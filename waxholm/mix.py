@@ -1,4 +1,7 @@
 # 
+
+from .exceptions import FRExpected
+
 def fix_text(text: str) -> str:
     replacements = text.maketrans("{}|\\[]", "äåöÖÄÅ")
     return text.translate(replacements)
@@ -7,7 +10,7 @@ def fix_text(text: str) -> str:
 class FR:
     def __init__(self, text: str):
         if not text.startswith("FR"):
-            raise IOError("Unknown line type (does not begin with 'FR'): " + text)
+            raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
         self.frame = parts[0][2:].strip()
         if parts[-1].strip().endswith(" sec"):
@@ -20,11 +23,11 @@ class FR:
             elif subpart.startswith("$"):
                 self.type = 'I'
                 self.phone_type = fix_text(subpart[0:2])
-                self.phone = fix_text(subpart[2:])
+                self.phone = fix_text(subpart[1:])
             elif subpart.startswith("#"):
                 self.type = 'B'
                 self.phone_type = fix_text(subpart[0:2])
-                self.phone = fix_text(subpart[2:])
+                self.phone = fix_text(subpart[1:])
             elif subpart.startswith(">pm "):
                 self.pm_type = fix_text(subpart[4:5])
                 self.pm = fix_text(subpart[5:])
