@@ -21,11 +21,11 @@ class FR:
                 self.phone = fix_text(subpart[2:])
             elif subpart.startswith("$"):
                 self.type = 'I'
-                self.phone_type = fix_text(subpart[0:2])
+                self.phone_type = fix_text(subpart[0:1])
                 self.phone = fix_text(subpart[1:])
             elif subpart.startswith("#"):
                 self.type = 'B'
-                self.phone_type = fix_text(subpart[0:2])
+                self.phone_type = fix_text(subpart[0:1])
                 self.phone = fix_text(subpart[1:])
             elif subpart.startswith(">pm "):
                 self.pm_type = fix_text(subpart[4:5])

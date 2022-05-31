@@ -9,4 +9,6 @@ def test_fr1():
     assert fr.frame == "4481"
     assert 'word' in fr.__dict__
     assert fr.word == "XsmackX"
+    assert fr.phone_type == "#"
+    assert fr.pm_type == "#"
     print(fr)
