@@ -1,6 +1,5 @@
-# 
-
 from .exceptions import FRExpected
+
 
 def fix_text(text: str) -> str:
     replacements = text.maketrans("{}|\\[]", "äåöÖÄÅ")
@@ -51,7 +50,6 @@ class FR:
             elif subpart == "OK":
                 self.type = 'E'
 
-
     def __repr__(self):
         parts = []
         parts.append(f"type: {self.type}")
@@ -65,7 +63,7 @@ class FR:
         if 'pm' in self.__dict__:
             parts.append(f"pm: {self.pm}")
         parts.append(f"sec: {self.seconds}")
-        return f"FR(" + ", ".join(parts) + ")"
+        return "FR(" + ", ".join(parts) + ")"
 
 
 class Mix():
