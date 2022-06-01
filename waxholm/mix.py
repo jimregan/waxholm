@@ -148,6 +148,11 @@ class Mix():
         return [x for x in zip(fixed_starts, ends)]
 
     def get_dictionary(self):
+        """
+        Get pronunciation dictionary entries from the .mix file.
+        These entries are based on the corrected pronunciations; for
+        the lexical pronunciations, use the `phoneme` property.
+        """
         output = {}
         current_phones = []
         prev_word = ''
