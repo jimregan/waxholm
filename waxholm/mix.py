@@ -67,29 +67,35 @@ class FR:
 
 
 class Mix():
-    def __init__(self, filepath: str):
+    def __init__(self, filepath: str, stringfile = None):
         self.fr = []
-        with open(filepath) as inpf:
-            saw_text = False
-            saw_labels = False
-            for line in inpf.readlines():
-                if line.startswith("Waxholm dialog."):
-                    self.filepath = line[15:].strip()
-                if line.startswith("TEXT:"):
-                    saw_text = True
-                    continue
-                if saw_text:
-                    self.text = fix_text(line.strip())
-                    saw_text = False
-                if line.startswith("FR "):
-                    if saw_labels:
-                        saw_labels = False
-                    self.fr.append(FR(line))
-                if line.startswith("Labels: "):
-                    self.labels = line[8:].strip()
-                    saw_labels = True
-                if saw_labels and line.startswith(" "):
-                    self.labels += line.strip()
+        if stringfile is None:
+            with open(filepath) as inpf:
+                self.read_data(inpf.readlines())
+        else:
+            self.read_data(stringfile.split("\n"))
+
+    def read_data(self, inpf):
+        saw_text = False
+        saw_labels = False
+        for line in inpf:
+            if line.startswith("Waxholm dialog."):
+                self.filepath = line[15:].strip()
+            if line.startswith("TEXT:"):
+                saw_text = True
+                continue
+            if saw_text:
+                self.text = fix_text(line.strip())
+                saw_text = False
+            if line.startswith("FR "):
+                if saw_labels:
+                    saw_labels = False
+                self.fr.append(FR(line))
+            if line.startswith("Labels: "):
+                self.labels = line[8:].strip()
+                saw_labels = True
+            if saw_labels and line.startswith(" "):
+                self.labels += line.strip()
 
     def _check_fr(self) -> bool:
         """
@@ -108,7 +114,7 @@ class Mix():
             return []
         start = [0] if as_frames else [0.0]
         if as_frames:
-            times = [int(x.frames) for x in self.fr]
+            times = [int(x.frame) for x in self.fr]
         else:
             times = [float(x.seconds) for x in self.fr]
         if pad_start:
