@@ -11,11 +11,11 @@ Waxholm dialog. /u/wax/data/scenes/fp2060/fp2060.1.05.smp
 WIZARD:  jesper    Jesper H|gberg Fri Mar 25 12:22:42 MET 1994
 TEXT:
 jag vill }ka 17 och 45 .
-PHONEME:   J'A:G+ V'IL+ "]:K'A  SJ"UT']N  ']:+ F\42TIF'EM.
+PHONEME:   J'A:G+ V'IL+ "]:K'A  SJ"UT']N  ']:+ F\\42TIF'EM.
 
 
 CT 1
-Labels:  J'A: V'IL "]:KkA SJ"UTt]N ']Kk F\42TtIF'EMv
+Labels:  J'A: V'IL "]:KkA SJ"UTt]N ']Kk F\\42TtIF'EMv
  .
 FR       4196	 #J	>pm #J	>w jag	 0.262 sec
 FR       5638	 $'A:	>pm $'A:	 0.352 sec
@@ -38,7 +38,7 @@ FR      21827	 #']	>pm #']	>w och	 1.364 sec
 FR      23007	 $K	>pm $K	 1.438 sec
 FR      23771	 $k	>pm $k	 1.486 sec
 FR      24044	 #F	>pm #F	>w 45	 1.503 sec
-FR      25048	 $\4	>pm $\4	 1.565 sec
+FR      25048	 $\\4	>pm $\\4	 1.565 sec
 FR      26004	 $2T	>pm $2T	 1.625 sec
 FR      26995	 $2t	>pm $2t		1.687 sec
 FR      27269	 $I	>pm $I	 1.704 sec
@@ -68,3 +68,8 @@ def test_mix_gettimes_asframes():
     times = mix.get_times(as_frames=True)
     assert times[0] == 4196
     assert times[-1] == 36001
+
+
+def test_mix_phoneme_string():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    assert mix.phoneme == "J'A:G+ V'IL+ \"Å:K'A  SJ\"UT'ÅN  'Å:+ FÖ42TIF'EM."

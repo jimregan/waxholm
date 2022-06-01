@@ -77,6 +77,7 @@ class Mix():
 
     def read_data(self, inpf):
         saw_text = False
+        saw_phoneme = False
         saw_labels = False
         for line in inpf:
             if line.startswith("Waxholm dialog."):
@@ -87,6 +88,16 @@ class Mix():
             if saw_text:
                 self.text = fix_text(line.strip())
                 saw_text = False
+            if line.startswith("PHONEME:"):
+                saw_phoneme = True
+                self.phoneme = fix_text(line[8:].strip())
+                if line[8:].strip().endswith("."):
+                    saw_phoneme = False
+                continue
+            if saw_phoneme:
+                self.phoneme = fix_text(line.strip())
+                if line[8:].strip().endswith("."):
+                    saw_phoneme = False
             if line.startswith("FR "):
                 if saw_labels:
                     saw_labels = False
