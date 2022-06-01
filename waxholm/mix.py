@@ -65,6 +65,14 @@ class FR:
         parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
 
+    def get_phone(self):
+        if 'pm' in self.__dict__:
+            return self.pm
+        elif 'phone' in self.__dict__:
+            return self.phone
+        else:
+            return None
+
 
 class Mix():
     def __init__(self, filepath: str, stringfile=None):
@@ -138,3 +146,27 @@ class Mix():
         ends = self.get_times(as_frames=as_frames, pad_start=False)
         fixed_starts = starts[0:-1]
         return [x for x in zip(fixed_starts, ends)]
+
+    def get_dictionary(self):
+        output = {}
+        current_phones = []
+        prev_word = ''
+
+        for fr in self.fr:
+            if 'word' in fr.__dict__:
+                phone = fr.get_phone()
+                if prev_word != "":
+                    if prev_word not in output:
+                        output[prev_word] = []
+                    output[prev_word].append(current_phones.copy())
+                    current_phones.clear()
+                prev_word = fr.word
+                current_phones.append(phone)
+            elif fr.type == "I":
+                phone = fr.get_phone()
+                current_phones.append(phone)
+            else:
+                if prev_word not in output:
+                    output[prev_word] = []
+                output[prev_word].append(current_phones.copy())
+                return output

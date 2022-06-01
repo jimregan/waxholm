@@ -73,3 +73,11 @@ def test_mix_gettimes_asframes():
 def test_mix_phoneme_string():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     assert mix.phoneme == "J'A:G+ V'IL+ \"Å:K'A  SJ\"UT'ÅN  'Å:+ FÖ42TIF'EM."
+
+
+def test_get_dictionary():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    dictionary = mix.get_dictionary()
+    assert len(dictionary.keys()) == 7
+    assert "vill" in dictionary.keys()
+    assert dictionary["vill"] == [["V", "'I", "L+"]]
