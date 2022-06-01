@@ -1,1 +1,1 @@
-from .mix import FR
+from .mix import FR, Mix
