@@ -67,7 +67,7 @@ class FR:
 
 
 class Mix():
-    def __init__(self, filepath: str, stringfile = None):
+    def __init__(self, filepath: str, stringfile=None):
         self.fr = []
         if stringfile is None:
             with open(filepath) as inpf:
@@ -103,13 +103,13 @@ class Mix():
         and that the first was a start type, and
         last was an end type.
         """
-        if not 'fr' in self.__dict__:
+        if 'fr' not in self.__dict__:
             return False
         if len(self.fr) == 0:
             return False
         return self.fr[0].type == "B" and self.fr[-1].type == "E"
 
-    def get_times(self, as_frames = False, pad_start = False):
+    def get_times(self, as_frames=False, pad_start=False):
         if not self._check_fr():
             return []
         start = [0] if as_frames else [0.0]
@@ -122,8 +122,8 @@ class Mix():
         else:
             return times
 
-    def get_time_pairs(self, as_frames = False):
+    def get_time_pairs(self, as_frames=False):
         starts = self.get_times(as_frames=as_frames, pad_start=True)
         ends = self.get_times(as_frames=as_frames, pad_start=False)
         fixed_starts = starts[0:-1]
-        return [x for x in  zip(fixed_starts, ends)]
+        return [x for x in zip(fixed_starts, ends)]
