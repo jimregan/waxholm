@@ -1,4 +1,3 @@
-from io import StringIO
 from waxholm import Mix
 
 
@@ -51,15 +50,18 @@ FR      35570	 #.	>pm #.	>w .	 2.223 sec
 FR      36001	 OK	 2.250 sec
 """
 
+
 def test_mix_read():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     assert mix.text == "jag vill åka 17 och 45 ."
+
 
 def test_mix_gettimes():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     times = mix.get_times()
     assert times[0] == 0.262
     assert times[-1] == 2.25
+
 
 def test_mix_gettimes_asframes():
     mix = Mix(filepath="", stringfile=SAMPLE1)
