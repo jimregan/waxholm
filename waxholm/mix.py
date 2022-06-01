@@ -71,7 +71,6 @@ class Mix():
         self.fr = []
         with open(filepath) as inpf:
             saw_text = False
-            saw_phoneme = False
             saw_labels = False
             for line in inpf.readlines():
                 if line.startswith("Waxholm dialog."):
@@ -91,3 +90,34 @@ class Mix():
                     saw_labels = True
                 if saw_labels and line.startswith(" "):
                     self.labels += line.strip()
+
+    def _check_fr(self) -> bool:
+        """
+        Simple sanity check: that there were FR lines,
+        and that the first was a start type, and
+        last was an end type.
+        """
+        if not 'fr' in self.__dict__:
+            return False
+        if len(self.fr) == 0:
+            return False
+        return self.fr[0].type == "B" and self.fr[-1].type == "E"
+
+    def get_times(self, as_frames = False, pad_start = False):
+        if not self._check_fr():
+            return []
+        start = [0] if as_frames else [0.0]
+        if as_frames:
+            times = [int(x.frames) for x in self.fr]
+        else:
+            times = [float(x.seconds) for x in self.fr]
+        if pad_start:
+            return start + times
+        else:
+            return times
+
+    def get_time_pairs(self, as_frames = False):
+        starts = self.get_times(as_frames=as_frames, pad_start=True)
+        ends = self.get_times(as_frames=as_frames, pad_start=False)
+        fixed_starts = starts[0:-1]
+        return [x for x in  zip(fixed_starts, ends)]
