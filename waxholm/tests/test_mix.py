@@ -78,3 +78,21 @@ def test_fr_end1():
     assert 'pm' not in fr.__dict__
     assert 'seconds' in fr.__dict__
     assert fr.seconds == "0.952"
+
+
+def test_fr_broken_inner1():
+    line = "FR      34326	 $v	 2.145 sec"
+    fr = FR(line)
+    assert 'type' in fr.__dict__
+    assert fr.type == "I"
+    assert 'phone' in fr.__dict__
+    assert fr.phone == "v"
+    assert 'frame' in fr.__dict__
+    assert fr.frame == "34326"
+    assert 'word' not in fr.__dict__
+    assert 'phone_type' in fr.__dict__
+    assert fr.phone_type == "$"
+    assert 'pm_type' not in fr.__dict__
+    assert 'pm' not in fr.__dict__
+    assert 'seconds' in fr.__dict__
+    assert fr.seconds == "2.145"
