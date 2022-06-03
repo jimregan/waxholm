@@ -82,7 +82,15 @@ def test_get_dictionary():
     assert "vill" in dictionary.keys()
     assert dictionary["vill"] == [["V", "'I", "L+"]]
 
-def test_get_time_pars():
+
+def test_get_time_pairs_seconds():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    pairs = mix.get_time_pairs()
+    assert pairs[0] == (0.262, 0.352)
+    assert pairs[-1] == (2.223, 2.25)
+
+
+def test_get_time_pairs_frames():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     pairs = mix.get_time_pairs(as_frames=True)
     assert pairs[0] == (4196, 5638)
