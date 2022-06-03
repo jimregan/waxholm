@@ -128,10 +128,9 @@ class Mix():
             return False
         return self.fr[0].type == "B" and self.fr[-1].type == "E"
 
-    def get_times(self, as_frames=False, pad_start=False):
+    def get_times(self, as_frames=False):
         """
-        get the times of each phoneme; if `pad_start` is
-        True, it includes 0 as a start time
+        get the times of each phoneme
         """
         if not self._check_fr():
             return []
@@ -140,24 +139,18 @@ class Mix():
             times = [int(x.frame) for x in self.fr]
         else:
             times = [float(x.seconds) for x in self.fr]
-        if pad_start:
-            return start + times
-        else:
-            return times
+        return times
 
     def get_time_pairs(self, as_frames=False):
         """
         get a list of tuples containing start and end times
         By default, the times are in seconds; if `as_frames`
         is set, the number of frames are returned instead.
-        TODO: add a way of passing the end time (which must
-        be determined by reading the audio).
-        As is, getting the initial silence is not much use.
         """
-        starts = self.get_times(as_frames=as_frames, pad_start=True)
-        ends = self.get_times(as_frames=as_frames, pad_start=False)
-        fixed_starts = starts[0:-1]
-        return [x for x in zip(fixed_starts, ends)]
+        times = self.get_times(as_frames=as_frames)
+        starts = times[0:-1]
+        ends = times[1:]
+        return [x for x in zip(starts, ends)]
 
     def get_dictionary(self):
         """
