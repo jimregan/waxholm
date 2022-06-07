@@ -7,7 +7,7 @@ def fix_text(text: str) -> str:
 
 
 class FR:
-    def __init__(self, text: str):
+    def __init__(self, text: str):  # C901
         if not text.startswith("FR"):
             raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
@@ -83,7 +83,7 @@ class Mix():
         else:
             self.read_data(stringfile.split("\n"))
 
-    def read_data(self, inpf):
+    def read_data(self, inpf):  # C901
         """read data from text of a .mix file"""
         saw_text = False
         saw_phoneme = False
