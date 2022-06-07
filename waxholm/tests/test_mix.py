@@ -95,4 +95,3 @@ def test_get_time_pairs_frames():
     pairs = mix.get_time_pairs(as_frames=True)
     assert pairs[0] == (4196, 5638)
     assert pairs[-1] == (35570, 36001)
- 

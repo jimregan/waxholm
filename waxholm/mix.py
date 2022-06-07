@@ -134,7 +134,6 @@ class Mix():
         """
         if not self._check_fr():
             return []
-        start = [0] if as_frames else [0.0]
         if as_frames:
             times = [int(x.frame) for x in self.fr]
         else:
