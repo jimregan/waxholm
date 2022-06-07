@@ -84,6 +84,7 @@ class Mix():
             self.read_data(stringfile.split("\n"))
 
     def read_data(self, inpf):
+        """read data from text of a .mix file"""
         saw_text = False
         saw_phoneme = False
         saw_labels = False
