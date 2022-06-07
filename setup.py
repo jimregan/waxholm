@@ -6,6 +6,7 @@ import sys
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
+
 class Tox(TestCommand):
     user_options = [('tox-args=', 'a', 'Arguments to pass to tox')]
 
@@ -41,6 +42,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
@@ -63,9 +65,8 @@ setup(name='waxholm',
       description='Module for reading Waxholm corpus transcripts',
       long_description=long_description,
       long_description_content_type='text/x-rst',
-      author='Jim O'Regan',
+      author="Jim O'Regan",
       author_email='joregan@kth.se',
-      url='http://foo.bar',
       classifiers=classifiers,
       packages=['waxholm'],
       data_files=[],
