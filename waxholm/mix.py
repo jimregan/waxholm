@@ -117,7 +117,7 @@ class Mix():
             if saw_labels and line.startswith(" "):
                 self.labels += line.strip()
 
-    def _check_fr(self) -> bool:
+    def check_fr(self) -> bool:
         """
         Simple sanity check: that there were FR lines,
         and that the first was a start type, and
@@ -133,7 +133,7 @@ class Mix():
         """
         get the times of each phoneme
         """
-        if not self._check_fr():
+        if not self.check_fr():
             return []
         if as_frames:
             times = [int(x.frame) for x in self.fr]
