@@ -3,7 +3,7 @@
 
 import os
 import sys
-from setuptools import setup
+from setuptools import find_packages, setup
 from setuptools.command.test import test as TestCommand
 
 
@@ -68,7 +68,7 @@ setup(name='waxholm',
       author="Jim O'Regan",
       author_email='joregan@kth.se',
       classifiers=classifiers,
-      packages=['waxholm'],
+      packages=find_packages(exclude=("scripts",)),
       data_files=[],
       install_requires=requires,
       include_package_data=True,

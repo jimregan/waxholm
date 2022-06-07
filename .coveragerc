@@ -3,3 +3,4 @@ include =
     waxholm/*
 omit =
     waxholm/tests/*
+    scripts/*
