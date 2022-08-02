@@ -9,8 +9,8 @@ def main():
     parser = argparse.ArgumentParser(description='Make fairseq input tsv from waxholm data.')
     parser.add_argument('inpath', type=str, help='path to input')
     parser.add_argument('outpath', type=str, help='path to place converted files')
-    parser.add_argument('--phonetic', type=bool, help='use phonetic transcriptions', default=False)
-    parser.add_argument('--audio', type=bool, help='also convert audio', default=False)
+    parser.add_argument('--phonetic', help='use phonetic transcriptions', action='store_true')
+    parser.add_argument('--audio', help='also convert audio', action='store_true')
     args = parser.parse_args()
 
     inpath = Path(args.inpath)
