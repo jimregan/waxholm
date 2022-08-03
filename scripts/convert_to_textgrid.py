@@ -38,7 +38,18 @@ def main():
     parser = argparse.ArgumentParser(description='Convert .mix to Praat textgrid.')
     parser.add_argument('files', type=str, nargs='+', help='files to process')
     parser.add_argument('--outpath', type=str, help='path to place converted files')
+    parser.add_argument('--audio', help='also convert audio', action='store_true')
     args = parser.parse_args()
+
+    if args.outpath:
+        outpath = args.outpath
+
+        if outpath.exists() and not outpath.is_dir():
+            print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
+            exit()
+
+        if not outpath.exists() and not outpath.is_dir():
+            outpath.mkdir()
 
     for file in args.files:
         path = Path(file)
