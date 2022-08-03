@@ -6,6 +6,8 @@ from praatio.utilities.constants import Interval
 import argparse
 from pathlib import Path
 
+from waxholm.audio import smp_to_wav
+
 
 def get_phone_intervals(mix):
     times = mix.get_time_pairs()
@@ -42,7 +44,7 @@ def main():
     args = parser.parse_args()
 
     if args.outpath:
-        outpath = args.outpath
+        outpath = Path(args.outpath)
 
         if outpath.exists() and not outpath.is_dir():
             print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
@@ -54,11 +56,20 @@ def main():
     for file in args.files:
         path = Path(file)
         stem = path.stem
+        if stem.endswith(".mix"):
+            stem = stem[:-4]
+        if stem.endswith(".smp"):
+            stem = stem[:-4]
         if args.outpath:
             parent = args.outpath
         else:
             parent = path.parents[0]
-        outfile = parent / f"{stem}.textgrid"
+        outfile = f"{parent}/{stem}.textgrid"
+
+        if args.audio:
+            smpfile = file.replace(".mix", "")
+            wavfile = f"{parent}/{stem}.wav"
+            smp_to_wav(smpfile, wavfile)
 
         mix = Mix(file)
         tg = textgrid.Textgrid()
