@@ -60,6 +60,8 @@ def get_word_intervals(mix):
         out = []
         for z in zip(times, mix.fr[0:-1]):
             if z[1].type == "B":
+                if z[0][0] == z[0][1]:
+                    z[0] = (z[0][0], z[0][1] + 0.001)
                 out.append(Interval(z[0][0], z[0][1], z[1].word))
         return out
     else:
