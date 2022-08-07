@@ -24,6 +24,36 @@ def get_phone_intervals(mix):
         return []
 
 
+def get_merged_phone_intervals(mix, strategy = ""):
+    times = mix.get_time_pairs()
+    if mix.check_fr():
+        labels = [fr.get_phone() for fr in mix.fr[0:-1]]
+    else:
+        labels = []
+    if len(times) == len(labels):
+        out = []
+        last = None
+        for z in zip(times, labels):
+            if z[0][0] == z[0][1]:
+                print(z)
+            if last == None:
+                last = (z[0][0], z[0][1], z[1])
+                continue
+            else:
+                cur = (z[0][0], z[0][1], z[1])
+                if cur[1] == last[1]:
+                    if strategy == "merge":
+                        last = (last[0], last[1], f"{last[2]} {cur[2]}")
+                    else:
+                        last = (last[0], last[1], cur[2])
+                else:
+                    out.append(Interval(last[0], last[1], last[2]))
+                    last = cur                
+        return out
+    else:
+        return []
+
+
 def get_word_intervals(mix):
     times = mix.get_time_pairs()
     if len(times) == len(mix.fr[0:-1]):
@@ -75,7 +105,7 @@ def main():
         tg = textgrid.Textgrid()
 
         word_tier = textgrid.IntervalTier("words", get_word_intervals(mix))
-        phone_tier = textgrid.IntervalTier("phones", get_phone_intervals(mix))
+        phone_tier = textgrid.IntervalTier("phones", get_merged_phone_intervals(mix))
 
         tg.addTier(word_tier, reportingMode="error")
         tg.addTier(phone_tier, reportingMode="error")
