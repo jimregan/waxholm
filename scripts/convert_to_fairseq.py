@@ -28,7 +28,7 @@ def main():
         if args.audio:
             smpfile = str(file).replace(".mix", "")
             wavfile = outpath / f"{stem}.wav"
-            smp_to_wav(smpfile, str(wavfile))
+            smp_to_wav(smpfile, wavfile)
 
 #        print(stem)
 
