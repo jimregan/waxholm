@@ -152,8 +152,8 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
-    def get_phone_label_tuples(self):
-        times = self.get_time_pairs()
+    def get_phone_label_tuples(self, as_frames=False):
+        times = self.get_time_pairs(as_frames=as_frames)
         if self.check_fr():
             labels = [fr.get_phone() for fr in self.fr[0:-1]]
         else:
