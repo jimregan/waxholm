@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# flake8: noqa
 
 from waxholm import FR, Mix
 from praatio import textgrid
