@@ -35,8 +35,10 @@ def get_merged_phone_intervals(mix, strategy = ""):
         out = []
         last = None
         for z in zip(times, labels):
+            print(f"Start: ({z[0][0]}); end: ({z[0][1]}); label {z[1]}")
             if z[0][0] == z[0][1]:
                 print(f"Start time ({z[0][0]}) same as end time ({z[0][1]})")
+                continue
             if last == None:
                 last = (z[0][0], z[0][1], z[1])
                 continue
