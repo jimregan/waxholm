@@ -215,8 +215,6 @@ class Mix():
             i = 0
             cur = None
             while i < len(labels_raw) - 1:
-                if cur is not None:
-                    print(cur)
                 if labels_raw[i][1].type == "B":
                     if cur is not None:
                         out.append(cur)
