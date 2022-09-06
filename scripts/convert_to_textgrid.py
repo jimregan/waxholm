@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # flake8: noqa
 
+from collections import namedtuple
 from waxholm import FR, Mix
 from praatio import textgrid
 from praatio.utilities.constants import Interval
@@ -9,6 +10,8 @@ from pathlib import Path
 
 from waxholm.audio import smp_to_wav
 
+
+Label = namedtuple('Label', ['start', 'end', 'label'])
 
 def get_phone_intervals(mix):
     times = mix.get_time_pairs()
@@ -23,6 +26,48 @@ def get_phone_intervals(mix):
         return out
     else:
         return []
+
+
+def get_label_tuples(mix):
+    times = get_phone_intervals(mix)
+    return [Label(start = x[0], end = x[1], label = x[2]) for x in times]
+
+
+def prune_empty_labels(labels, debug = False):
+    out = []
+    for label in labels:
+        if label['start'] != label['end']:
+            out.append(label)
+        else:
+            if debug:
+                print(f"Start: ({label['start']}); end: ({label['end']}); label {label['label']}")    
+    return out
+
+
+def merge_plosives(labels):
+    i = 0
+    sils = {
+        "K": "k",
+        "G": "g",
+        "T": "t",
+        "D": "d",
+        "2T": "2t",
+        "2D": "2d",
+        "P": "p",
+        "B": "b"
+    }
+    out = []
+    while i < len(labels-1):
+        cur = labels[i]
+        next = labels[i+1]
+        if cur['label'] in sils.keys() and sils[cur['label']] == next['label']:
+            tmp = Label(start = cur['start'], end = next['end'], label = next['label'])
+            out.append(tmp)
+            i += 2
+        else:
+            out.append(cur)
+            i += 1
+    return out
 
 
 def get_merged_phone_intervals(mix, strategy = ""):
