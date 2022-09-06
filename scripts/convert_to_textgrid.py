@@ -36,11 +36,11 @@ def get_label_tuples(mix):
 def prune_empty_labels(labels, debug = False):
     out = []
     for label in labels:
-        if label['start'] != label['end']:
+        if label[0] != label[1]:
             out.append(label)
         else:
             if debug:
-                print(f"Start: ({label['start']}); end: ({label['end']}); label {label['label']}")    
+                print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
     return out
 
 
@@ -57,11 +57,12 @@ def merge_plosives(labels):
         "B": "b"
     }
     out = []
-    while i < len(labels-1):
+    while i < len(labels)-1:
         cur = labels[i]
         next = labels[i+1]
-        if cur['label'] in sils.keys() and sils[cur['label']] == next['label']:
-            tmp = Label(start = cur['start'], end = next['end'], label = next['label'])
+        cl = cur[2]
+        if cl in sils.keys() and sils[cl] == next[2]:
+            tmp = Label(start = cur[0], end = next[1], label = next[2])
             out.append(tmp)
             i += 2
         else:
@@ -71,6 +72,13 @@ def merge_plosives(labels):
 
 
 def get_merged_phone_intervals(mix, strategy = ""):
+    labels = get_label_tuples(mix)
+    labels = prune_empty_labels(labels)
+    merged = merge_plosives(labels)
+    return [(x[0], x[1], x[2]) for x in merged]
+
+
+def get_merged_phone_intervalsO(mix, strategy = ""):
     times = mix.get_time_pairs()
     if mix.check_fr():
         labels = [fr.get_phone() for fr in mix.fr[0:-1]]
@@ -96,7 +104,7 @@ def get_merged_phone_intervals(mix, strategy = ""):
                         last = (last[0], last[1], cur[2])
                 else:
                     out.append(Interval(last[0], last[1], last[2]))
-                    last = cur                
+                    last = cur
         return out
     else:
         return []
