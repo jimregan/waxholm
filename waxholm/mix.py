@@ -221,7 +221,7 @@ class Mix():
                     if cur is not None:
                         out.append(cur)
                     if labels_raw[i+1][1].type == "B":
-                        out.append((labels_raw[i][0][0], labels_raw[i+1][0][1], labels_raw[i][1].word))
+                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word))
                         cur = None
                         i += 1
                         continue
@@ -229,7 +229,7 @@ class Mix():
                         cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
                 if labels_raw[i+1][1].type == "B":
                     if cur is not None:
-                        cur = (cur[0], labels_raw[i+1][0][1], cur[2])
+                        cur = (cur[0], labels_raw[i][0][1], cur[2])
                 i += 1
             out.append(cur)
             return out
