@@ -1,9 +1,13 @@
+from collections import namedtuple
 from .exceptions import FRExpected
 
 
 def fix_text(text: str) -> str:
     replacements = text.maketrans("{}|\\[]", "äåöÖÄÅ")
     return text.translate(replacements)
+
+
+Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
 class FR:

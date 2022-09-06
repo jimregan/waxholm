@@ -13,23 +13,8 @@ from waxholm.audio import smp_to_wav
 
 Label = namedtuple('Label', ['start', 'end', 'label'])
 
-def get_phone_intervals(mix):
-    times = mix.get_time_pairs()
-    if mix.check_fr():
-        labels = [fr.get_phone() for fr in mix.fr[0:-1]]
-    else:
-        labels = []
-    if len(times) == len(labels):
-        out = []
-        for z in zip(times, labels):
-            out.append(Interval(z[0][0], z[0][1], z[1]))
-        return out
-    else:
-        return []
-
-
 def get_label_tuples(mix):
-    times = get_phone_intervals(mix)
+    times = mix.get_phone_label_tuples()
     return [Label(start = x[0], end = x[1], label = x[2]) for x in times]
 
 
