@@ -71,43 +71,11 @@ def merge_plosives(labels):
     return out
 
 
-def get_merged_phone_intervals(mix, strategy = ""):
+def get_merged_phone_intervals(mix):
     labels = get_label_tuples(mix)
     labels = prune_empty_labels(labels)
     merged = merge_plosives(labels)
     return [(x[0], x[1], x[2]) for x in merged]
-
-
-def get_merged_phone_intervalsO(mix, strategy = ""):
-    times = mix.get_time_pairs()
-    if mix.check_fr():
-        labels = [fr.get_phone() for fr in mix.fr[0:-1]]
-    else:
-        labels = []
-    if len(times) == len(labels):
-        out = []
-        last = None
-        for z in zip(times, labels):
-            print(f"Start: ({z[0][0]}); end: ({z[0][1]}); label {z[1]}")
-            if z[0][0] == z[0][1]:
-                print(f"Start time ({z[0][0]}) same as end time ({z[0][1]})")
-                continue
-            if last == None:
-                last = (z[0][0], z[0][1], z[1])
-                continue
-            else:
-                cur = (z[0][0], z[0][1], z[1])
-                if cur[1] == last[1]:
-                    if strategy == "merge":
-                        last = (last[0], last[1], f"{last[2]} {cur[2]}")
-                    else:
-                        last = (last[0], last[1], cur[2])
-                else:
-                    out.append(Interval(last[0], last[1], last[2]))
-                    last = cur
-        return out
-    else:
-        return []
 
 
 def get_word_intervals(mix):
