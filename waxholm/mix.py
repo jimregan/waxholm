@@ -170,6 +170,43 @@ class Mix():
         else:
             return []
 
+    def prune_empty_labels(self, debug = False):
+        out = []
+        for label in self.get_phone_label_tuples():
+            if label[0] != label[1]:
+                out.append(label)
+            else:
+                if debug:
+                    print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
+        return out
+
+    def merge_plosives(self):
+        i = 0
+        sils = {
+            "K": "k",
+            "G": "g",
+            "T": "t",
+            "D": "d",
+            "2T": "2t",
+            "2D": "2d",
+            "P": "p",
+            "B": "b"
+        }
+        out = []
+        labels = self.prune_empty_labels()
+        while i < len(labels)-1:
+            cur = labels[i]
+            next = labels[i+1]
+            cl = cur[2]
+            if cl in sils.keys() and sils[cl] == next[2]:
+                tmp = Label(start = cur[0], end = next[1], label = next[2])
+                out.append(tmp)
+                i += 2
+            else:
+                out.append(cur)
+                i += 1
+        return out
+
     def get_word_label_tuples(self):
         times = self.get_time_pairs()
         if len(times) == len(self.fr[0:-1]):

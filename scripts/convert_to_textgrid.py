@@ -29,38 +29,8 @@ def prune_empty_labels(labels, debug = False):
     return out
 
 
-def merge_plosives(labels):
-    i = 0
-    sils = {
-        "K": "k",
-        "G": "g",
-        "T": "t",
-        "D": "d",
-        "2T": "2t",
-        "2D": "2d",
-        "P": "p",
-        "B": "b"
-    }
-    out = []
-    while i < len(labels)-1:
-        cur = labels[i]
-        next = labels[i+1]
-        cl = cur[2]
-        if cl in sils.keys() and sils[cl] == next[2]:
-            tmp = Label(start = cur[0], end = next[1], label = next[2])
-            out.append(tmp)
-            i += 2
-        else:
-            out.append(cur)
-            i += 1
-    return out
-
-
 def get_merged_phone_intervals(mix):
-    labels = get_label_tuples(mix)
-    labels = prune_empty_labels(labels)
-    merged = merge_plosives(labels)
-    return [(x[0], x[1], x[2]) for x in merged]
+    return mix.merge_plosives()
 
 
 def get_word_intervals(mix):
