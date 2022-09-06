@@ -180,7 +180,7 @@ class Mix():
                     print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
         return out
 
-    def merge_plosives(self):
+    def get_merged_plosives(self):
         i = 0
         sils = {
             "K": "k",
@@ -211,13 +211,26 @@ class Mix():
         times = self.get_time_pairs()
         if len(times) == len(self.fr[0:-1]):
             out = []
-            for z in zip(times, self.fr[0:-1]):
-                if z[1].type == "B":
-                    out.append((z[0][0], z[0][1], z[1].word))
+            labels_raw = [x for x in zip(times, self.fr[0:-1])]
+            i = 0
+            cur = None
+            while i < len(labels_raw) - 1:
+                if cur is not None:
+                    print(cur)
+                if labels_raw[i][1].type == "B":
+                    if cur is not None:
+                        out.append(cur)
+                    cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
+                if labels_raw[i+1][1].type == "B":
+                    if cur is not None:
+                        cur = (cur[0], labels_raw[i+1][0][1], cur[2])
+                    else:
+                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)                    
+                i += 1
+            out.append(cur)
             return out
         else:
             return []
-
 
     def get_dictionary(self):
         """
