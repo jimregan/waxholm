@@ -161,7 +161,7 @@ class Mix():
         """
         get the times of each phoneme
         """
-        if not self.check_fr():
+        if not self.check_fr(verbose=True):
             return []
         if as_frames:
             times = [int(x.frame) for x in self.fr]
