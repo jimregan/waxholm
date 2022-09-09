@@ -78,6 +78,12 @@ class FR:
         else:
             return None
 
+    def is_silence_word(self):
+        if 'word' in self.__dict__:
+            return self.word == "XX"
+        else:
+            return False
+
 
 class Mix():
     def __init__(self, filepath: str, stringfile=None):
@@ -165,10 +171,10 @@ class Mix():
         self.orig_fr = deepcopy(self.fr)
         i = 0
         warned = False
+        def check_cur(cur, next):
+            return cur.seconds == next.seconds and cur.is_silence_word()
         while i < len(self.fr) - 1:
-            cur = self.fr[i]
-            next = self.fr[i + 1]
-            if cur.seconds == next.seconds and "word" in cur and cur.word == "XX":
+            if check_cur(self.fr[i], self.fr[i + 1]):
                 if verbose:
                     if not warned:
                         warned = True
