@@ -104,6 +104,12 @@ class FR:
     def has_seconds(self):
         return "seconds" in self.__dict__
 
+    def  get_seconds(self):
+        if not self.has_seconds() and "frame" in self.__dict__:
+            return int(self.frame) / 16000.0
+        else:
+            return self.seconds
+
 
 class Mix():
     def __init__(self, filepath: str, stringfile=None):
@@ -198,13 +204,11 @@ class Mix():
         i = 0
         warned = False
         def check_cur(cur, next):
-            if not cur.has_seconds():
+            if verbose and not cur.has_seconds():
                 print(f"Missing seconds: {self.path}\nLine: {cur}")
-                return False
-            if not next.has_seconds():
+            if verbose and not next.has_seconds():
                 print(f"Missing seconds: {self.path}\nLine: {next}")
-                return False
-            return cur.seconds == next.seconds and cur.is_silence_word()
+            return cur.get_seconds() == next.get_seconds() and cur.is_silence_word()
         while i < len(self.fr) - 1:
             if check_cur(self.fr[i], self.fr[i + 1]):
                 if verbose:
