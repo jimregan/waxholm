@@ -55,19 +55,26 @@ class FR:
             elif subpart == "OK":
                 self.type = 'E'
 
+    def get_type(self):
+        if "type" in self.__dict__:
+            return self.type
+        else:
+            return ""
+
     def __repr__(self):
         parts = []
-        parts.append(f"type: {self.type}")
+        parts.append(f"type: {self.get_type()}")
         parts.append(f"frame: {self.frame}")
-        if self.type != 'E':
-            parts.append(f"phone: {self.phone}")
+        if self.get_type() != 'E':
+            parts.append(f"phone: {self.get_phone()}")
         if 'word' in self.__dict__:
             parts.append(f"word: {self.word}")
         if 'pm_type' in self.__dict__:
             parts.append(f"pm_type: {self.pm_type}")
         if 'pm' in self.__dict__:
             parts.append(f"pm: {self.pm}")
-        parts.append(f"sec: {self.seconds}")
+        if 'seconds' in self.__dict__:
+            parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
 
     def get_phone(self, fix_accents=True):
@@ -93,6 +100,9 @@ class FR:
             return type == self.type
         else:
             return False
+
+    def has_seconds(self):
+        return "seconds" in self.__dict__
 
 
 class Mix():
@@ -188,6 +198,12 @@ class Mix():
         i = 0
         warned = False
         def check_cur(cur, next):
+            if not cur.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {cur}")
+                return False
+            if not next.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {next}")
+                return False
             return cur.seconds == next.seconds and cur.is_silence_word()
         while i < len(self.fr) - 1:
             if check_cur(self.fr[i], self.fr[i + 1]):
