@@ -209,6 +209,12 @@ class Mix():
         return out
 
     def get_merged_plosives(self, noop = False):
+        """
+        Returns a list of phones with plosives merged
+        (in Waxholm, as in TIMIT, the silence before the burst and the burst
+        are annotated separately).
+        If `noop` is True, it simply returns the output of `prune_empty_labels()`
+        """
         if noop:
             return self.prune_empty_labels()
         i = 0
