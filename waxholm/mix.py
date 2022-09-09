@@ -87,6 +87,12 @@ class FR:
             return self.word == "XX"
         else:
             return False
+    
+    def is_type(self, type):
+        if "type" in self.__dict__:
+            return type == self.type
+        else:
+            return False
 
 
 class Mix():
@@ -133,7 +139,7 @@ class Mix():
             if saw_labels and line.startswith(" "):
                 self.labels += line.strip()
 
-    def check_fr(self) -> bool:
+    def check_fr(self, verbose=False) -> bool:
         """
         Simple sanity check: that there were FR lines,
         and that the first was a start type, and
@@ -143,7 +149,13 @@ class Mix():
             return False
         if len(self.fr) == 0:
             return False
-        return self.fr[0].type == "B" and self.fr[-1].type == "E"
+        start_end = self.fr[0].is_type("B") and self.fr[-1].is_type("E")
+        if verbose and not start_end:
+            if not self.fr[0].is_type("B"):
+                print(f"{self.path}: missing start type")
+            if not self.fr[-1].is_type("E"):
+                print(f"{self.path}: missing end type")
+        return start_end
 
     def get_times(self, as_frames=False):
         """
