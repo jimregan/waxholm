@@ -70,11 +70,15 @@ class FR:
         parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
 
-    def get_phone(self):
+    def get_phone(self, fix_accents=True):
+        def fix_accents(phone, fix_accents=True):
+            if not fix_accents:
+                return phone
+            return phone.replace("'", "ˈ").replace('"', "ˌ")
         if 'pm' in self.__dict__:
-            return self.pm
+            return fix_accents(self.pm, fix_accents)
         elif 'phone' in self.__dict__:
-            return self.phone
+            return fix_accents(self.phone, fix_accents)
         else:
             return None
 
@@ -184,10 +188,10 @@ class Mix():
             else:
                 i += 1
 
-    def get_phone_label_tuples(self, as_frames=False):
+    def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
         times = self.get_time_pairs(as_frames=as_frames)
         if self.check_fr():
-            labels = [fr.get_phone() for fr in self.fr[0:-1]]
+            labels = [fr.get_phone(fix_accents) for fr in self.fr[0:-1]]
         else:
             labels = []
         if len(times) == len(labels):
@@ -270,7 +274,7 @@ class Mix():
         else:
             return []
 
-    def get_dictionary(self):
+    def get_dictionary(self, fix_accents=True):
         """
         Get pronunciation dictionary entries from the .mix file.
         These entries are based on the corrected pronunciations; for
@@ -282,7 +286,7 @@ class Mix():
 
         for fr in self.fr:
             if 'word' in fr.__dict__:
-                phone = fr.get_phone()
+                phone = fr.get_phone(fix_accents)
                 if prev_word != "":
                     if prev_word not in output:
                         output[prev_word] = []
@@ -291,7 +295,7 @@ class Mix():
                 prev_word = fr.word
                 current_phones.append(phone)
             elif fr.type == "I":
-                phone = fr.get_phone()
+                phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
                 if prev_word not in output:
