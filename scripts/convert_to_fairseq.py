@@ -5,6 +5,28 @@ from waxholm.audio import smp_to_wav
 import argparse
 from pathlib import Path
 
+
+def _clean_phone(phone):
+    # original accents
+    phone = phone.replace("'", "").replace('\"', "").replace("`", "")
+    # IPA-style accents
+    phone = phone.replace("ˌ", "").replace("ˈ", "")
+    # other markers
+    phone = phone.replace("#", "").replace("+", "")
+    return phone
+
+
+def _clean_word(word):
+    if "XX" in word:
+        return ""
+    else:
+        return word
+
+
+def clean_words(words):
+    return [x for x in words if _clean_word(x) != ""]
+
+
 def main():
     parser = argparse.ArgumentParser(description='Make fairseq input tsv from waxholm data.')
     parser.add_argument('inpath', type=str, help='path to input')
