@@ -46,6 +46,10 @@ class FR:
                 self.type = 'B'
                 self.word = fix_text(subpart[4:])
                 self.pseudoword = False
+            elif subpart == "> XklickX" or subpart == "> XutandX":
+                self.type = 'B'
+                self.word = subpart[2:]
+                self.pseudoword = True
             elif subpart.startswith("X"):
                 if hasattr(self, 'type'):
                     print(self.type, self.type == 'B')
@@ -196,7 +200,7 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
-    def prune_empty_silences(self, verbose = False):
+    def prune_empty_presilences(self, verbose = False):
         """
         Remove empty silence markers (i.e., those with no distinct duration)
         """
@@ -219,6 +223,35 @@ class Mix():
                 del self.fr[i]
             else:
                 i += 1
+
+    def prune_empty_postsilences(self, verbose = False):
+        """
+        Remove empty silence markers (i.e., those with no distinct duration)
+        """
+        if not "orig_fr" in self.__dict__:
+            self.orig_fr = deepcopy(self.fr)
+        i = 1
+        warned = False
+        def check_cur(cur, prev):
+            if verbose and not cur.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {cur}")
+            if verbose and not prev.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {prev}")
+            return cur.get_seconds() == prev.get_seconds() and cur.is_silence_word()
+        while i < len(self.fr):
+            if check_cur(self.fr[i], self.fr[i - 1]):
+                if verbose:
+                    if not warned:
+                        warned = True
+                        print(f"Empty silence in {self.path}:")
+                    print(self.fr[i])
+                del self.fr[i]
+            else:
+                i += 1
+
+    def prune_empty_silences(self, verbose = False):
+        self.prune_empty_presilences(verbose)
+        self.prune_empty_postsilences(verbose)
 
     def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
         times = self.get_time_pairs(as_frames=as_frames)
