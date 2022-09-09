@@ -1,4 +1,5 @@
 from collections import namedtuple
+from copy import deepcopy
 from .exceptions import FRExpected
 
 
@@ -81,6 +82,7 @@ class FR:
 class Mix():
     def __init__(self, filepath: str, stringfile=None):
         self.fr = []
+        self.path = filepath
         if stringfile is None:
             with open(filepath) as inpf:
                 self.read_data(inpf.readlines())
@@ -156,6 +158,23 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
+    def prune_empty_silences(self, verbose = False):
+        self.orig_fr = deepcopy(self.fr)
+        i = 0
+        warned = False
+        while i < len(self.fr) - 1:
+            cur = self.fr[i]
+            next = self.fr[i + 1]
+            if cur.seconds == next.seconds and cur.label == "XX":
+                if verbose:
+                    if not warned:
+                        warned = True
+                        print(f"Empty silence in {self.path}:")
+                    print(self.fr[i])
+                del self.fr[i]
+            else:
+                i += 1
+
     def get_phone_label_tuples(self, as_frames=False):
         times = self.get_time_pairs(as_frames=as_frames)
         if self.check_fr():
@@ -180,7 +199,9 @@ class Mix():
                     print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
         return out
 
-    def get_merged_plosives(self):
+    def get_merged_plosives(self, noop = False):
+        if noop:
+            return self.prune_empty_labels()
         i = 0
         sils = {
             "K": "k",
