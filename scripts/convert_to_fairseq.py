@@ -49,22 +49,22 @@ def main():
     transcript = str(outpath / "train.ltr")
 
     with open(manifest, "w") as m_out, open(transcript, "w") as t_out:
-        m_out.write(str(outpath) + "\n")
+        m_out.write(str(outpath.resolve()) + "\n")
         for file in inpath.glob("**/*.mix"):
             stem = file.stem.replace(".smp", "")
             frames = 0
 
             if args.audio:
                 smpfile = str(file).replace(".mix", "")
-                wavfile = outpath / f"{stem}.wav"
+                wavfile = str(outpath / f"{stem}.wav")
                 smp_to_wav(smpfile, wavfile)
                 frames, _ = sf.read(wavfile)
 
             mix = Mix(file)
-            mix.prune_empty_silences(verbose=True)
+            mix.prune_empty_silences(verbose=False)
             if args.phonetic:
-                labels = mix.get_phone_label_tuples()
-                labels = [_clean_phone(x[2]) for x in labels]
+                labels = mix.get_merged_plosives()
+                labels = [_clean_phone(x[2]) for x in labels if x != "."]
                 label_text = " ".join(labels)
             else:
                 labels = mix.get_word_label_tuples()
