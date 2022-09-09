@@ -287,17 +287,17 @@ class Mix():
             i = 0
             cur = None
             while i < len(labels_raw) - 1:
-                if labels_raw[i][1].type == "B":
+                if labels_raw[i][1].is_type("B"):
                     if cur is not None:
                         out.append(cur)
-                    if labels_raw[i+1][1].type == "B":
+                    if labels_raw[i+1][1].is_type("B"):
                         out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word))
                         cur = None
                         i += 1
                         continue
                     else:
                         cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
-                if labels_raw[i+1][1].type == "B":
+                if labels_raw[i+1][1].is_type("B"):
                     if cur is not None:
                         cur = (cur[0], labels_raw[i][0][1], cur[2])
                 i += 1
@@ -326,7 +326,7 @@ class Mix():
                     current_phones.clear()
                 prev_word = fr.word
                 current_phones.append(phone)
-            elif fr.type == "I":
+            elif fr.is_type("I"):
                 phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
