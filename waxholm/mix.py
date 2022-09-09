@@ -159,13 +159,16 @@ class Mix():
         return [x for x in zip(starts, ends)]
 
     def prune_empty_silences(self, verbose = False):
+        """
+        Remove empty silence markers (i.e., those with no distinct duration)
+        """
         self.orig_fr = deepcopy(self.fr)
         i = 0
         warned = False
         while i < len(self.fr) - 1:
             cur = self.fr[i]
             next = self.fr[i + 1]
-            if cur.seconds == next.seconds and cur.label == "XX":
+            if cur.seconds == next.seconds and "word" in cur and cur.word == "XX":
                 if verbose:
                     if not warned:
                         warned = True
