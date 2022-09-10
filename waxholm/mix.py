@@ -93,9 +93,12 @@ class FR:
         else:
             return None
 
-    def is_silence_word(self):
+    def is_silence_word(self, noise=False):
         if 'word' in self.__dict__:
-            return self.word == "XX"
+            if not noise:
+                return self.word == "XX"
+            else:
+                return self.word.startswith("X") and self.word.endswith("X")
         else:
             return False
     
@@ -113,6 +116,12 @@ class FR:
             return int(self.frame) / 16000.0
         else:
             return self.seconds
+
+    def  get_word(self):
+        if "word" in self.__dict__:
+            return self.word
+        else:
+            return ""
 
 
 class Mix():
@@ -200,7 +209,7 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
-    def prune_empty_presilences(self, verbose = False):
+    def prune_empty_presilences(self, verbose=False, include_noises=False):
         """
         Remove empty silence markers (i.e., those with no distinct duration)
         """
@@ -224,7 +233,7 @@ class Mix():
             else:
                 i += 1
 
-    def prune_empty_postsilences(self, verbose = False):
+    def prune_empty_postsilences(self, verbose=False, include_noises=False):
         """
         Remove empty silence markers (i.e., those with no distinct duration)
         """
@@ -312,7 +321,7 @@ class Mix():
                 i += 1
         return out
 
-    def get_word_label_tuples(self):
+    def get_word_label_tuples(self, verbose=True):
         times = self.get_time_pairs()
         if len(times) == len(self.fr[0:-1]):
             out = []
@@ -324,12 +333,16 @@ class Mix():
                     if cur is not None:
                         out.append(cur)
                     if labels_raw[i+1][1].is_type("B"):
-                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word))
+                        if verbose and labels_raw[i][1].get_word() == "":
+                            print("Expected word", labels_raw[i][1])
+                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word()))
                         cur = None
                         i += 1
                         continue
                     else:
-                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
+                        if verbose and labels_raw[i][1].get_word() == "":
+                            print("Expected word", labels_raw[i][1])
+                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word())
                 if labels_raw[i+1][1].is_type("B"):
                     if cur is not None:
                         cur = (cur[0], labels_raw[i][0][1], cur[2])
