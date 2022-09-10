@@ -20,12 +20,23 @@ def _clean_phone(phone):
 def _clean_word(word):
     if "XX" in word:
         return ""
+    elif word.startswith("X") and word.endswith("X"):
+        return ""
     else:
         return word
 
 
 def clean_words(words):
     return [x for x in words if _clean_word(x) != ""]
+
+
+DISCARD_PHONES = [
+    "pa", "."
+]
+
+
+def clean_phones(phones):
+    return [_clean_phone(x) for x in phones if x not in DISCARD_PHONES]
 
 
 def main():
@@ -64,7 +75,7 @@ def main():
             mix.prune_empty_silences(verbose=False)
             if args.phonetic:
                 labels = mix.get_merged_plosives()
-                labels = [_clean_phone(x[2]) for x in labels if x != "."]
+                labels = clean_phones(labels)
                 label_text = " ".join(labels)
             else:
                 labels = mix.get_word_label_tuples()
