@@ -58,6 +58,8 @@ class FR:
                 self.pseudoword = True
             elif subpart == "OK":
                 self.type = 'E'
+            elif subpart == "PROBLEMS":
+                self.type = 'E'
 
     def get_type(self):
         if "type" in self.__dict__:
