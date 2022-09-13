@@ -81,6 +81,12 @@ class FR:
             parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
 
+    def fix_type(self):
+        if self.is_type("B") and self.get_word() == "":
+            self.pm_type = "$"
+            self.phone_type = "$"
+            self.type = "I"
+
     def get_phone(self, fix_accents=True):
         def fix_accents(phone, fix_accents=True):
             if not fix_accents:
@@ -118,7 +124,7 @@ class FR:
             return self.seconds
 
     def get_word(self):
-        if "word" in self.__dict__:
+        if self.has_word():
             return self.word
         else:
             return ""
@@ -128,7 +134,7 @@ class FR:
 
 
 class Mix():
-    def __init__(self, filepath: str, stringfile=None):
+    def __init__(self, filepath: str, stringfile=None, fix_type=True):
         self.fr = []
         self.path = filepath
         if stringfile is None:
@@ -136,6 +142,9 @@ class Mix():
                 self.read_data(inpf.readlines())
         else:
             self.read_data(stringfile.split("\n"))
+        if fix_type:
+            for fr in self.fr:
+                fr.fix_type()
 
     def read_data(self, inpf):  # C901
         """read data from text of a .mix file"""
