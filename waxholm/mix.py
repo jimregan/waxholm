@@ -111,17 +111,20 @@ class FR:
     def has_seconds(self):
         return "seconds" in self.__dict__
 
-    def  get_seconds(self):
+    def get_seconds(self):
         if not self.has_seconds() and "frame" in self.__dict__:
             return int(self.frame) / 16000.0
         else:
             return self.seconds
 
-    def  get_word(self):
+    def get_word(self):
         if "word" in self.__dict__:
             return self.word
         else:
             return ""
+
+    def has_word(self):
+        return "word" in self.__dict__
 
 
 class Mix():
@@ -332,7 +335,7 @@ class Mix():
                 if labels_raw[i][1].is_type("B"):
                     if cur is not None:
                         out.append(cur)
-                    if labels_raw[i+1][1].is_type("B"):
+                    if labels_raw[i+1][1].is_type("B") and labels_raw[i+1][1].has_word():
                         if verbose and labels_raw[i][1].get_word() == "":
                             print("Expected word", labels_raw[i][1])
                         out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word()))
