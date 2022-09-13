@@ -1288,15 +1288,6 @@ Textgrid has a max timestamp of (4.135) but tier has (3.961)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2040/fp2040.13.09.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2040/fp2040.13.09.smp.mix:
 FR(type: B, frame: 23268, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.454)
-Expected word FR(type: B, frame: 15147, phone: R, pm_type: #, pm: R, sec: 0.947)
-Traceback (most recent call last):
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 62, in <module>
-    main()
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 52, in main
-    word_tier = textgrid.IntervalTier("words", mix.get_word_label_tuples())
-  File "/Users/joregan/opt/anaconda3/envs/waxholm/lib/python3.10/site-packages/praatio/data_classes/interval_tier.py", line 57, in __init__
-    raise errors.TextgridStateError(
-praatio.utilities.errors.TextgridStateError: The start time of an interval (0.947) cannot occur after its end time (0.947)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2040/fp2040.14.02.smp.mix
 
@@ -2950,7 +2941,6 @@ FR(type: B, frame: 11225, phone: p:, word: XX, pm_type: #, pm: p:, sec: 0.701)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2055/fp2055.pr.04.smp.mix
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2055/fp2055.1.01.smp.mix
-Expected word FR(type: B, frame: 7588, phone: F, pm_type: #, pm: F, sec: 0.474)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2055/fp2055.pr.11.smp.mix
 Textgrid has a max timestamp of (1.69) but tier has (1.599)
@@ -4299,7 +4289,6 @@ FR(type: B, frame: 17415, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.088)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2045/fp2045.pr.11.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2045/fp2045.pr.11.smp.mix:
 FR(type: B, frame: 31781, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.986)
-Expected word FR(type: B, frame: 34326, phone: v, sec: 2.145)
 Textgrid has a max timestamp of (3.291) but tier has (3.1)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2045/fp2045.1.09.smp.mix
@@ -4366,8 +4355,6 @@ FR(type: B, frame: 39801, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.487)
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2020/fp2020.pr.10.smp.mix:
 FR(type: B, frame: 57083, phone: p:, word: XX, pm_type: #, pm: p:, sec: 3.568)
 FR(type: B, frame: 58536, phone: p:, word: XX, pm_type: #, pm: p:, sec: 3.658)
-Expected word FR(type: B, frame: 46434, phone: T, pm_type: #, pm: T, sec: 2.902)
-Expected word FR(type: B, frame: 47625, phone: t, pm_type: #, pm: t, sec: 2.977)
 Textgrid has a max timestamp of (4.256) but tier has (4.174)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2020/fp2020.1.04.smp.mix
@@ -4666,7 +4653,6 @@ FR(type: B, frame: 13641, phone: p:, word: XX, pm_type: #, pm: p:, sec: 0.853)
 FR(type: B, frame: 29531, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.846)
 FR(type: B, frame: 62321, phone: p:, word: XX, pm_type: #, pm: p:, sec: 3.895)
 FR(type: B, frame: 81413, phone: p:, word: XX, pm_type: #, pm: p:, sec: 5.088)
-Expected word FR(type: B, frame: 43601, phone: p:, pm_type: #, pm: p:, sec: 2.725)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2027/fp2027.pr.05.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2027/fp2027.pr.05.smp.mix:
@@ -5540,7 +5526,6 @@ FR(type: B, frame: 36893, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.306)
 FR(type: B, frame: 41266, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.579)
 FR(type: B, frame: 52401, phone: p:, word: XX, pm_type: #, pm: p:, sec: 3.275)
 FR(type: B, frame: 56815, phone: p:, word: XX, pm_type: #, pm: p:, sec: 3.551)
-Expected word FR(type: B, frame: 40723, phone: G, pm_type: $, pm: G, sec: 2.545)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2043/fp2043.11.02.smp.mix
 Traceback (most recent call last):
@@ -5781,7 +5766,6 @@ FR(type: B, frame: 124734, phone: p:, word: XX, pm_type: #, pm: p:, sec: 7.796)
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.05.smp.mix:
 FR(type: B, frame: 25561, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.597)
 FR(type: B, frame: 42281, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.642)
-Expected word FR(type: B, frame: 39561, phone: S, pm_type: #, pm: S, sec: 2.473)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.15.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.15.smp.mix:
@@ -5822,7 +5806,6 @@ FR(type: B, frame: 74985, phone: p:, word: XX, pm_type: #, pm: p:, sec: 4.687)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.04.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.04.smp.mix:
 FR(type: B, frame: 33949, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.122)
-Expected word FR(type: B, frame: 52977, phone: S, pm_type: #, pm: S, sec: 3.311)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.49.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.49.smp.mix:
@@ -5961,15 +5944,6 @@ Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2
 FR(type: B, frame: 21318, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.332)
 FR(type: B, frame: 27360, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.710)
 FR(type: B, frame: 33126, phone: p:, word: XX, pm_type: #, pm: p:, sec: 2.070)
-Expected word FR(type: B, frame: 45405, phone: S, pm_type: #, pm: S, sec: 2.838)
-Traceback (most recent call last):
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 62, in <module>
-    main()
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 52, in main
-    word_tier = textgrid.IntervalTier("words", mix.get_word_label_tuples())
-  File "/Users/joregan/opt/anaconda3/envs/waxholm/lib/python3.10/site-packages/praatio/data_classes/interval_tier.py", line 57, in __init__
-    raise errors.TextgridStateError(
-praatio.utilities.errors.TextgridStateError: The start time of an interval (2.838) cannot occur after its end time (2.838)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.28.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2028/fp2028.2.28.smp.mix:
@@ -7303,7 +7277,6 @@ Textgrid has a max timestamp of (3.772) but tier has (3.581)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2066/fp2066.1.12.smp.mix
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2066/fp2066.pr.08.smp.mix
-Expected word FR(type: B, frame: 46835, phone: p:, pm_type: #, pm: p:, sec: 2.927)
 Textgrid has a max timestamp of (5.857) but tier has (5.756)
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2066/fp2066.16.05.smp.mix
