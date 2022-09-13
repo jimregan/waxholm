@@ -335,7 +335,7 @@ class Mix():
                 if labels_raw[i][1].is_type("B"):
                     if cur is not None:
                         out.append(cur)
-                    if labels_raw[i+1][1].is_type("B") and labels_raw[i+1][1].has_word():
+                    if labels_raw[i+1][1].is_type("B"):
                         if verbose and labels_raw[i][1].get_word() == "":
                             print("Expected word", labels_raw[i][1])
                         out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word()))
