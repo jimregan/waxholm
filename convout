@@ -3402,22 +3402,6 @@ FR(type: B, frame: 12133, phone: p:, word: XX, pm_type: #, pm: p:, sec: 0.758)
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2008/fp2008.1.01.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2008/fp2008.1.01.smp.mix:
 FR(type: B, frame: 21914, phone: p:, word: XX, pm_type: #, pm: p:, sec: 1.370)
-/Users/joregan/Playing/waxholm/scenes_formatted/fp2008/fp2008.1.01.smp.mix: missing end type
-Traceback (most recent call last):
-  File "/Users/joregan/opt/anaconda3/envs/waxholm/lib/python3.10/site-packages/praatio/data_classes/interval_tier.py", line 78, in __init__
-    resolvedMinT = min(minTimeList)
-ValueError: min() arg is an empty sequence
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 62, in <module>
-    main()
-  File "/Users/joregan/Playing/waxholm-module/waxholm/scripts/convert_to_textgrid.py", line 52, in main
-    word_tier = textgrid.IntervalTier("words", mix.get_word_label_tuples())
-  File "/Users/joregan/opt/anaconda3/envs/waxholm/lib/python3.10/site-packages/praatio/data_classes/interval_tier.py", line 81, in __init__
-    raise errors.TimelessTextgridTierException()
-praatio.utilities.errors.TimelessTextgridTierException: All textgrid tiers much have a min and max duration
 
 /Users/joregan/Playing/waxholm/scenes_formatted/fp2008/fp2008.4.00.smp.mix
 Empty silence in /Users/joregan/Playing/waxholm/scenes_formatted/fp2008/fp2008.4.00.smp.mix:
