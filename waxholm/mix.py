@@ -284,17 +284,15 @@ class Mix():
         if len(times) != len(self.fr):
             print("Uh oh: time pairs and items don't match")
         else:
-            deletions = []
-            while i < len(self.fr):
-                cur_time = times[i]
+            keep = []
+            for fr in zip(self.fr, times):
+                cur_time = fr[1]
                 if cur_time[0] == cur_time[1]:
                     if verbose:
-                        print(f"Empty segment {self.fr[i].get_phone()} ({times[0]} --> {times[1]})")
-                    #del self.fr[i]
-                    deletions.append(i)
-                i += 1
-            for x in deletions.reverse():
-                del(self.fr[i])
+                        print(f"Empty segment {fr[0].get_phone()} ({cur_time[0]} --> {cur_time[1]})")
+                else:
+                    keep.append(fr[0])
+            self.fr = keep
 
     def prune_empty_silences(self, verbose = False):
         self.prune_empty_presilences(verbose)
