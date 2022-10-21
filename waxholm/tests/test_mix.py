@@ -80,7 +80,7 @@ def test_get_dictionary():
     dictionary = mix.get_dictionary()
     assert len(dictionary.keys()) == 7
     assert "vill" in dictionary.keys()
-    assert dictionary["vill"] == [["V", "'I", "L+"]]
+    assert dictionary["vill"] == [["V", "ˈI", "L+"]]
 
 
 def test_get_time_pairs_seconds():
