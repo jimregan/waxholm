@@ -1,4 +1,5 @@
 from collections import namedtuple
+from copy import deepcopy
 from .exceptions import FRExpected
 
 
@@ -69,18 +70,29 @@ class FR:
         parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
 
-    def get_phone(self):
+    def get_phone(self, fix_accents=True):
+        def fix_accents(phone, fix_accents=True):
+            if not fix_accents:
+                return phone
+            return phone.replace("'", "ˈ").replace('"', "ˌ")
         if 'pm' in self.__dict__:
-            return self.pm
+            return fix_accents(self.pm, fix_accents)
         elif 'phone' in self.__dict__:
-            return self.phone
+            return fix_accents(self.phone, fix_accents)
         else:
             return None
+
+    def is_silence_word(self):
+        if 'word' in self.__dict__:
+            return self.word == "XX"
+        else:
+            return False
 
 
 class Mix():
     def __init__(self, filepath: str, stringfile=None):
         self.fr = []
+        self.path = filepath
         if stringfile is None:
             with open(filepath) as inpf:
                 self.read_data(inpf.readlines())
@@ -156,10 +168,30 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
-    def get_phone_label_tuples(self, as_frames=False):
+    def prune_empty_silences(self, verbose = False):
+        """
+        Remove empty silence markers (i.e., those with no distinct duration)
+        """
+        self.orig_fr = deepcopy(self.fr)
+        i = 0
+        warned = False
+        def check_cur(cur, next):
+            return cur.seconds == next.seconds and cur.is_silence_word()
+        while i < len(self.fr) - 1:
+            if check_cur(self.fr[i], self.fr[i + 1]):
+                if verbose:
+                    if not warned:
+                        warned = True
+                        print(f"Empty silence in {self.path}:")
+                    print(self.fr[i])
+                del self.fr[i]
+            else:
+                i += 1
+
+    def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
         times = self.get_time_pairs(as_frames=as_frames)
         if self.check_fr():
-            labels = [fr.get_phone() for fr in self.fr[0:-1]]
+            labels = [fr.get_phone(fix_accents) for fr in self.fr[0:-1]]
         else:
             labels = []
         if len(times) == len(labels):
@@ -180,7 +212,15 @@ class Mix():
                     print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
         return out
 
-    def merge_plosives(self):
+    def get_merged_plosives(self, noop = False):
+        """
+        Returns a list of phones with plosives merged
+        (in Waxholm, as in TIMIT, the silence before the burst and the burst
+        are annotated separately).
+        If `noop` is True, it simply returns the output of `prune_empty_labels()`
+        """
+        if noop:
+            return self.prune_empty_labels()
         i = 0
         sils = {
             "K": "k",
@@ -211,15 +251,30 @@ class Mix():
         times = self.get_time_pairs()
         if len(times) == len(self.fr[0:-1]):
             out = []
-            for z in zip(times, self.fr[0:-1]):
-                if z[1].type == "B":
-                    out.append((z[0][0], z[0][1], z[1].word))
+            labels_raw = [x for x in zip(times, self.fr[0:-1])]
+            i = 0
+            cur = None
+            while i < len(labels_raw) - 1:
+                if labels_raw[i][1].type == "B":
+                    if cur is not None:
+                        out.append(cur)
+                    if labels_raw[i+1][1].type == "B":
+                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word))
+                        cur = None
+                        i += 1
+                        continue
+                    else:
+                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
+                if labels_raw[i+1][1].type == "B":
+                    if cur is not None:
+                        cur = (cur[0], labels_raw[i][0][1], cur[2])
+                i += 1
+            out.append(cur)
             return out
         else:
             return []
 
-
-    def get_dictionary(self):
+    def get_dictionary(self, fix_accents=True):
         """
         Get pronunciation dictionary entries from the .mix file.
         These entries are based on the corrected pronunciations; for
@@ -231,7 +286,7 @@ class Mix():
 
         for fr in self.fr:
             if 'word' in fr.__dict__:
-                phone = fr.get_phone()
+                phone = fr.get_phone(fix_accents)
                 if prev_word != "":
                     if prev_word not in output:
                         output[prev_word] = []
@@ -240,7 +295,7 @@ class Mix():
                 prev_word = fr.word
                 current_phones.append(phone)
             elif fr.type == "I":
-                phone = fr.get_phone()
+                phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
                 if prev_word not in output:

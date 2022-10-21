@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # flake8: noqa
 
-from collections import namedtuple
 from waxholm import FR, Mix
 from praatio import textgrid
 from praatio.utilities.constants import Interval
@@ -47,6 +46,7 @@ def main():
             smp_to_wav(smpfile, wavfile)
 
         mix = Mix(file)
+        mix.prune_empty_silences(verbose=True)
         tg = textgrid.Textgrid()
 
         word_tier = textgrid.IntervalTier("words", mix.get_word_label_tuples())
