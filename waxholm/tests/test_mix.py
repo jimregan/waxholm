@@ -106,6 +106,4 @@ def test_get_merged_plosives():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     assert len(mix.fr) == 31
     merged = mix.get_merged_plosives(prune_empty=False)
-    print(merged)
-    print(mix.get_phone_label_tuples())
-    assert len(merged) == 26
+    assert len(merged) == 24
