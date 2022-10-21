@@ -116,4 +116,4 @@ def test_merge_plosives():
     print(mix.orig_fr)
     print(mix.fr)
     assert "orig_fr" in mix.__dict__
-    assert len(mix.fr) == 26
+    assert len(mix.fr) == 25
