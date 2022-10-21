@@ -371,7 +371,7 @@ class Mix():
         if not "orig_fr" in self.__dict__:
             self.orig_fr = deepcopy(self.fr)
         tmp = []
-        for i in range(0, len(self.fr)-1):
+        while i < len(self.fr)-1:
             merged = merge_frs(self.fr[i], self.fr[i+1])
             if merged is not None:
                 if verbose:
@@ -380,6 +380,7 @@ class Mix():
                 tmp.append(merged)
             else:
                 tmp.append(self.fr[i])
+            i += 1
         self.fr = tmp
 
     def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
