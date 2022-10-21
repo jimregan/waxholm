@@ -101,3 +101,9 @@ def test_get_phone_label_tuples():
     tuples = mix.get_phone_label_tuples(as_frames=True)
     assert tuples[0] == (4196, 5638, "J")
     assert tuples[-1] == (35570, 36001, ".")
+
+def test_get_merged_plosives():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    assert len(mix.fr) == 0 # meant to fail, for now
+    merged = mix.get_merged_plosives()
+    assert len(merged) == 0
