@@ -383,6 +383,7 @@ class Mix():
             else:
                 tmp.append(self.fr[i])
             i += 1
+        tmp.append(self.fr[-1])
         self.fr = tmp
 
     def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
