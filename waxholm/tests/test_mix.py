@@ -115,3 +115,9 @@ def test_merge_plosives():
     mix.merge_plosives()
     assert "orig_fr" in mix.__dict__
     assert len(mix.fr) == 26
+
+def test_get_compare_dictionary():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    pdict = mix.get_compare_dictionary()
+    print(pdict[0])
+    assert 0 == 1
