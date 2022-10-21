@@ -529,10 +529,10 @@ class Mix():
                 output.append((prev_word, " ".join(current_phones)))
                 return output
 
-    def get_compare_dictionary(self, fix_accents=True, merge_plosives=True):
-        orig = self.get_dictionary_list(fix_accents)
+    def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
         if merge_plosives:
             self.merge_plosives()
+        orig = self.get_dictionary_list(fix_accents)
         self.prune_empty_labels()
         new = self.get_dictionary_list(fix_accents)
         if len(orig) != len(new):
@@ -549,7 +549,8 @@ class Mix():
         while i < len(orig):
             if orig[i][0] == new[i][0]:
                 if orig[i][1] == new[i][1]:
-                    out.append(orig)
+                    if not only_changed:
+                        out.append(orig)
                 else:
                     out.append((orig[0], orig[1], new[1]))
             i += 1
