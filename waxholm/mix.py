@@ -525,7 +525,7 @@ class Mix():
         if merge_plosives:
             self.merge_plosives()
         orig = self.get_dictionary_list(fix_accents)
-        self.prune_empty_segments(verbose=True)
+        self.prune_empty_segments()
         new = self.get_dictionary_list(fix_accents)
         if len(orig) != len(new):
             words_orig = [w[0] for w in orig]
