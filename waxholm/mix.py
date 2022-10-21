@@ -402,16 +402,6 @@ class Mix():
         else:
             return []
 
-    def prune_empty_labels(self, debug = False):
-        out = []
-        for label in self.get_phone_label_tuples():
-            if label[0] != label[1]:
-                out.append(label)
-            else:
-                if debug:
-                    print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
-        return out
-
     def get_merged_plosives(self, noop=False, prune_empty=True):
         """
         Returns a list of phones with plosives merged
@@ -534,7 +524,7 @@ class Mix():
         if merge_plosives:
             self.merge_plosives()
         orig = self.get_dictionary_list(fix_accents)
-        self.prune_empty_labels(verbose=True)
+        self.prune_empty_segments(verbose=True)
         new = self.get_dictionary_list(fix_accents)
         if len(orig) != len(new):
             words_orig = [w[0] for w in orig]
