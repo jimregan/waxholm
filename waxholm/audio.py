@@ -1,4 +1,5 @@
 import soundfile as sf
+from pathlib import Path
 
 
 def smp_headers(filename: str):
@@ -42,5 +43,9 @@ def write_wav(filename, arr):
 
 
 def smp_to_wav(infile, outfile):
+    if type(infile) == Path:
+        infile = str(infile)
+    if type(outfile) == Path:
+        outfile = str(outfile)
     data, sr = smp_read_sf(infile)
     write_wav(outfile, data)

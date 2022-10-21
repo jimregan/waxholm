@@ -80,7 +80,7 @@ def test_get_dictionary():
     dictionary = mix.get_dictionary()
     assert len(dictionary.keys()) == 7
     assert "vill" in dictionary.keys()
-    assert dictionary["vill"] == [["V", "'I", "L+"]]
+    assert dictionary["vill"] == [["V", "ˈI", "L+"]]
 
 
 def test_get_time_pairs_seconds():
@@ -101,3 +101,17 @@ def test_get_phone_label_tuples():
     tuples = mix.get_phone_label_tuples(as_frames=True)
     assert tuples[0] == (4196, 5638, "J")
     assert tuples[-1] == (35570, 36001, ".")
+
+def test_get_merged_plosives():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    assert len(mix.fr) == 31
+    merged = mix.get_merged_plosives(prune_empty=False)
+    assert len(merged) == 24
+
+def test_merge_plosives():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    assert "orig_fr" not in mix.__dict__
+    assert len(mix.fr) == 31
+    mix.merge_plosives()
+    assert "orig_fr" in mix.__dict__
+    assert len(mix.fr) == 26
