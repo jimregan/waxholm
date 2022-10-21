@@ -46,6 +46,10 @@ class FR:
                 self.type = 'B'
                 self.word = fix_text(subpart[4:])
                 self.pseudoword = False
+            elif subpart == "> XklickX" or subpart == "> XutandX":
+                self.type = 'B'
+                self.word = subpart[2:]
+                self.pseudoword = True
             elif subpart.startswith("X"):
                 if hasattr(self, 'type'):
                     print(self.type, self.type == 'B')
@@ -54,21 +58,36 @@ class FR:
                 self.pseudoword = True
             elif subpart == "OK":
                 self.type = 'E'
+            elif subpart == "PROBLEMS":
+                self.type = 'E'
+
+    def get_type(self):
+        if "type" in self.__dict__:
+            return self.type
+        else:
+            return ""
 
     def __repr__(self):
         parts = []
-        parts.append(f"type: {self.type}")
+        parts.append(f"type: {self.get_type()}")
         parts.append(f"frame: {self.frame}")
-        if self.type != 'E':
-            parts.append(f"phone: {self.phone}")
+        if self.get_type() != 'E':
+            parts.append(f"phone: {self.get_phone()}")
         if 'word' in self.__dict__:
             parts.append(f"word: {self.word}")
         if 'pm_type' in self.__dict__:
             parts.append(f"pm_type: {self.pm_type}")
         if 'pm' in self.__dict__:
             parts.append(f"pm: {self.pm}")
-        parts.append(f"sec: {self.seconds}")
+        if 'seconds' in self.__dict__:
+            parts.append(f"sec: {self.seconds}")
         return "FR(" + ", ".join(parts) + ")"
+
+    def fix_type(self):
+        if self.is_type("B") and self.get_word() == "":
+            self.pm_type = "$"
+            self.phone_type = "$"
+            self.type = "I"
 
     def get_phone(self, fix_accents=True):
         def fix_accents(phone, fix_accents=True):
@@ -82,15 +101,42 @@ class FR:
         else:
             return None
 
-    def is_silence_word(self):
+    def is_silence_word(self, noise=False):
         if 'word' in self.__dict__:
-            return self.word == "XX"
+            if not noise:
+                return self.word == "XX"
+            else:
+                return self.word.startswith("X") and self.word.endswith("X")
+        else:
+            return False
+    
+    def is_type(self, type):
+        if "type" in self.__dict__:
+            return type == self.type
         else:
             return False
 
+    def has_seconds(self):
+        return "seconds" in self.__dict__
+
+    def get_seconds(self):
+        if not self.has_seconds() and "frame" in self.__dict__:
+            return int(self.frame) / 16000.0
+        else:
+            return self.seconds
+
+    def get_word(self):
+        if self.has_word():
+            return self.word
+        else:
+            return ""
+
+    def has_word(self):
+        return "word" in self.__dict__
+
 
 class Mix():
-    def __init__(self, filepath: str, stringfile=None):
+    def __init__(self, filepath: str, stringfile=None, fix_type=True):
         self.fr = []
         self.path = filepath
         if stringfile is None:
@@ -98,6 +144,9 @@ class Mix():
                 self.read_data(inpf.readlines())
         else:
             self.read_data(stringfile.split("\n"))
+        if fix_type:
+            for fr in self.fr:
+                fr.fix_type()
 
     def read_data(self, inpf):  # C901
         """read data from text of a .mix file"""
@@ -133,7 +182,7 @@ class Mix():
             if saw_labels and line.startswith(" "):
                 self.labels += line.strip()
 
-    def check_fr(self) -> bool:
+    def check_fr(self, verbose=False) -> bool:
         """
         Simple sanity check: that there were FR lines,
         and that the first was a start type, and
@@ -143,13 +192,19 @@ class Mix():
             return False
         if len(self.fr) == 0:
             return False
-        return self.fr[0].type == "B" and self.fr[-1].type == "E"
+        start_end = self.fr[0].is_type("B") and self.fr[-1].is_type("E")
+        if verbose and not start_end:
+            if not self.fr[0].is_type("B"):
+                print(f"{self.path}: missing start type")
+            if not self.fr[-1].is_type("E"):
+                print(f"{self.path}: missing end type")
+        return start_end
 
     def get_times(self, as_frames=False):
         """
         get the times of each phoneme
         """
-        if not self.check_fr():
+        if not self.check_fr(verbose=True):
             return []
         if as_frames:
             times = [int(x.frame) for x in self.fr]
@@ -168,7 +223,7 @@ class Mix():
         ends = times[1:]
         return [x for x in zip(starts, ends)]
 
-    def prune_empty_silences(self, verbose = False):
+    def prune_empty_presilences(self, verbose=False, include_noises=False):
         """
         Remove empty silence markers (i.e., those with no distinct duration)
         """
@@ -176,7 +231,12 @@ class Mix():
         i = 0
         warned = False
         def check_cur(cur, next):
-            return cur.seconds == next.seconds and cur.is_silence_word()
+            if verbose and not cur.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {cur}")
+            if verbose and not next.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {next}")
+            return cur.get_seconds() == next.get_seconds() and cur.is_silence_word()
+        todel = []
         while i < len(self.fr) - 1:
             if check_cur(self.fr[i], self.fr[i + 1]):
                 if verbose:
@@ -184,9 +244,61 @@ class Mix():
                         warned = True
                         print(f"Empty silence in {self.path}:")
                     print(self.fr[i])
-                del self.fr[i]
-            else:
-                i += 1
+                todel.append(i)
+            i += 1
+        for chaff in todel.reverse():
+            del(self.fr[chaff])
+
+    def prune_empty_postsilences(self, verbose=False, include_noises=False):
+        """
+        Remove empty silence markers (i.e., those with no distinct duration)
+        """
+        if not "orig_fr" in self.__dict__:
+            self.orig_fr = deepcopy(self.fr)
+        i = 1
+        warned = False
+        def check_cur(cur, prev):
+            if verbose and not cur.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {cur}")
+            if verbose and not prev.has_seconds():
+                print(f"Missing seconds: {self.path}\nLine: {prev}")
+            return cur.get_seconds() == prev.get_seconds() and cur.is_silence_word()
+        todel = []
+        while i < len(self.fr):
+            if check_cur(self.fr[i], self.fr[i - 1]):
+                if verbose:
+                    if not warned:
+                        warned = True
+                        print(f"Empty silence in {self.path}:")
+                    print(self.fr[i])
+                todel.append(i)
+            i += 1
+        for chaff in todel.reverse():
+            del(self.fr[chaff])
+
+    def prune_empty_segments(self, verbose=False):
+        """
+        Remove empty segments (i.e., those with no distinct duration)
+        """
+        if not "orig_fr" in self.__dict__:
+            self.orig_fr = deepcopy(self.fr)
+        times = self.get_time_pairs(as_frames=True)
+        if len(times) != len(self.fr):
+            print("Uh oh: time pairs and items don't match")
+        else:
+            keep = []
+            for fr in zip(self.fr, times):
+                cur_time = fr[1]
+                if cur_time[0] == cur_time[1]:
+                    if verbose:
+                        print(f"Empty segment {fr[0].get_phone()} ({cur_time[0]} --> {cur_time[1]})")
+                else:
+                    keep.append(fr[0])
+            self.fr = keep
+
+    def prune_empty_silences(self, verbose = False):
+        self.prune_empty_presilences(verbose)
+        self.prune_empty_postsilences(verbose)
 
     def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
         times = self.get_time_pairs(as_frames=as_frames)
@@ -247,7 +359,7 @@ class Mix():
                 i += 1
         return out
 
-    def get_word_label_tuples(self):
+    def get_word_label_tuples(self, verbose=True):
         times = self.get_time_pairs()
         if len(times) == len(self.fr[0:-1]):
             out = []
@@ -255,17 +367,21 @@ class Mix():
             i = 0
             cur = None
             while i < len(labels_raw) - 1:
-                if labels_raw[i][1].type == "B":
+                if labels_raw[i][1].is_type("B"):
                     if cur is not None:
                         out.append(cur)
-                    if labels_raw[i+1][1].type == "B":
-                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word))
+                    if labels_raw[i+1][1].is_type("B"):
+                        if verbose and labels_raw[i][1].get_word() == "":
+                            print("Expected word", labels_raw[i][1])
+                        out.append((labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word()))
                         cur = None
                         i += 1
                         continue
                     else:
-                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].word)
-                if labels_raw[i+1][1].type == "B":
+                        if verbose and labels_raw[i][1].get_word() == "":
+                            print("Expected word", labels_raw[i][1])
+                        cur = (labels_raw[i][0][0], labels_raw[i][0][1], labels_raw[i][1].get_word())
+                if labels_raw[i+1][1].is_type("B"):
                     if cur is not None:
                         cur = (cur[0], labels_raw[i][0][1], cur[2])
                 i += 1
@@ -294,7 +410,7 @@ class Mix():
                     current_phones.clear()
                 prev_word = fr.word
                 current_phones.append(phone)
-            elif fr.type == "I":
+            elif fr.is_type("I"):
                 phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
