@@ -362,6 +362,26 @@ class Mix():
         self.prune_empty_presilences(verbose)
         self.prune_empty_postsilences(verbose)
 
+    def merge_plosives(self, verbose=False):
+        """
+        Merge plosives in FRs
+        (in Waxholm, as in TIMIT, the silence before the burst and the burst
+        are annotated separately).
+        """
+        if not "orig_fr" in self.__dict__:
+            self.orig_fr = deepcopy(self.fr)
+        tmp = []
+        for i in range(0, len(self.fr)):
+            merged = merge_frs(self.fr[i], self.fr[i+1])
+            if merged is not None:
+                if verbose:
+                    print(f"Merging {self.fr[i]} and {self.fr[i+1]}")
+                i += 1
+                tmp.append(merged)
+            else:
+                tmp.append(self.fr[i])
+        self.fr = tmp
+
     def get_phone_label_tuples(self, as_frames=False, fix_accents=True):
         times = self.get_time_pairs(as_frames=as_frames)
         if self.check_fr():
