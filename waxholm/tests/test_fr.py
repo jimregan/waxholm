@@ -104,3 +104,7 @@ def test_merge_frs():
     fr2 = FR(text="FR       8341	 $g	>pm $g	 0.521 sec")
     merge = merge_frs(fr1, fr2)
     assert merge.get_phone() == "g"
+    fr1 = FR(text="FR       8341	 $g	>pm $g	 0.521 sec")
+    fr2 = FR(text="FR       8341	 #V	>pm #V	>w vill	 0.521 sec")
+    merge = merge_frs(fr1, fr2)
+    assert merge is None
