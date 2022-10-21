@@ -348,7 +348,7 @@ class Mix():
         if not "orig_fr" in self.__dict__:
             self.orig_fr = deepcopy(self.fr)
         times = self.get_time_pairs(as_frames=True)
-        if len(times) != len(self.fr)-1:
+        if len(times) != (len(self.fr) - 1):
             print("Uh oh: time pairs and items don't match")
         else:
             keep = []
@@ -359,7 +359,7 @@ class Mix():
                         print(f"Empty segment {fr[0].get_phone()} ({cur_time[0]} --> {cur_time[1]})")
                 else:
                     keep.append(fr[0])
-            keep.append(fr[-1])
+            keep.append(self.fr[-1])
             self.fr = keep
 
     def prune_empty_silences(self, verbose = False):
