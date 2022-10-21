@@ -1,5 +1,6 @@
 from collections import namedtuple
 from copy import deepcopy
+from tabnanny import verbose
 from .exceptions import FRExpected
 from difflib import SequenceMatcher
 
@@ -533,7 +534,7 @@ class Mix():
         if merge_plosives:
             self.merge_plosives()
         orig = self.get_dictionary_list(fix_accents)
-        self.prune_empty_labels()
+        self.prune_empty_labels(verbose=True)
         new = self.get_dictionary_list(fix_accents)
         if len(orig) != len(new):
             words_orig = [w[0] for w in orig]
