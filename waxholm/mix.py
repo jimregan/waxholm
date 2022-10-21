@@ -236,6 +236,7 @@ class Mix():
             if verbose and not next.has_seconds():
                 print(f"Missing seconds: {self.path}\nLine: {next}")
             return cur.get_seconds() == next.get_seconds() and cur.is_silence_word()
+        todel = []
         while i < len(self.fr) - 1:
             if check_cur(self.fr[i], self.fr[i + 1]):
                 if verbose:
@@ -243,9 +244,10 @@ class Mix():
                         warned = True
                         print(f"Empty silence in {self.path}:")
                     print(self.fr[i])
-                del self.fr[i]
-            else:
-                i += 1
+                todel.append(i)
+            i += 1
+        for chaff in todel.reverse():
+            del(self.fr[chaff])
 
     def prune_empty_postsilences(self, verbose=False, include_noises=False):
         """
@@ -261,6 +263,7 @@ class Mix():
             if verbose and not prev.has_seconds():
                 print(f"Missing seconds: {self.path}\nLine: {prev}")
             return cur.get_seconds() == prev.get_seconds() and cur.is_silence_word()
+        todel = []
         while i < len(self.fr):
             if check_cur(self.fr[i], self.fr[i - 1]):
                 if verbose:
@@ -268,9 +271,10 @@ class Mix():
                         warned = True
                         print(f"Empty silence in {self.path}:")
                     print(self.fr[i])
-                del self.fr[i]
-            else:
-                i += 1
+                todel.append(i)
+            i += 1
+        for chaff in todel.reverse():
+            del(self.fr[chaff])
 
     def prune_empty_segments(self, verbose=False):
         """
@@ -278,8 +282,6 @@ class Mix():
         """
         if not "orig_fr" in self.__dict__:
             self.orig_fr = deepcopy(self.fr)
-        i = 1
-        warned = False
         times = self.get_time_pairs(as_frames=True)
         if len(times) != len(self.fr):
             print("Uh oh: time pairs and items don't match")
