@@ -324,7 +324,7 @@ class Mix():
                     print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
         return out
 
-    def get_merged_plosives(self, noop = False):
+    def get_merged_plosives(self, noop=False, prune_empty=True):
         """
         Returns a list of phones with plosives merged
         (in Waxholm, as in TIMIT, the silence before the burst and the burst
@@ -332,6 +332,9 @@ class Mix():
         If `noop` is True, it simply returns the output of `prune_empty_labels()`
         """
         if noop:
+            if not prune_empty:
+                print("Warning: not valid to set noop to True and prune_empty to false")
+                print("Ignoring prune_empty")
             return self.prune_empty_labels()
         i = 0
         sils = {
@@ -345,7 +348,10 @@ class Mix():
             "B": "b"
         }
         out = []
-        labels = self.prune_empty_labels()
+        if prune_empty:
+            labels = self.prune_empty_labels()
+        else:
+            labels = self.get_phone_label_tuples()
         while i < len(labels)-1:
             cur = labels[i]
             next = labels[i+1]
