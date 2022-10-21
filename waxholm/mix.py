@@ -163,11 +163,12 @@ class FR:
         return "pseudoword" in self.__dict__
 
 
-def merge_frs(fr1, fr2):
+def merge_frs(fr1, fr2, check_time=False):
     if fr2.has_word():
         return None
-    if fr1.get_seconds() != fr2.get_seconds():
-        return None
+    if check_time:
+        if fr1.get_seconds() != fr2.get_seconds():
+            return None
     if _is_glottal_closure(fr1.get_phone(), fr2.get_phone()):
         if not fr1.has_word():
             return fr2
