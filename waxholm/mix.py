@@ -272,6 +272,30 @@ class Mix():
             else:
                 i += 1
 
+    def prune_empty_segments(self, verbose=False):
+        """
+        Remove empty segments (i.e., those with no distinct duration)
+        """
+        if not "orig_fr" in self.__dict__:
+            self.orig_fr = deepcopy(self.fr)
+        i = 1
+        warned = False
+        times = self.get_time_pairs(as_frames=True)
+        if len(times) != len(self.fr):
+            print("Uh oh: time pairs and items don't match")
+        else:
+            deletions = []
+            while i < len(self.fr):
+                cur_time = times[i]
+                if cur_time[0] == cur_time[1]:
+                    if verbose:
+                        print(f"Empty segment {self.fr[i].get_phone()} ({times[0]} --> {times[1]})")
+                    #del self.fr[i]
+                    deletions.append(i)
+                i += 1
+            for x in deletions.reverse():
+                del(self.fr[i])
+
     def prune_empty_silences(self, verbose = False):
         self.prune_empty_presilences(verbose)
         self.prune_empty_postsilences(verbose)
