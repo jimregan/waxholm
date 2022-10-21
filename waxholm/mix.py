@@ -361,7 +361,8 @@ class Mix():
                 out.append(tmp)
                 i += 2
             else:
-                out.append(cur)
+                tmp = Label(start = cur[0], end = cur[1], label = cur[2])
+                out.append(tmp)
                 i += 1
         return out
 
