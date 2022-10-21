@@ -95,3 +95,9 @@ def test_get_time_pairs_frames():
     pairs = mix.get_time_pairs(as_frames=True)
     assert pairs[0] == (4196, 5638)
     assert pairs[-1] == (35570, 36001)
+
+def test_get_phone_label_tuples():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    tuples = mix.get_phone_label_tuples(as_frames=True)
+    assert tuples[0] == (4196, 5638, "J")
+    assert tuples[-1] == (35570, 36001, ".")
