@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from waxholm import FR
+from waxholm.mix import merge_frs
 
 
 def test_fr_begin1():
@@ -96,3 +97,10 @@ def test_fr_broken_inner1():
     assert 'pm' not in fr.__dict__
     assert 'seconds' in fr.__dict__
     assert fr.seconds == "2.145"
+
+
+def test_merge_frs():
+    fr1 = FR(text="FR       8341	 $G	>pm $G	 0.521 sec")
+    fr2 = FR(text="FR       8341	 $g	>pm $g	 0.521 sec")
+    merge = merge_frs(fr1, fr2)
+    assert merge.get_phone() == "g"

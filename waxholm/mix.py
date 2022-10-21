@@ -12,7 +12,9 @@ Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
 class FR:
-    def __init__(self, text="", pm=None, pm_type=None, type=None, frame=None, seconds=None, phone=None, phone_type=None, word=None, pseudoword=None):  # C901
+    def __init__(self, text="", pm=None, pm_type=None, type=None,
+                 frame=None, seconds=None, phone=None,
+                 phone_type=None, word=None, pseudoword=None):  # C901
         if text and text != "":
             self.from_text(text)
         else:
@@ -161,7 +163,7 @@ class FR:
         return "pseudoword" in self.__dict__
 
 
-def _merge_frs(fr1, fr2):
+def merge_frs(fr1, fr2):
     if fr2.has_word():
         return None
     if fr1.get_seconds() != fr2.get_seconds():
