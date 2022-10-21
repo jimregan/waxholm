@@ -12,7 +12,30 @@ Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
 class FR:
-    def __init__(self, text: str):  # C901
+    def __init__(self, text="", pm=None, pm_type=None, type=None, frame=None, seconds=None, phone=None, phone_type=None, word=None, pseudoword=None):  # C901
+        if text and text != "":
+            self.from_text(text)
+        else:
+            if pm:
+                self.pm = pm
+            if pm_type:
+                self.pm_type = pm_type
+            if type:
+                self.type = type
+            if frame:
+                self.frame = frame
+            if seconds:
+                self.seconds = seconds
+            if phone:
+                self.phone = phone
+            if phone_type:
+                self.phone_type = phone_type
+            if word:
+                self.word = word
+            if pseudoword:
+                self.pseudoword = pseudoword
+
+    def from_text(self, text: str):
         if not text.startswith("FR"):
             raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
@@ -134,6 +157,29 @@ class FR:
     def has_word(self):
         return "word" in self.__dict__
 
+    def has_pseudoword(self):
+        return "pseudoword" in self.__dict__
+
+
+def _merge_frs(fr1, fr2):
+    if fr2.has_word():
+        return None
+    if fr1.get_seconds() != fr2.get_seconds():
+        return None
+    if _is_glottal_closure(fr1.get_phone(), fr2.get_phone()):
+        if not fr1.has_word():
+            return fr2
+        else:
+            word = None
+            if fr1.has_word():
+                word = fr1.word
+            pword = None
+            if fr1.has_pseudoword():
+                pword = fr1.pseudoword
+            return FR(pm=fr2.pm, pm_type=fr2.pm_type, type=fr2.type,
+                      frame=fr2.frame, seconds=fr2.seconds, phone=fr2.phone,
+                      phone_type=fr2.phone_type, word=word, pseudoword=pword)
+
 
 def _is_glottal_closure(cur, next):
     sils = {
@@ -189,7 +235,7 @@ class Mix():
             if line.startswith("FR "):
                 if saw_labels:
                     saw_labels = False
-                self.fr.append(FR(line))
+                self.fr.append(FR(text=line))
             if line.startswith("Labels: "):
                 self.labels = line[8:].strip()
                 saw_labels = True
