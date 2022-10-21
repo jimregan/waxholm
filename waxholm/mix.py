@@ -371,7 +371,7 @@ class Mix():
         if not "orig_fr" in self.__dict__:
             self.orig_fr = deepcopy(self.fr)
         tmp = []
-        for i in range(0, len(self.fr)):
+        for i in range(0, len(self.fr)-1):
             merged = merge_frs(self.fr[i], self.fr[i+1])
             if merged is not None:
                 if verbose:
