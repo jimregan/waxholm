@@ -124,5 +124,4 @@ def test_get_compare_dictionary():
 
     mix = Mix(filepath="", stringfile=SAMPLE1)
     pdict = mix.get_compare_dictionary(only_changed=True)
-    print(len(pdict))
-    assert 1 == 0
+    assert len(pdict) == 1
