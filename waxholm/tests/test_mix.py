@@ -107,3 +107,11 @@ def test_get_merged_plosives():
     assert len(mix.fr) == 31
     merged = mix.get_merged_plosives(prune_empty=False)
     assert len(merged) == 24
+
+def test_merge_plosives():
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    assert "fr_orig" not in mix
+    assert len(mix.fr) == 31
+    mix.merge_plosives()
+    assert "fr_orig" in mix
+    assert len(mix.fr) == 26
