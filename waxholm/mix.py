@@ -552,4 +552,5 @@ class Mix():
                     out.append(orig)
                 else:
                     out.append((orig[0], orig[1], new[1]))
+            i += 1
         return out
