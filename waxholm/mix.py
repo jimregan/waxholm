@@ -1,6 +1,8 @@
 from collections import namedtuple
 from copy import deepcopy
+from tabnanny import verbose
 from .exceptions import FRExpected
+from difflib import SequenceMatcher
 
 
 def fix_text(text: str) -> str:
@@ -346,17 +348,18 @@ class Mix():
         if not "orig_fr" in self.__dict__:
             self.orig_fr = deepcopy(self.fr)
         times = self.get_time_pairs(as_frames=True)
-        if len(times) != len(self.fr):
+        if len(times) != (len(self.fr) - 1):
             print("Uh oh: time pairs and items don't match")
         else:
             keep = []
-            for fr in zip(self.fr, times):
+            for fr in zip(self.fr[:-1], times):
                 cur_time = fr[1]
                 if cur_time[0] == cur_time[1]:
                     if verbose:
                         print(f"Empty segment {fr[0].get_phone()} ({cur_time[0]} --> {cur_time[1]})")
                 else:
                     keep.append(fr[0])
+            keep.append(self.fr[-1])
             self.fr = keep
 
     def prune_empty_silences(self, verbose = False):
@@ -399,16 +402,6 @@ class Mix():
             return out
         else:
             return []
-
-    def prune_empty_labels(self, debug = False):
-        out = []
-        for label in self.get_phone_label_tuples():
-            if label[0] != label[1]:
-                out.append(label)
-            else:
-                if debug:
-                    print(f"Start: ({label[0]}); end: ({label[1]}); label {label[2]}")    
-        return out
 
     def get_merged_plosives(self, noop=False, prune_empty=True):
         """
@@ -500,3 +493,57 @@ class Mix():
                     output[prev_word] = []
                 output[prev_word].append(current_phones.copy())
                 return output
+
+    def get_dictionary_list(self, fix_accents=True):
+        """
+        Get pronunciation dictionary entries from the .mix file.
+        These entries are based on the corrected pronunciations; for
+        the lexical pronunciations, use the `phoneme` property.
+        This version creates a list of tuples (word, phones) that
+        preserves the order of the entries.
+        """
+        output = []
+        current_phones = []
+        prev_word = ''
+
+        for fr in self.fr:
+            if 'word' in fr.__dict__:
+                phone = fr.get_phone(fix_accents)
+                if prev_word != "":
+                    output.append((prev_word, " ".join(current_phones)))
+                    current_phones.clear()
+                prev_word = fr.word
+                current_phones.append(phone)
+            elif fr.is_type("I"):
+                phone = fr.get_phone(fix_accents)
+                current_phones.append(phone)
+            else:
+                output.append((prev_word, " ".join(current_phones)))
+                return output
+
+    def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
+        if merge_plosives:
+            self.merge_plosives()
+        orig = self.get_dictionary_list(fix_accents)
+        self.prune_empty_segments()
+        new = self.get_dictionary_list(fix_accents)
+        if len(orig) != len(new):
+            words_orig = [w[0] for w in orig]
+            words_new = [w[0] for w in new]
+            skippables = []
+            for tag, i, j, _, _ in SequenceMatcher(None, words_orig, words_new).get_opcodes():
+                if tag in ('delete', 'replace'):
+                    skippables += [a for a in range(i, j)]
+            for c in skippables.reverse():
+                del(orig[c])
+        out = []
+        i = 0
+        while i < len(orig):
+            if orig[i][0] == new[i][0]:
+                if orig[i][1] == new[i][1]:
+                    if not only_changed:
+                        out.append(orig)
+                else:
+                    out.append((orig[i][0], orig[i][1], new[i][1]))
+            i += 1
+        return out
