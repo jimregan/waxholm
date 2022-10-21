@@ -135,6 +135,20 @@ class FR:
         return "word" in self.__dict__
 
 
+def _is_glottal_closure(cur, next):
+    sils = {
+        "K": "k",
+        "G": "g",
+        "T": "t",
+        "D": "d",
+        "2T": "2t",
+        "2D": "2d",
+        "P": "p",
+        "B": "b"
+    }
+    return cur in sils and next == sils[cur]
+
+
 class Mix():
     def __init__(self, filepath: str, stringfile=None, fix_type=True):
         self.fr = []
@@ -337,16 +351,6 @@ class Mix():
                 print("Ignoring prune_empty")
             return self.prune_empty_labels()
         i = 0
-        sils = {
-            "K": "k",
-            "G": "g",
-            "T": "t",
-            "D": "d",
-            "2T": "2t",
-            "2D": "2d",
-            "P": "p",
-            "B": "b"
-        }
         out = []
         if prune_empty:
             labels = self.prune_empty_labels()
@@ -355,8 +359,7 @@ class Mix():
         while i < len(labels)-1:
             cur = labels[i]
             next = labels[i+1]
-            cl = cur[2]
-            if cl in sils.keys() and sils[cl] == next[2]:
+            if _is_glottal_closure(cur[2], next[2]):
                 tmp = Label(start = cur[0], end = next[1], label = next[2])
                 out.append(tmp)
                 i += 2
