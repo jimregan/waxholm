@@ -113,5 +113,6 @@ def test_merge_plosives():
     assert "orig_fr" not in mix.__dict__
     assert len(mix.fr) == 31
     mix.merge_plosives()
+    print(mix.fr)
     assert "orig_fr" in mix.__dict__
     assert len(mix.fr) == 26
