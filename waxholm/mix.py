@@ -1,6 +1,5 @@
 from collections import namedtuple
 from copy import deepcopy
-from tabnanny import verbose
 from .exceptions import FRExpected
 from difflib import SequenceMatcher
 
