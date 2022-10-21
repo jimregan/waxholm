@@ -119,6 +119,10 @@ def test_merge_plosives():
 def test_get_compare_dictionary():
     mix = Mix(filepath="", stringfile=SAMPLE1)
     pdict = mix.get_compare_dictionary()
-    print(len(pdict))
+    assert len(pdict) == len(mix.get_dictionary_list())
     assert pdict[0] == ('jag', 'J ˈA: g', 'J ˈA:')
-    assert 0 == 1
+
+    mix = Mix(filepath="", stringfile=SAMPLE1)
+    pdict = mix.get_compare_dictionary(only_changed=True)
+    print(len(pdict))
+    assert 1 == 0
