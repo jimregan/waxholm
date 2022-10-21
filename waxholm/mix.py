@@ -552,6 +552,6 @@ class Mix():
                     if not only_changed:
                         out.append(orig)
                 else:
-                    out.append((orig[0], orig[1], new[1]))
+                    out.append((orig[i][0], orig[i][1], new[i][1]))
             i += 1
         return out
