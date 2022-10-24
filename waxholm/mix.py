@@ -13,30 +13,18 @@ Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
 class FR:
-    def __init__(self, text="", pm=None, pm_type=None, type=None,
-                 frame=None, seconds=None, phone=None,
-                 phone_type=None, word=None, pseudoword=None):  # C901
+    def __init__(self, text="", **kwargs):  # C901
         if text and text != "":
             self.from_text(text)
         else:
-            if pm:
-                self.pm = pm
-            if pm_type:
-                self.pm_type = pm_type
-            if type:
-                self.type = type
-            if frame:
-                self.frame = frame
-            if seconds:
-                self.seconds = seconds
-            if phone:
-                self.phone = phone
-            if phone_type:
-                self.phone_type = phone_type
-            if word:
-                self.word = word
-            if pseudoword:
-                self.pseudoword = pseudoword
+            for arg in kwargs:
+                prms = ["pm", "pm_type", "type", "frame",
+                        "seconds", "phone", "phone_type",
+                        "word", "pseudoword"]
+                if arg in prms:
+                    self.__dict__[arg] = kwargs[arg]
+                else:
+                    print(f"Unrecognised argument: {arg}")
 
     def from_text(self, text: str):
         if not text.startswith("FR"):
@@ -165,6 +153,11 @@ class FR:
 
 
 def merge_frs(fr1, fr2, check_time=False):
+    """
+    Merge FRS entries for plosives: by default, the
+    period of glottal closure and the burst are separately
+    annotated.
+    """
     if fr2.has_word():
         return None
     if check_time:
@@ -521,6 +514,10 @@ class Mix():
                 return output
 
     def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
+        """
+        Get pronunciation dictionary for comparision: i.e., where there is a difference
+        between the canonical pronunciation and what was spoken
+        """
         if merge_plosives:
             self.merge_plosives()
         orig = self.get_dictionary_list(fix_accents)
