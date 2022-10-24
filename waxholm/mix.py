@@ -165,6 +165,11 @@ class FR:
 
 
 def merge_frs(fr1, fr2, check_time=False):
+    """
+    Merge FRS entries for plosives: by default, the
+    period of glottal closure and the burst are separately
+    annotated.
+    """
     if fr2.has_word():
         return None
     if check_time:
@@ -521,6 +526,10 @@ class Mix():
                 return output
 
     def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
+        """
+        Get pronunciation dictionary for comparision: i.e., where there is a difference
+        between the canonical pronunciation and what was spoken
+        """
         if merge_plosives:
             self.merge_plosives()
         orig = self.get_dictionary_list(fix_accents)
