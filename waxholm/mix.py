@@ -303,8 +303,9 @@ class Mix():
                     print(self.fr[i])
                 todel.append(i)
             i += 1
-        for chaff in todel.reverse():
-            del(self.fr[chaff])
+        if todel is not None and todel != []:
+            for chaff in todel.reverse():
+                del(self.fr[chaff])
 
     def prune_empty_postsilences(self, verbose=False, include_noises=False):
         """
@@ -330,8 +331,9 @@ class Mix():
                     print(self.fr[i])
                 todel.append(i)
             i += 1
-        for chaff in todel.reverse():
-            del(self.fr[chaff])
+        if todel is not None and todel != []:
+            for chaff in todel.reverse():
+                del(self.fr[chaff])
 
     def prune_empty_segments(self, verbose=False):
         """
