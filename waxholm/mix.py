@@ -33,25 +33,39 @@ class FR:
         self.frame = parts[0][2:].strip()
         if parts[-1].strip().endswith(" sec"):
             self.seconds = parts[-1].strip()[0:-4]
+        def split_phone(phone):
+            if phone.startswith("$#"):
+                phtype = 'I'
+                phone_type = fix_text(subpart[0:2])
+                phone_out = fix_text(subpart[2:])
+            elif phone.startswith("$") or phone.startswith("#"):
+                phtype = 'I'
+                phone_type = fix_text(subpart[0:1])
+                phone_out = fix_text(subpart[1:])
+            else:
+                return None
+            return {
+                "type": phtype,
+                "phone_type": phone_type,
+                "phone": phone_out
+            }
         for subpart in parts[1:-1]:
-            if subpart.startswith("$#"):
-                self.type = 'I'
-                self.phone_type = fix_text(subpart[0:2])
-                self.phone = fix_text(subpart[2:])
-            elif subpart.startswith("$"):
-                self.type = 'I'
-                self.phone_type = fix_text(subpart[0:1])
-                self.phone = fix_text(subpart[1:])
-            elif subpart.startswith("#"):
-                self.type = 'B'
-                self.phone_type = fix_text(subpart[0:1])
-                self.phone = fix_text(subpart[1:])
+            subpart = subpart.strip()
+            if subpart.startswith("$#") or subpart.startswith("$") or subpart.startswith("#"):
+                parts = split_phone(subpart)
+                if parts is not None:
+                    self.type = parts['type']
+                    self.phone_type = parts['phone_type']
+                    self.phone = parts['phone']
             elif subpart.startswith(">pm "):
-                self.pm_type = fix_text(subpart[4:5])
-                self.pm = fix_text(subpart[5:])
+                parts = split_phone(subpart)
+                if parts is not None:
+                    self.pm_type = parts['phone_type']
+                    self.pm = parts['phone']
             elif subpart.startswith(">pm. "):
-                self.pm_type = fix_text(subpart[4:5])
-                self.pm = fix_text(subpart[5:])
+                if parts is not None:
+                    self.pm_type = parts['phone_type']
+                    self.pm = parts['phone']
             elif subpart.startswith(">w "):
                 self.type = 'B'
                 self.word = fix_text(subpart[3:])
