@@ -547,6 +547,9 @@ class Mix():
         joined = _fix_duration_markers(joined)
         return joined
 
+    def get_phoneme_list(self, insert_pauses=True, fix_accents=True):
+        return self.get_phoneme_string(insert_pauses, fix_accents).split(' ')
+
     def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
         """
         Get pronunciation dictionary for comparision: i.e., where there is a difference
