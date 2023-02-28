@@ -178,18 +178,30 @@ def merge_frs(fr1, fr2, check_time=False):
                       phone_type=fr2.phone_type, word=word, pseudoword=pword)
 
 
+SILS = {
+    "K": "k",
+    "G": "g",
+    "T": "t",
+    "D": "d",
+    "2T": "2t",
+    "2D": "2d",
+    "P": "p",
+    "B": "b"
+}
 def _is_glottal_closure(cur, next):
-    sils = {
-        "K": "k",
-        "G": "g",
-        "T": "t",
-        "D": "d",
-        "2T": "2t",
-        "2D": "2d",
-        "P": "p",
-        "B": "b"
-    }
-    return cur in sils and next == sils[cur]
+    return cur in SILS and next == SILS[cur]
+
+
+def _replace_glottal_closures(input):
+    input += ' '
+    for sil in SILS:
+        input = input.replace(f"{sil} {SILS[sil]} ", f"{SILS[sil]} ")
+    return input[:-1]
+
+def _fix_duration_markers(input):
+    input += ' '
+    input = input.replace(":+ ", ": ")
+    return input[:-1]
 
 
 class Mix():
@@ -514,6 +526,26 @@ class Mix():
             else:
                 output.append((prev_word, " ".join(current_phones)))
                 return output
+
+    def get_phoneme_string(self, insert_pauses=True, fix_accents=True):
+        """
+        Get an opinionated phoneme string
+
+        Args:
+            insert_pauses (bool, optional): Insert pauses between words. Defaults to True.
+            fix_accents (bool, optional): IPA-ify accents. Defaults to True.
+        """
+        dict_list = self.get_dictionary_list(fix_accents)
+        skip = ['p:', '.']
+        if insert_pauses:
+            phone_strings = [x[1] for x in dict_list if x[1] not in skip]
+            joined = ' p: '.join(phone_strings)
+        else:
+            phone_strings = [x[1] for x in dict_list if x[1] != "."]
+            joined = ' '.join(phone_strings)
+        joined = _replace_glottal_closures(joined)
+        joined = _fix_duration_markers(joined)
+        return joined
 
     def get_compare_dictionary(self, fix_accents=True, merge_plosives=True, only_changed=True):
         """
