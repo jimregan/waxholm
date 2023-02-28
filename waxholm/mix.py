@@ -33,25 +33,40 @@ class FR:
         self.frame = parts[0][2:].strip()
         if parts[-1].strip().endswith(" sec"):
             self.seconds = parts[-1].strip()[0:-4]
+        def split_phone(phone):
+            if phone.startswith("$#"):
+                phtype = 'I'
+                phone_type = fix_text(phone[0:2])
+                phone_out = fix_text(phone[2:])
+            elif phone.startswith("$") or phone.startswith("#"):
+                phtype = 'I'
+                phone_type = fix_text(phone[0:1])
+                phone_out = fix_text(phone[1:])
+            else:
+                return None
+            return {
+                "type": phtype,
+                "phone_type": phone_type,
+                "phone": phone_out
+            }
         for subpart in parts[1:-1]:
-            if subpart.startswith("$#"):
-                self.type = 'I'
-                self.phone_type = fix_text(subpart[0:2])
-                self.phone = fix_text(subpart[2:])
-            elif subpart.startswith("$"):
-                self.type = 'I'
-                self.phone_type = fix_text(subpart[0:1])
-                self.phone = fix_text(subpart[1:])
-            elif subpart.startswith("#"):
-                self.type = 'B'
-                self.phone_type = fix_text(subpart[0:1])
-                self.phone = fix_text(subpart[1:])
+            subpart = subpart.strip()
+            if subpart.startswith("$#") or subpart.startswith("$") or subpart.startswith("#"):
+                phparts = split_phone(subpart)
+                if phparts is not None:
+                    self.type = phparts['type']
+                    self.phone_type = phparts['phone_type']
+                    self.phone = phparts['phone']
             elif subpart.startswith(">pm "):
-                self.pm_type = fix_text(subpart[4:5])
-                self.pm = fix_text(subpart[5:])
+                phparts = split_phone(subpart[4:])
+                if phparts is not None:
+                    self.pm_type = phparts['phone_type']
+                    self.pm = phparts['phone']
             elif subpart.startswith(">pm. "):
-                self.pm_type = fix_text(subpart[4:5])
-                self.pm = fix_text(subpart[5:])
+                phparts = split_phone(subpart[5:])
+                if phparts is not None:
+                    self.pm_type = phparts['phone_type']
+                    self.pm = phparts['phone']
             elif subpart.startswith(">w "):
                 self.type = 'B'
                 self.word = fix_text(subpart[3:])
