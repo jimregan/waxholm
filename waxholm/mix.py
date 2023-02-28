@@ -36,12 +36,12 @@ class FR:
         def split_phone(phone):
             if phone.startswith("$#"):
                 phtype = 'I'
-                phone_type = fix_text(subpart[0:2])
-                phone_out = fix_text(subpart[2:])
+                phone_type = fix_text(phone[0:2])
+                phone_out = fix_text(phone[2:])
             elif phone.startswith("$") or phone.startswith("#"):
                 phtype = 'I'
-                phone_type = fix_text(subpart[0:1])
-                phone_out = fix_text(subpart[1:])
+                phone_type = fix_text(phone[0:1])
+                phone_out = fix_text(phone[1:])
             else:
                 return None
             return {
