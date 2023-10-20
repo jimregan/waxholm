@@ -5,14 +5,39 @@
     "labels": "'A:R"
   },
   {
+    "word": "skinnardal",
+    "phonemes": "SJ\"INA#2D'A:L",
+    "labels": "SJ\"INA#2D`A:L"
+  },
+  {
     "word": "Öppna",
     "phonemes": "\"ÖPN'A",
     "labels": "\"ÖPNA"
   },
   {
+    "word": "norrskär",
+    "phonemes": "N'ÅRSJÄ3R",
+    "labels": "2N'ÅR2SÄ3R"
+  },
+  {
+    "word": "kunna",
+    "phonemes": "K\"UN'A",
+    "labels": "K\"UNA"
+  },
+  {
     "word": "eftermiddagen",
     "phonemes": "\"EFTÄ4R#M'IDAN",
     "labels": "\"EFTE0#M`IDAN"
+  },
+  {
+    "word": "jag",
+    "phonemes": "J'A:G",
+    "labels": "J'A:Gv"
+  },
+  {
+    "word": "östermalmstorg",
+    "phonemes": "ÖSTÄ4RMALMST'ÅRJ",
+    "labels": "ÖSTÄ4RvMALMST'ÅRJ"
   },
   {
     "word": "jag",
@@ -23,6 +48,11 @@
     "word": "Sprakande",
     "phonemes": "SPR\"A:K'ANDE",
     "labels": "SPR\"A:KANE0"
+  },
+  {
+    "word": "brevik",
+    "phonemes": "BREV'I:K",
+    "labels": "BR'E:VI:K"
   },
   {
     "word": "innan",
@@ -60,6 +90,11 @@
     "labels": "IFR'Å:"
   },
   {
+    "word": "Fortkörning",
+    "phonemes": "F\"O:2T#TJ'Ö32NING",
+    "labels": "F\"O:RT#TJ`Ö32NING"
+  },
+  {
     "word": "dags",
     "phonemes": "D'AGS",
     "labels": "2D'AGS"
@@ -68,6 +103,16 @@
     "word": "åker",
     "phonemes": "'Å:KÄ4R",
     "labels": "'Å:KE0"
+  },
+  {
+    "word": "tid",
+    "phonemes": "T'I:D",
+    "labels": "T'I:Dv"
+  },
+  {
+    "word": "eller",
+    "phonemes": "'ELER",
+    "labels": "'ELE0R"
   },
   {
     "word": "stockholm",
@@ -85,9 +130,19 @@
     "labels": "ST\"ÅK#H`ÅM"
   },
   {
+    "word": "mord",
+    "phonemes": "M'O:2D",
+    "labels": "M'O:2Dv"
+  },
+  {
     "word": "4",
     "phonemes": "F\"Y:R'A",
     "labels": "F\"Y:RA"
+  },
+  {
+    "word": "till",
+    "phonemes": "T'IL",
+    "labels": "2T'IL"
   },
   {
     "word": "som",
@@ -120,9 +175,19 @@
     "labels": "NÅST`ANS"
   },
   {
+    "word": "17",
+    "phonemes": "SJ\"UT'ÅN",
+    "labels": "2S\"UTÅN"
+  },
+  {
     "word": "Thörnhjort",
     "phonemes": "T\"Ö32N#J'O:2T",
     "labels": "T\"Ö32Np:#J`O2T"
+  },
+  {
+    "word": "kan",
+    "phonemes": "K'AN",
+    "labels": "K'ANG"
   },
   {
     "word": "så",
@@ -145,9 +210,19 @@
     "labels": "'E:"
   },
   {
+    "word": "mellan",
+    "phonemes": "M\"EL'AN",
+    "labels": "M\"ELA"
+  },
+  {
     "word": "stolar",
     "phonemes": "ST\"O:L'AR",
     "labels": "ST\"O:LA"
+  },
+  {
+    "word": "lidingö",
+    "phonemes": "L\"I:DIN#J'Ö:",
+    "labels": "L\"I:DINGÖ:"
   },
   {
     "word": "kunde",
@@ -160,6 +235,16 @@
     "labels": "'A:R"
   },
   {
+    "word": "söndagar",
+    "phonemes": "S\"ÖN#D'A:GAR",
+    "labels": "S\"ÖN#D`A:GAR"
+  },
+  {
+    "word": "dit",
+    "phonemes": "D'I:T",
+    "labels": "2D'I:T"
+  },
+  {
     "word": "skinnardal",
     "phonemes": "SKINA2D'A:L",
     "labels": "SJINAR2D'A:L"
@@ -170,9 +255,24 @@
     "labels": "N\"ÄSTA"
   },
   {
-    "word": "struntar",
-    "phonemes": "STR\"UNT'AR",
-    "labels": "D'Å:"
+    "word": "konstapel",
+    "phonemes": "KÅNST'A:PE0L",
+    "labels": "KÅNST'A:PE0Lv"
+  },
+  {
+    "word": "närmaste",
+    "phonemes": "N\"Ä4RM'ASTE0",
+    "labels": "N\"Ä4RMASTE0"
+  },
+  {
+    "word": "billigaste",
+    "phonemes": "B\"IL'IGASTE0",
+    "labels": "B\"ILIGASTE0"
+  },
+  {
+    "word": "antal",
+    "phonemes": "\"AN#T'A:L",
+    "labels": "\"AN#T`A:L"
   },
   {
     "word": "ungefär",
@@ -185,9 +285,14 @@
     "labels": "K'ÅME0"
   },
   {
-    "word": "storskär",
-    "phonemes": "ST'O:RSJÄ3R",
-    "labels": "ST'O:SJÄ3R"
+    "word": "norrskär",
+    "phonemes": "N'ÅRSJÄ3R",
+    "labels": "2N'ÅRSJÄ3Rv"
+  },
+  {
+    "word": "vara",
+    "phonemes": "V\"A:R'A",
+    "labels": "V\"A:RA"
   },
   {
     "word": "sandhamn",
@@ -195,14 +300,19 @@
     "labels": "S\"AND`AMN"
   },
   {
+    "word": "storskär",
+    "phonemes": "ST'O:RSJÄ3R",
+    "labels": "ST'O:SJÄ3R"
+  },
+  {
     "word": "fyrverkeripjäser",
     "phonemes": "F\"Y:R#VÄ4RKÄ4RI#PJ'Ä:SÄ4R",
     "labels": "FY:VÄ4RKÄ4R\"I:#PJ`Ä:SE0R"
   },
   {
-    "word": "konstapel",
-    "phonemes": "KÅNST'A:PEL",
-    "labels": "KÅST'A:PE0L"
+    "word": "stockholm",
+    "phonemes": "ST\"ÅK#'ÅLM",
+    "labels": "ST\"ÅK#`ÅLMv"
   },
   {
     "word": "början",
@@ -215,9 +325,19 @@
     "labels": "2S\"U:TA"
   },
   {
+    "word": "konstapel",
+    "phonemes": "KÅNST'A:PEL",
+    "labels": "KÅST'A:PE0L"
+  },
+  {
     "word": "årsta_havsbad",
     "phonemes": "\"Å2S2T'A~H\"A:VS#B'A:D",
     "labels": "\"Å2S2TA~H\"A:VS#B`A:D"
+  },
+  {
+    "word": "någonstans",
+    "phonemes": "NÅNST'ANS",
+    "labels": "NÅST'ANS"
   },
   {
     "word": "värre",
@@ -225,9 +345,14 @@
     "labels": "V'Ä4RE0"
   },
   {
-    "word": "utvilade",
-    "phonemes": "\"U:T#V'I:LADE",
-    "labels": "T\"ITAD"
+    "word": "tider",
+    "phonemes": "T'I:DÄ4R",
+    "labels": "T'I:DE0"
+  },
+  {
+    "word": "börjar",
+    "phonemes": "B\"Ö4RJ'AR",
+    "labels": "B\"Ö4RJAR"
   },
   {
     "word": "Stockholms",
@@ -235,19 +360,39 @@
     "labels": "ST\"ÅK#H`ÅLM"
   },
   {
-    "word": "XtvekX",
-    "phonemes": "öh",
-    "labels": "p:"
+    "word": "skärgården",
+    "phonemes": "SJ'Ä3RGÅ:2N",
+    "labels": "SJ\"Ä3R#G`Å:RDE0N"
   },
   {
-    "word": "det",
-    "phonemes": "D'E:T",
-    "labels": "p:"
+    "word": "fjäderholmarna",
+    "phonemes": "FJ\"Ä:DÄ4R#H'ÅLMA2NA",
+    "labels": "FJ\"Ä:DE0R#H`ÅLMA2NA"
+  },
+  {
+    "word": "Fortkörning",
+    "phonemes": "F\"O:2T#TJ'Ö32NING",
+    "labels": "F\"O:2T#TJ`Ö32NIG"
   },
   {
     "word": "skulle",
     "phonemes": "SK\"UL'E",
     "labels": "SK\"U"
+  },
+  {
+    "word": "när",
+    "phonemes": "N'Ä3R",
+    "labels": "'Ä3R"
+  },
+  {
+    "word": "väljer",
+    "phonemes": "V'ÄLJÄ4R",
+    "labels": "V'ÄLJE0"
+  },
+  {
+    "word": "båttider",
+    "phonemes": "B\"ÅT#'I:DÄ4R",
+    "labels": "B\"ÅT#`I:DE0R"
   },
   {
     "word": "trycka",
@@ -260,14 +405,29 @@
     "labels": "SK\"ULE0"
   },
   {
+    "word": "eller",
+    "phonemes": "'ELER",
+    "labels": "'ELE0"
+  },
+  {
     "word": "från",
     "phonemes": "FR'ÅM",
     "labels": "FR'Å"
   },
   {
+    "word": "annat",
+    "phonemes": "\"AN'AT",
+    "labels": "\"ANAT"
+  },
+  {
     "word": "skärgården",
     "phonemes": "S\"Ä3RGg'Å:2DEN",
     "labels": "SJ\"Ä3R#G`Å:2DE0N"
+  },
+  {
+    "word": "skulle",
+    "phonemes": "SK\"UL'E",
+    "labels": "SK\"UE0"
   },
   {
     "word": "jag",
@@ -285,6 +445,11 @@
     "labels": "BILJ'ETE0R"
   },
   {
+    "word": "detta",
+    "phonemes": "D\"ET'A",
+    "labels": "D\"ETA"
+  },
+  {
     "word": "tider",
     "phonemes": "T'I:DÄ4R",
     "labels": "T'I:DE0R"
@@ -295,9 +460,24 @@
     "labels": "J'ÄLPE0N"
   },
   {
+    "word": "skärgården",
+    "phonemes": "SJ'Ä3RGÅ:2N",
+    "labels": "SJ'Ä3GÅ:2DE0Nv"
+  },
+  {
     "word": "seglarhotellet",
     "phonemes": "S\"E:GL'AR~HÅT'ELET",
     "labels": "S\"E:GLAR~HÅT'ELE0"
+  },
+  {
+    "word": "avgång",
+    "phonemes": "\"A:V#G'ÅNG",
+    "labels": "\"A:V#G`ÅNG"
+  },
+  {
+    "word": "konstapel",
+    "phonemes": "KÅNST'A:PEL",
+    "labels": "KÅST'A:PL"
   },
   {
     "word": "seglarhotellet",
@@ -325,6 +505,11 @@
     "labels": "N'E"
   },
   {
+    "word": "som",
+    "phonemes": "S'ÅM",
+    "labels": "2S'ÅNG"
+  },
+  {
     "word": "Vaxholm",
     "phonemes": "V\"AKS#H'ÅLM",
     "labels": "V\"AKS`ÅLM"
@@ -340,9 +525,19 @@
     "labels": "N\"Å:GÅT"
   },
   {
+    "word": "19",
+    "phonemes": "N\"IT'ÅN",
+    "labels": "N\"ITÅN"
+  },
+  {
     "word": "en",
     "phonemes": "'EN",
     "labels": "'ENG"
+  },
+  {
+    "word": "campingplatser",
+    "phonemes": "K\"AMPING#PL'ATSÄ4R",
+    "labels": "K\"AMPING#PL`ATSE0R"
   },
   {
     "word": "vandrarhemmen",
@@ -365,14 +560,14 @@
     "labels": "'ÅM"
   },
   {
-    "word": "10",
-    "phonemes": "T\"I:'O",
-    "labels": "T\"I:E"
-  },
-  {
     "word": "stjärnorna",
     "phonemes": "SJ\"Ä32N'O2NA",
     "labels": "SJ\"Ä32NO2NA"
+  },
+  {
+    "word": "10",
+    "phonemes": "T\"I:'O",
+    "labels": "T\"I:E"
   },
   {
     "word": "det",
@@ -383,6 +578,16 @@
     "word": "finnhamn",
     "phonemes": "F\"IN#H'AMN",
     "labels": "F\"IN#H`AMN"
+  },
+  {
+    "word": "ramsöberg",
+    "phonemes": "RAMSÖ:B'Ä4RJ",
+    "labels": "RAMSÖ:B'Ä4RJv"
+  },
+  {
+    "word": "ute",
+    "phonemes": "\"U:T'E",
+    "labels": "\"U:TE0"
   },
   {
     "word": "skjuta",
@@ -405,6 +610,11 @@
     "labels": "B\"Å:TAR"
   },
   {
+    "word": "jo",
+    "phonemes": "J'O:",
+    "labels": "'O:"
+  },
+  {
     "word": "närliggande",
     "phonemes": "N\"Ä3R#L'IGANDE",
     "labels": "N\"Ä3R#2L`IGANDE"
@@ -425,6 +635,16 @@
     "labels": "SJ\"IMRADE0"
   },
   {
+    "word": "står",
+    "phonemes": "ST'Å:R",
+    "labels": "'Å:R"
+  },
+  {
+    "word": "vaxholmsbåten",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TEN",
+    "labels": "V\"AKSÅMS#B`Å:TE0N"
+  },
+  {
     "word": "restauranger",
     "phonemes": "RESTU:R'ANGÄ4R",
     "labels": "RESTUR'ANGE0R"
@@ -433,6 +653,16 @@
     "word": "skärgården",
     "phonemes": "SJ'Ä3RGÅ:2N",
     "labels": "SJ'Ä3RGÅ:2DE0N"
+  },
+  {
+    "word": "veta",
+    "phonemes": "V\"E:T'A",
+    "labels": "V\"E:TA"
+  },
+  {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "N"
   },
   {
     "word": "lådna",
@@ -448,6 +678,11 @@
     "word": "hamnar",
     "phonemes": "H\"AMN'AR",
     "labels": "H\"AMNAR"
+  },
+  {
+    "word": "vilken",
+    "phonemes": "V\"ILK'EN",
+    "labels": "V\"ILKE0NG"
   },
   {
     "word": "visa",
@@ -495,9 +730,9 @@
     "labels": "H'ÖJDE0"
   },
   {
-    "word": "hotellen",
-    "phonemes": "HOT'ELE0N",
-    "labels": "HOT'ELE0M"
+    "word": "vad",
+    "phonemes": "V'A:",
+    "labels": "VA:Dv"
   },
   {
     "word": "30",
@@ -505,9 +740,9 @@
     "labels": "TR\"ETI"
   },
   {
-    "word": "vad",
-    "phonemes": "V'A:",
-    "labels": "VA:Dv"
+    "word": "hotellen",
+    "phonemes": "HOT'ELE0N",
+    "labels": "HOT'ELE0M"
   },
   {
     "word": "torsdag",
@@ -535,6 +770,26 @@
     "labels": "KL\"ÅKA"
   },
   {
+    "word": "bara",
+    "phonemes": "B\"A:R'A",
+    "labels": "B\"A:RA"
+  },
+  {
+    "word": "sig",
+    "phonemes": "S'EJ",
+    "labels": "S'E"
+  },
+  {
+    "word": "hem",
+    "phonemes": "H'EM",
+    "labels": "H'EMv"
+  },
+  {
+    "word": "vaxholm",
+    "phonemes": "V\"AKS#H'ÅLM",
+    "labels": "V\"AKS#H`ÅL"
+  },
+  {
     "word": "efter",
     "phonemes": "'EFTE0R",
     "labels": "'EFTE0Rv"
@@ -545,6 +800,11 @@
     "labels": "EKSPLÅD'E:RADE0"
   },
   {
+    "word": "ankomst",
+    "phonemes": "\"ANKÅMST",
+    "labels": "\"ANGKÅMST"
+  },
+  {
     "word": "heter",
     "phonemes": "H'E:TÄ4R",
     "labels": "H'E:TE0"
@@ -553,6 +813,21 @@
     "word": "stockholm",
     "phonemes": "ST\"ÅK#'ÅLM",
     "labels": "ST\"ÅKH#`ÅLM"
+  },
+  {
+    "word": "hungrig",
+    "phonemes": "H\"UNGR'IG",
+    "labels": "H\"UNGRIG"
+  },
+  {
+    "word": "systemet",
+    "phonemes": "SYST'E:MET",
+    "labels": "SYST'E:ME0T"
+  },
+  {
+    "word": "campar",
+    "phonemes": "K'AMPAR",
+    "labels": "K\"AMPAR"
   },
   {
     "word": "finnhamn",
@@ -570,14 +845,34 @@
     "labels": "M\"ÅNGA"
   },
   {
-    "word": "13",
-    "phonemes": "TR\"ET'ÅN",
-    "labels": "TR\"ETÅN"
+    "word": "17",
+    "phonemes": "SJ\"UT'ÅN",
+    "labels": "SJ\"UTÅ"
+  },
+  {
+    "word": "vaxholmsbåtarna",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TA2NA",
+    "labels": "V\"AKS#HÅS#B`Å:TA2NA"
+  },
+  {
+    "word": "servering",
+    "phonemes": "SÄ4RV'E:RING",
+    "labels": "Ä4RV'E:RING"
+  },
+  {
+    "word": "sandhamn",
+    "phonemes": "S\"AND#H'AMN",
+    "labels": "S\"ANDv#H`AMNv"
   },
   {
     "word": "från",
     "phonemes": "FR'Å:N",
     "labels": "FR'Å:"
+  },
+  {
+    "word": "13",
+    "phonemes": "TR\"ET'ÅN",
+    "labels": "TR\"ETÅN"
   },
   {
     "word": "lediga",
@@ -595,6 +890,11 @@
     "labels": "\"ÅKSÅ"
   },
   {
+    "word": "östan",
+    "phonemes": "\"ÖST'AN",
+    "labels": "\"ÖSTAN"
+  },
+  {
     "word": "inifrån",
     "phonemes": "\"INI#FR'Å:N",
     "labels": "\"INI#FR`Å:N"
@@ -603,6 +903,21 @@
     "word": "22",
     "phonemes": "TJU:GOTV'Å:",
     "labels": "TJU:TV'Å:"
+  },
+  {
+    "word": "södra",
+    "phonemes": "S\"Ö:DR'A",
+    "labels": "S\"Ö:DRA"
+  },
+  {
+    "word": "öppet",
+    "phonemes": "\"ÖP'ET",
+    "labels": "\"ÖPE0T"
+  },
+  {
+    "word": "annan",
+    "phonemes": "\"AN'AN",
+    "labels": "\"ANANG"
   },
   {
     "word": "morgonen",
@@ -615,9 +930,9 @@
     "labels": "N\"Å:GvRA"
   },
   {
-    "word": "tror",
-    "phonemes": "TR'O:R",
-    "labels": "TR"
+    "word": "jag",
+    "phonemes": "J'A:G",
+    "labels": "J'A"
   },
   {
     "word": "det",
@@ -625,9 +940,29 @@
     "labels": "2D'E:"
   },
   {
+    "word": "tror",
+    "phonemes": "TR'O:R",
+    "labels": "TR"
+  },
+  {
+    "word": "heter",
+    "phonemes": "H'E:TÄ4R",
+    "labels": "H'E:TE0R"
+  },
+  {
     "word": "8",
     "phonemes": "\"ÅT'A",
     "labels": "\"ÅTA"
+  },
+  {
+    "word": "den",
+    "phonemes": "D'EN",
+    "labels": "2D'EN"
+  },
+  {
+    "word": "något",
+    "phonemes": "N\"Å:G'ÅT",
+    "labels": "N'ÅT"
   },
   {
     "word": "mellan",
@@ -635,9 +970,39 @@
     "labels": "M\"ELAN"
   },
   {
+    "word": "vilken",
+    "phonemes": "V\"ILK'EN",
+    "labels": "V\"IKE0N"
+  },
+  {
     "word": "de",
     "phonemes": "D'OM",
     "labels": "R'ÅM"
+  },
+  {
+    "word": "jag",
+    "phonemes": "J'A:G",
+    "labels": "Jkl'A:"
+  },
+  {
+    "word": "Vaxholm",
+    "phonemes": "V\"AKS#H'ÅLM",
+    "labels": "V\"AKS#H`ÅLMv"
+  },
+  {
+    "word": "på",
+    "phonemes": "P'Å:",
+    "labels": "P"
+  },
+  {
+    "word": "pizzeria",
+    "phonemes": "P\"ISÄ4RI'A",
+    "labels": "P\"ITSÄ4RIA"
+  },
+  {
+    "word": "ett",
+    "phonemes": "'ET",
+    "labels": "'E"
   },
   {
     "word": "de",
@@ -645,9 +1010,24 @@
     "labels": "2D'ÅM"
   },
   {
+    "word": "konstapel",
+    "phonemes": "KÅNST'A:PEL",
+    "labels": "KÅNS'A:PE0L"
+  },
+  {
     "word": "att",
     "phonemes": "'AT",
     "labels": "'Å"
+  },
+  {
+    "word": "löka",
+    "phonemes": "L\"Ö:#TJ'Ö:",
+    "labels": "L\"Ö:KA"
+  },
+  {
+    "word": "det",
+    "phonemes": "D'E:T",
+    "labels": "D'ET"
   },
   {
     "word": "skulle",
@@ -670,6 +1050,11 @@
     "labels": "2S\"Ä3R#G`Å:2DE0N"
   },
   {
+    "word": "ok",
+    "phonemes": "\"O:#TJ'E:J",
+    "labels": "ÅK'E:J"
+  },
+  {
     "word": "nynäshamn",
     "phonemes": "NY:NÄ:SH'AMN",
     "labels": "NY:NÄ:SH'AMvNv"
@@ -688,6 +1073,11 @@
     "word": "XavbrordX",
     "phonemes": "XavbrordX",
     "labels": "N\"Å"
+  },
+  {
+    "word": "som",
+    "phonemes": "S'ÅM",
+    "labels": "S'Å"
   },
   {
     "word": "Sprakande",
@@ -710,6 +1100,16 @@
     "labels": "V\"AKS`ÅM"
   },
   {
+    "word": "ok",
+    "phonemes": "\"O:#TJ'E:Y",
+    "labels": "ÅK'E:J"
+  },
+  {
+    "word": "skulle",
+    "phonemes": "SK\"UL'E",
+    "labels": "SKL'E"
+  },
+  {
     "word": "vilja",
     "phonemes": "V\"ILJ'A",
     "labels": "V\"ILJA"
@@ -720,14 +1120,9 @@
     "labels": "FY:VÄ4KÄ4R\"I:#PJ`Ä:SE0R"
   },
   {
-    "word": "över",
-    "phonemes": "'Ö:VÄ4R",
-    "labels": "'Ö:VR"
-  },
-  {
-    "word": "dit",
-    "phonemes": "D'I:T",
-    "labels": "D'I:Tv"
+    "word": "hotellrum",
+    "phonemes": "HOT\"EL#R'UM",
+    "labels": "HOT\"ELv#R`UM"
   },
   {
     "word": "någonstans",
@@ -735,9 +1130,39 @@
     "labels": "NÅNST'ANS"
   },
   {
+    "word": "dit",
+    "phonemes": "D'I:T",
+    "labels": "D'I:Tv"
+  },
+  {
+    "word": "över",
+    "phonemes": "'Ö:VÄ4R",
+    "labels": "'Ö:VR"
+  },
+  {
+    "word": "till",
+    "phonemes": "T'IL",
+    "labels": "TL"
+  },
+  {
+    "word": "åker",
+    "phonemes": "'Å:KÄ4R",
+    "labels": "'Å:p:KE0R"
+  },
+  {
+    "word": "tisdagar",
+    "phonemes": "T\"I:SD'A:GAR",
+    "labels": "T\"I:SDA:GAR"
+  },
+  {
     "word": "tidtabell",
     "phonemes": "T\"I:D#TAB'EL",
     "labels": "T\"I:D#TAB`EL"
+  },
+  {
+    "word": "hittade",
+    "phonemes": "H\"IT'ADE",
+    "labels": "H\"ITADE"
   },
   {
     "word": "lunch",
@@ -745,14 +1170,34 @@
     "labels": "L'UN2S"
   },
   {
+    "word": "staveström",
+    "phonemes": "STA:VESTR'ÖM",
+    "labels": "ST\"A:VE#STR`ÖM"
+  },
+  {
     "word": "Stockholms",
     "phonemes": "ST\"ÅK#'ÅLMS",
     "labels": "ST\"ÅK#`ÅMS"
   },
   {
+    "word": "saltsjöbaden",
+    "phonemes": "S\"ALT#SJÖ:B'A:DEN",
+    "labels": "S\"ALT#2SÖ:B`A:DE0N"
+  },
+  {
+    "word": "rummet",
+    "phonemes": "R'UMET",
+    "labels": "R'UME0T"
+  },
+  {
     "word": "hotell",
     "phonemes": "HOT'EL",
     "labels": "OT'EL"
+  },
+  {
+    "word": "vilket",
+    "phonemes": "V\"ILK'ET",
+    "labels": "V\"ILKE0T"
   },
   {
     "word": "ingen",
@@ -775,9 +1220,19 @@
     "labels": "D'E:"
   },
   {
+    "word": "campingplatsen",
+    "phonemes": "K\"AMPING#PL'ATSEN",
+    "labels": "K\"AMPING#PL`ATSE0N"
+  },
+  {
     "word": "klockan",
     "phonemes": "KL\"ÅK'AN",
     "labels": "KL\"ÅKAN"
+  },
+  {
+    "word": "delen",
+    "phonemes": "D'E:LEN",
+    "labels": "D'E:LE0N"
   },
   {
     "word": "hej",
@@ -790,6 +1245,31 @@
     "labels": "'ONSDA:G"
   },
   {
+    "word": "11",
+    "phonemes": "\"ELV'A",
+    "labels": "\"ELVA"
+  },
+  {
+    "word": "det",
+    "phonemes": "D'E",
+    "labels": "D"
+  },
+  {
+    "word": "klippudden",
+    "phonemes": "KL\"IP#'UDEN",
+    "labels": "KL\"IPp:#`UDEMv"
+  },
+  {
+    "word": "vara",
+    "phonemes": "V\"A:R'A",
+    "labels": "V\"A:"
+  },
+  {
+    "word": "cyklar",
+    "phonemes": "S\"Y:KL'AR",
+    "labels": "S\"Y:KLAR"
+  },
+  {
     "word": "snabbaste",
     "phonemes": "SN\"AB'ASTE",
     "labels": "SN\"ABASTE0"
@@ -800,14 +1280,19 @@
     "labels": "2S\"Ä32NO2NA"
   },
   {
+    "word": "åker",
+    "phonemes": "'Å:KÄ4R",
+    "labels": "'Å:KE0R"
+  },
+  {
     "word": "än",
     "phonemes": "'ÄN",
     "labels": "'Ä"
   },
   {
-    "word": "åker",
-    "phonemes": "'Å:KÄ4R",
-    "labels": "'Å:KE0R"
+    "word": "hotellet",
+    "phonemes": "HOT'ELET",
+    "labels": "OT'ELE0T"
   },
   {
     "word": "hamn",
@@ -820,9 +1305,34 @@
     "labels": "FÖ42S2T'ÅS"
   },
   {
+    "word": "utanför",
+    "phonemes": "\"U:TAN#F'Ö3R",
+    "labels": "\"U:TAN#F`Ö3"
+  },
+  {
     "word": "kostar",
     "phonemes": "K\"ÅST'AR",
     "labels": "K\"ÅSTA"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ'Ä3RGÅ:2N",
+    "labels": "SJ'Ä3RGÅ:2DE02N"
+  },
+  {
+    "word": "finns",
+    "phonemes": "F'INS",
+    "labels": "F'IN"
+  },
+  {
+    "word": "kvällarna",
+    "phonemes": "KV\"ÄL'A2NA",
+    "labels": "KV\"ÄLA2NA"
+  },
+  {
+    "word": "skulle",
+    "phonemes": "SK\"UL'E",
+    "labels": "SK'U"
   },
   {
     "word": "för",
@@ -833,6 +1343,11 @@
     "word": "pris",
     "phonemes": "PR'I:S'",
     "labels": "PR'I:S"
+  },
+  {
+    "word": "där",
+    "phonemes": "D'Ä3R",
+    "labels": "D'Ä3"
   },
   {
     "word": "båt",
@@ -880,6 +1395,11 @@
     "labels": "T\"ITAE0"
   },
   {
+    "word": "som",
+    "phonemes": "S'ÅM",
+    "labels": "S'ÅMv"
+  },
+  {
     "word": "Lediga",
     "phonemes": "L\"E:D'IGA",
     "labels": "L\"E:DIGA"
@@ -895,6 +1415,11 @@
     "labels": "L'IGE0"
   },
   {
+    "word": "att",
+    "phonemes": "'AT",
+    "labels": "'A"
+  },
+  {
     "word": "kvällen",
     "phonemes": "KV'ÄLEN",
     "labels": "KV'ÄLE0N"
@@ -905,9 +1430,14 @@
     "labels": "B\"Ö4RJA"
   },
   {
-    "word": "på",
-    "phonemes": "P'Å:",
-    "labels": "F\"Ö3RE#ST`ÄLNINGE0N"
+    "word": "skärgården",
+    "phonemes": "SJ\"Ä3RG#Å:2DEN",
+    "labels": "SJ\"Ä3R#G`Å:2DE0N"
+  },
+  {
+    "word": "adressen",
+    "phonemes": "ADR'ESEN",
+    "labels": "ADR'ESE0N"
   },
   {
     "word": "stannar",
@@ -925,9 +1455,29 @@
     "labels": "2N\"Å:A"
   },
   {
+    "word": "kosta",
+    "phonemes": "K\"ÅST'A",
+    "labels": "K\"ÅSTA"
+  },
+  {
     "word": "men",
     "phonemes": "M'EN",
     "labels": "M'ENv"
+  },
+  {
+    "word": "skinnardal",
+    "phonemes": "SKINA2D'A:L",
+    "labels": "SJINA2D'A:L"
+  },
+  {
+    "word": "jävla",
+    "phonemes": "J\"Ä:VL'A",
+    "labels": "J\"Ä:VLA"
+  },
+  {
+    "word": "nybrokajen",
+    "phonemes": "N\"Y:BRO#K`AJEN",
+    "labels": "N\"Y:BROp:#K`AJE0N"
   },
   {
     "word": "köpa",
@@ -940,14 +1490,9 @@
     "labels": "V\"AKS#H`ÅLM"
   },
   {
-    "word": "utanför",
-    "phonemes": "\"U:TAN#F'Ö3R",
-    "labels": "\"U:TAN#F`Ö3R"
-  },
-  {
-    "word": "vid",
-    "phonemes": "V'I:D",
-    "labels": "V'I:Dv"
+    "word": "lång",
+    "phonemes": "L'ÅNG",
+    "labels": "2L'ÅNG"
   },
   {
     "word": "skimrade",
@@ -955,9 +1500,19 @@
     "labels": "2S\"IMRADE0"
   },
   {
-    "word": "lång",
-    "phonemes": "L'ÅNG",
-    "labels": "2L'ÅNG"
+    "word": "vid",
+    "phonemes": "V'I:D",
+    "labels": "V'I:Dv"
+  },
+  {
+    "word": "utanför",
+    "phonemes": "\"U:TAN#F'Ö3R",
+    "labels": "\"U:TAN#F`Ö3R"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ\"Ä3R#G'Å:2DEN",
+    "labels": "SJ'Ä3RGÅ:2N"
   },
   {
     "word": "restauranger",
@@ -980,6 +1535,11 @@
     "labels": "SJ\"Ä3R#G`Å:2DE02N"
   },
   {
+    "word": "kvarnen",
+    "phonemes": "KV'A:2NEN",
+    "labels": "KV'A:2NE0N"
+  },
+  {
     "word": "fortsätta",
     "phonemes": "F\"O2T#2S'ÄTA",
     "labels": "F\"O2T#2S`ÄTA"
@@ -1000,6 +1560,16 @@
     "labels": "G'Å:"
   },
   {
+    "word": "till",
+    "phonemes": "T'IL",
+    "labels": "T"
+  },
+  {
+    "word": "söka",
+    "phonemes": "S\"Ö:K'A",
+    "labels": "S\"Ö:KA"
+  },
+  {
     "word": "du",
     "phonemes": "D'U:",
     "labels": "2D'U:"
@@ -1010,6 +1580,11 @@
     "labels": "M'A"
   },
   {
+    "word": "det",
+    "phonemes": "D'E:T",
+    "labels": "2D'ET"
+  },
+  {
     "word": "fryser",
     "phonemes": "FR'Y:SÄ4R",
     "labels": "FR'Y:SR"
@@ -1018,6 +1593,11 @@
     "word": "konstapeln",
     "phonemes": "KÅNST'A:PEL",
     "labels": "KÅNST'A:PE0N"
+  },
+  {
+    "word": "timmen",
+    "phonemes": "T\"IM'EN",
+    "labels": "T\"IME0N"
   },
   {
     "word": "fyrverkeripjäser",
@@ -1040,11 +1620,6 @@
     "labels": "2S'ÅM"
   },
   {
-    "word": "och",
-    "phonemes": "'Å:",
-    "labels": "\"U:T#V`I:LADE0"
-  },
-  {
     "word": "18",
     "phonemes": "\"A:2T'ÅN",
     "labels": "\"A:2TÅN"
@@ -1055,14 +1630,19 @@
     "labels": "S\"E:NARIE0T"
   },
   {
-    "word": "jag",
-    "phonemes": "J'A:G",
-    "labels": "STR\"UNTA"
+    "word": "vaxholmsbåtar",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TAR",
+    "labels": "V\"AKSÅMS#B`Å:TAR"
   },
   {
     "word": "utvilade",
     "phonemes": "\"U:T#V'I:LADE",
     "labels": "\"U:T#V`I:LAE0"
+  },
+  {
+    "word": "söderöra",
+    "phonemes": "S\"Ö:DER#'Ö3RA",
+    "labels": "S\"Ö:DER#`Ö3RA"
   },
   {
     "word": "timme",
@@ -1075,9 +1655,19 @@
     "labels": "L\"ÄNGE"
   },
   {
+    "word": "även",
+    "phonemes": "\"Ä:V'EN",
+    "labels": "\"Ä:VE0N"
+  },
+  {
     "word": "jädra",
     "phonemes": "J\"Ä:DR'A",
     "labels": "J\"Ä:DRA"
+  },
+  {
+    "word": "hotellrum",
+    "phonemes": "HOTEL'U:M",
+    "labels": "HOT\"EL#R`U:M"
   },
   {
     "word": "sandhamn",
@@ -1090,9 +1680,19 @@
     "labels": "TJ\"U:GO"
   },
   {
+    "word": "torsdag",
+    "phonemes": "T'O:2SDA",
+    "labels": "T'O:2SDA:G"
+  },
+  {
     "word": "öar",
     "phonemes": "\"Ö:'AR",
     "labels": "\"Ö:AR"
+  },
+  {
+    "word": "båtförbindelse",
+    "phonemes": "B\"Å:T#FÖ4RB`INDELSE",
+    "labels": "B\"Å:T#FÖ4RB`INDELSE0"
   },
   {
     "word": "sådär",
@@ -1110,6 +1710,16 @@
     "labels": "VARIFR'Å:NG"
   },
   {
+    "word": "vaxholmsbåten",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TE0N",
+    "labels": "V\"AKS#HÅLMS#B`Å:TE0Nv"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ'Ä3RGÅ:2N",
+    "labels": "SJ\"Ä3#G`Å:2DE0Nv"
+  },
+  {
     "word": "alla",
     "phonemes": "\"AL'A",
     "labels": "\"ALA"
@@ -1120,19 +1730,29 @@
     "labels": "SJ\"Ö:#BR`I:S"
   },
   {
-    "word": "vegabryggan",
-    "phonemes": "V\"E:GABR'YGAN",
-    "labels": "V\"E:GABRYGAN"
-  },
-  {
     "word": "övernatta",
     "phonemes": "\"Ö:VÄ4R#N'ATA",
     "labels": "\"Ö:VE0#2N`ATA"
   },
   {
+    "word": "vegabryggan",
+    "phonemes": "V\"E:GABR'YGAN",
+    "labels": "V\"E:GABRYGAN"
+  },
+  {
+    "word": "istället",
+    "phonemes": "IST\"ÄL'ET",
+    "labels": "IST\"ÄLE0T"
+  },
+  {
     "word": "till",
     "phonemes": "T'IL",
     "labels": "T'I"
+  },
+  {
+    "word": "ställen",
+    "phonemes": "ST\"ÄL'EN",
+    "labels": "ST\"ÄLE0N"
   },
   {
     "word": "eftermiddagen",
@@ -1170,6 +1790,16 @@
     "labels": "\"Ö:VE0R#N`ATA"
   },
   {
+    "word": "symfoni",
+    "phonemes": "SYMFON'I:",
+    "labels": "SYMFON'I:v"
+  },
+  {
+    "word": "hotellrum",
+    "phonemes": "HOT\"EL#R'UM",
+    "labels": "HOT\"ELvp:#R`UMv"
+  },
+  {
     "word": "någon",
     "phonemes": "N\"Å:G'ÅN",
     "labels": "N\"Å:GÅM"
@@ -1200,9 +1830,9 @@
     "labels": "D'E:Tv"
   },
   {
-    "word": "på",
-    "phonemes": "P'Å:",
-    "labels": "p:"
+    "word": "fredag",
+    "phonemes": "FR'E:DA",
+    "labels": "FR'E:DAG"
   },
   {
     "word": "någonstans",
@@ -1215,6 +1845,21 @@
     "labels": "S\"ANDv#H`AMN"
   },
   {
+    "word": "morgonen",
+    "phonemes": "M\"ÅR'ÅNE0N",
+    "labels": "M\"ÅRÅNE0Nv"
+  },
+  {
+    "word": "tisdag",
+    "phonemes": "T'I:SDA",
+    "labels": "T'ISDA"
+  },
+  {
+    "word": "skinnardal",
+    "phonemes": "SK\"INA#2D'A:L",
+    "labels": "SJ\"INA#2D`A:L"
+  },
+  {
     "word": "tiden",
     "phonemes": "T'I:DEN",
     "labels": "T'I:DE0N"
@@ -1223,6 +1868,16 @@
     "word": "jag",
     "phonemes": "J'A:G",
     "labels": "J"
+  },
+  {
+    "word": "pensionat",
+    "phonemes": "PENSJ'O:NAT",
+    "labels": "PEN2S'O:NAT"
+  },
+  {
+    "word": "Thörnhjort",
+    "phonemes": "T\"Ö32N#J'O:2T",
+    "labels": "T\"Ö3RN#J`ORT"
   },
   {
     "word": "rödlöga",
@@ -1243,6 +1898,11 @@
     "word": "fyrverkeripjäser",
     "phonemes": "F\"Y:R#VÄ4RKÄ4RI#PJ'Ä:SÄ4R",
     "labels": "FY:RVÄ4RKR\"I:#PJ`Ä:SE0R"
+  },
+  {
+    "word": "från",
+    "phonemes": "FR'Å:N",
+    "labels": "FR'Å:NG"
   },
   {
     "word": "skärgården",
@@ -1275,6 +1935,11 @@
     "labels": "J'E:"
   },
   {
+    "word": "var",
+    "phonemes": "V'A:R",
+    "labels": "V'A:Rv"
+  },
+  {
     "word": "vaxholms_hotell",
     "phonemes": "VAKSÅLMSHOT'EL",
     "labels": "VAKSÅLMS~HOT'EL"
@@ -1290,14 +1955,29 @@
     "labels": "H'A:"
   },
   {
+    "word": "och",
+    "phonemes": "'Å:",
+    "labels": "'Å"
+  },
+  {
     "word": "djurö",
     "phonemes": "J\"U:R#'Ö:",
     "labels": "J\"U:R#`Ö:"
   },
   {
+    "word": "varifrån",
+    "phonemes": "VA:2TIFR'Å:N",
+    "labels": "V\"A:2TIFR`Å:N"
+  },
+  {
     "word": "båtar",
     "phonemes": "B\"Å:T'AR",
     "labels": "B\"Å:TA"
+  },
+  {
+    "word": "vaxholm",
+    "phonemes": "V\"AKS#H'ÅLM",
+    "labels": "V\"AKS#H`ÅLMv"
   },
   {
     "word": "vandrarhem",
@@ -1310,9 +1990,9 @@
     "labels": "\"UNDRAR"
   },
   {
-    "word": "åka",
-    "phonemes": "\"Å:K'A",
-    "labels": "p:"
+    "word": "ställe",
+    "phonemes": "ST\"ÄL'E0",
+    "labels": "ST\"ÄLE0"
   },
   {
     "word": "vaxholm",
@@ -1330,9 +2010,9 @@
     "labels": "KÅNFÄ4R'ANS"
   },
   {
-    "word": "tänkte",
-    "phonemes": "T\"ÄNKT'E",
-    "labels": "T\"ÄNGT"
+    "word": "skarpö",
+    "phonemes": "SK\"ARP#'Ö:",
+    "labels": "SK\"ARP#`Ö:"
   },
   {
     "word": "hur",
@@ -1340,9 +2020,29 @@
     "labels": "H'U:"
   },
   {
+    "word": "någon",
+    "phonemes": "N'ÅN",
+    "labels": "N\"Å:GÅN"
+  },
+  {
     "word": "skärgården",
     "phonemes": "SJ'Ä3RGÅ:2N",
     "labels": "SJ'Ä3GÅ:2N"
+  },
+  {
+    "word": "tänkte",
+    "phonemes": "T\"ÄNKT'E",
+    "labels": "T\"ÄNGT"
+  },
+  {
+    "word": "hamnar",
+    "phonemes": "H\"AMN'AR",
+    "labels": "H\"AMvNAR"
+  },
+  {
+    "word": "under",
+    "phonemes": "'UNDÄ4R",
+    "labels": "'UNDE0R"
   },
   {
     "word": "man",
@@ -1355,19 +2055,29 @@
     "labels": "L'I:LA"
   },
   {
+    "word": "9",
+    "phonemes": "N\"I:'O",
+    "labels": "N\"I:O"
+  },
+  {
+    "word": "vaxholms",
+    "phonemes": "V\"AKS#H'ÅLMS",
+    "labels": "V\"AKS#H`ÅLMS"
+  },
+  {
     "word": "furusund",
     "phonemes": "FU:RUS'UND",
     "labels": "FU:RUS'UNDv"
   },
   {
-    "word": "nähä",
-    "phonemes": "N\"Ä:#H'Ä:",
-    "labels": "\"Ä:#H`Ä:"
-  },
-  {
     "word": "finnhamn",
     "phonemes": "F\"IN#H'AMN",
     "labels": "F\"IN#H`AM"
+  },
+  {
+    "word": "plats",
+    "phonemes": "PL'ATS'",
+    "labels": "PL'ATS"
   },
   {
     "word": "hotellen",
@@ -1378,6 +2088,11 @@
     "word": "Lila",
     "phonemes": "L\"I:L'A",
     "labels": "'I:LA"
+  },
+  {
+    "word": "ville",
+    "phonemes": "V\"IL'E0",
+    "labels": "V\"ILE0"
   },
   {
     "word": "andra",
@@ -1400,14 +2115,34 @@
     "labels": "D'ÅM"
   },
   {
+    "word": "12",
+    "phonemes": "T'ÅLV",
+    "labels": "T'ÅL"
+  },
+  {
+    "word": "förbi",
+    "phonemes": "FÖ4RB'I:",
+    "labels": "FÖ4B'I:"
+  },
+  {
     "word": "karta",
     "phonemes": "K\"A:2T'A",
     "labels": "K\"A:2TA"
   },
   {
+    "word": "öppen",
+    "phonemes": "\"ÖP'EN",
+    "labels": "\"ÖPE0N"
+  },
+  {
     "word": "Vaxholm",
     "phonemes": "V\"AKS#H'ÅLM",
     "labels": "V\"AKS#H`ÅM"
+  },
+  {
+    "word": "finnhamn",
+    "phonemes": "F\"IN#H'AMN",
+    "labels": "F\"IN#H`AMvNv"
   },
   {
     "word": "söderöra",
@@ -1420,14 +2155,29 @@
     "labels": "K\"AMPA"
   },
   {
+    "word": "måste",
+    "phonemes": "M\"ÅST'E",
+    "labels": "M\"ÅSTE"
+  },
+  {
     "word": "upplysningarna",
     "phonemes": "\"UP#L'YSNINGA2NA",
     "labels": "\"UP#L`YSNINGA2NA"
   },
   {
+    "word": "skimrade",
+    "phonemes": "SJ\"IMR'ADE",
+    "labels": "2S\"IMRAD"
+  },
+  {
     "word": "informationen",
     "phonemes": "INFÅRMASJ'O:NEN",
     "labels": "INFÅRMA2S'O:NE0N"
+  },
+  {
+    "word": "nybrokajen",
+    "phonemes": "N\"Y:#BROK'AJEN",
+    "labels": "N\"Y:#BROK`AJE0N"
   },
   {
     "word": "det",
@@ -1455,9 +2205,29 @@
     "labels": "KÅNST'A:PL"
   },
   {
-    "word": "vill",
-    "phonemes": "V'IL",
-    "labels": "H'EM"
+    "word": "gruvbryggan",
+    "phonemes": "GR\"U:V#BR'YGAN",
+    "labels": "GR\"U:Vv#BR`YGAN"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ\"Ä3R#GÅ:2DEN",
+    "labels": "SJ\"Ä3R#G`Å:2DE0N"
+  },
+  {
+    "word": "trevliga",
+    "phonemes": "TR\"E:VL'IGA",
+    "labels": "TR\"E:VLIGA"
+  },
+  {
+    "word": "edesön",
+    "phonemes": "\"E:DE#S'Ö:N",
+    "labels": "\"E:DE#S`Ö:N"
+  },
+  {
+    "word": "onsdagar",
+    "phonemes": "\"ONS#D'A:GAR",
+    "labels": "\"ONS#D`A:GAR"
   },
   {
     "word": "för",
@@ -1475,9 +2245,19 @@
     "labels": "ST\"ÅK#H`ÅLM"
   },
   {
+    "word": "närmast",
+    "phonemes": "N\"Ä4RM'AST",
+    "labels": "N\"Ä4RMAST"
+  },
+  {
     "word": "vilken",
     "phonemes": "V\"ILK'E0N",
     "labels": "V\"ILKE0N"
+  },
+  {
+    "word": "ledigt",
+    "phonemes": "L\"E:D'IGT",
+    "labels": "L\"E:DIT"
   },
   {
     "word": "utö",
@@ -1485,9 +2265,9 @@
     "labels": "\"U:T#`Ö:"
   },
   {
-    "word": "ledigt",
-    "phonemes": "L\"E:D'IGT",
-    "labels": "L\"E:DIT"
+    "word": "skillnaden",
+    "phonemes": "SJ\"ILN'ADEN",
+    "labels": "SJ\"ILNADE0"
   },
   {
     "word": "staveström",
@@ -1520,9 +2300,19 @@
     "labels": "K'AM"
   },
   {
+    "word": "ifrån",
+    "phonemes": "IFR'Å:N",
+    "labels": "IFR'Å:Nv"
+  },
+  {
     "word": "nynäshamn",
     "phonemes": "NY:NÄ:SH'AMN",
     "labels": "NY:NÄ:SH'AMNv"
+  },
+  {
+    "word": "söndag",
+    "phonemes": "S'ÖNDA",
+    "labels": "S'ÖNDA:Gv"
   },
   {
     "word": "fredag",
@@ -1560,9 +2350,9 @@
     "labels": "SJ'Ä3RGÅ:N"
   },
   {
-    "word": "nybroviken",
-    "phonemes": "N\"Y:BRÅ#V'I:KEN",
-    "labels": "N\"Y:BRÅ#V`I:KE0N"
+    "word": "får",
+    "phonemes": "F'Å:R",
+    "labels": "F'Å:"
   },
   {
     "word": "skärgård",
@@ -1570,9 +2360,24 @@
     "labels": "SJ'Ä3RGÅ:2D"
   },
   {
+    "word": "nybroviken",
+    "phonemes": "N\"Y:BRÅ#V'I:KEN",
+    "labels": "N\"Y:BRÅ#V`I:KE0N"
+  },
+  {
     "word": "ikväll",
     "phonemes": "IKV'ÄL",
     "labels": "IKV'ÄLv"
+  },
+  {
+    "word": "norra",
+    "phonemes": "N\"ÅR'A",
+    "labels": "N\"ÅRA"
+  },
+  {
+    "word": "11",
+    "phonemes": "\"ELV'A",
+    "labels": "\"ELvVA"
   },
   {
     "word": "grinda",
@@ -1580,14 +2385,19 @@
     "labels": "GR\"INDA"
   },
   {
+    "word": "skärgården",
+    "phonemes": "SJ\"Ä3R#G'Å:2DEN",
+    "labels": "SJ\"Ä3R#G`Å:2DE0N"
+  },
+  {
     "word": "samma",
     "phonemes": "S\"AM'A",
     "labels": "S\"AMA"
   },
   {
-    "word": "skärgården",
-    "phonemes": "SJ\"Ä3R#G'Å:2DEN",
-    "labels": "SJ\"Ä3R#G`Å:2DE0N"
+    "word": "nybrokajen",
+    "phonemes": "N\"Y:BRO#K'AJEN",
+    "labels": "N\"Y:BROp:#K'AJE0N"
   },
   {
     "word": "stockholm",
@@ -1603,11 +2413,6 @@
     "word": "det",
     "phonemes": "D'E:T",
     "labels": "'E:"
-  },
-  {
-    "word": "tittade",
-    "phonemes": "T\"IT'ADE",
-    "labels": "'ÅM"
   },
   {
     "word": "nära",
@@ -1630,6 +2435,16 @@
     "labels": "V\"AKS#H`ÅLM"
   },
   {
+    "word": "information",
+    "phonemes": "INFÅRMASJ'O:N",
+    "labels": "INFÅMA2S'O:N"
+  },
+  {
+    "word": "ringer",
+    "phonemes": "R'INGÄ4R",
+    "labels": "R'INGE0R"
+  },
+  {
     "word": "härifrån",
     "phonemes": "H'Ä3RIFRÅN",
     "labels": "H'Ä3RIFRÅ"
@@ -1638,6 +2453,11 @@
     "word": "furusunds",
     "phonemes": "S",
     "labels": "FURUS'UND"
+  },
+  {
+    "word": "stadshuset",
+    "phonemes": "ST\"A:DS#H'U:SET",
+    "labels": "ST\"A:DS#H`U:SE0T"
   },
   {
     "word": "första",
@@ -1680,6 +2500,11 @@
     "labels": "GRAND~HOT'EL"
   },
   {
+    "word": "nybrokajen",
+    "phonemes": "N\"Y:#BROK'AJEN",
+    "labels": "N\"Y:BRO#K`AJE0M"
+  },
+  {
     "word": "att",
     "phonemes": "'AT",
     "labels": "T"
@@ -1700,9 +2525,24 @@
     "labels": "ID'A:Gv"
   },
   {
+    "word": "högskolan",
+    "phonemes": "H\"Ö:G#SK'O:LAN",
+    "labels": "H\"Ö:G#SK`O:LAN"
+  },
+  {
     "word": "ligger",
     "phonemes": "L'IGÄ4R",
     "labels": "L'IGE0R"
+  },
+  {
+    "word": "vandrarhemmen",
+    "phonemes": "V\"ANDRAR#H'EMEN",
+    "labels": "V\"ANDRAR#H`EME0N"
+  },
+  {
+    "word": "utö",
+    "phonemes": "\"U:T#'Ö:",
+    "labels": "\"U:T#`Ö:"
   },
   {
     "word": "vaxholms_hotell",
@@ -1720,9 +2560,14 @@
     "labels": "'IL"
   },
   {
-    "word": "datorn",
-    "phonemes": "D\"A:T'ÅR",
-    "labels": "D\"A:TÅR"
+    "word": "vilja",
+    "phonemes": "V\"ILJ'A",
+    "labels": "VJ'A"
+  },
+  {
+    "word": "året",
+    "phonemes": "'Å:RET",
+    "labels": "'Å:RE0T"
   },
   {
     "word": "måste",
@@ -1730,14 +2575,19 @@
     "labels": "M\"ÅSE"
   },
   {
+    "word": "datorn",
+    "phonemes": "D\"A:T'ÅR",
+    "labels": "D\"A:TÅR"
+  },
+  {
+    "word": "hela",
+    "phonemes": "H\"E:L'A",
+    "labels": "H\"E:LA"
+  },
+  {
     "word": "tänkte",
     "phonemes": "T\"ÄNKT'E",
     "labels": "T\"ÄNGTE"
-  },
-  {
-    "word": "en",
-    "phonemes": "'EN",
-    "labels": "p:"
   },
   {
     "word": "nya",
@@ -1745,9 +2595,29 @@
     "labels": "N\"Y:A"
   },
   {
+    "word": "det",
+    "phonemes": "D'E:T",
+    "labels": "2D"
+  },
+  {
     "word": "via",
     "phonemes": "V\"I:'A",
     "labels": "V\"I:A"
+  },
+  {
+    "word": "ute",
+    "phonemes": "\"U:T'E",
+    "labels": "\"U:T"
+  },
+  {
+    "word": "grand_hotell",
+    "phonemes": "GR'AND~H'O:TEL",
+    "labels": "GR'AND~H'O:TELv"
+  },
+  {
+    "word": "vill",
+    "phonemes": "V'IL",
+    "labels": "VIL"
   },
   {
     "word": "när",
@@ -1755,14 +2625,29 @@
     "labels": "N'Ä3Rv"
   },
   {
+    "word": "tidtabell",
+    "phonemes": "T\"I:D#TAB'EL",
+    "labels": "T\"I:D#TAB`ELv"
+  },
+  {
     "word": "lediga",
     "phonemes": "L\"E:D'IGA",
     "labels": "L\"E:DIGA"
   },
   {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "B'Å"
+  },
+  {
     "word": "kommer",
     "phonemes": "K'ÅMÄ4R",
     "labels": "K'ÅM"
+  },
+  {
+    "word": "vilken",
+    "phonemes": "V\"ILKE0N",
+    "labels": "V'ILKE0NG"
   },
   {
     "word": "skinnardal",
@@ -1773,6 +2658,11 @@
     "word": "30",
     "phonemes": "TR\"ET'I",
     "labels": "TR\"ETIO"
+  },
+  {
+    "word": "timme",
+    "phonemes": "T\"IM'E",
+    "labels": "T\"IM"
   },
   {
     "word": "över",
@@ -1825,9 +2715,34 @@
     "labels": "\"E:DES#`Ö:N"
   },
   {
+    "word": "vandrarhemmet",
+    "phonemes": "V\"ANDRAR#H'EMET",
+    "labels": "V\"ANDRAR#H`EME0T"
+  },
+  {
+    "word": "utav",
+    "phonemes": "\"U:T'AV",
+    "labels": "\"U:TA"
+  },
+  {
     "word": "sista",
     "phonemes": "S\"IST'A",
     "labels": "S\"ISTA"
+  },
+  {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "S"
+  },
+  {
+    "word": "halv",
+    "phonemes": "H'ALV",
+    "labels": "H'AL"
+  },
+  {
+    "word": "önskar",
+    "phonemes": "\"ÖNSK'AR",
+    "labels": "\"ÖNSKAR"
   },
   {
     "word": "vilken",
@@ -1840,14 +2755,29 @@
     "labels": "\"EFTE0R#MID`A:GE0N"
   },
   {
+    "word": "vilken",
+    "phonemes": "V\"ILK'E0T",
+    "labels": "V\"ILKE0N"
+  },
+  {
     "word": "vad",
     "phonemes": "V'A:",
     "labels": "VA:D"
   },
   {
+    "word": "övernattning",
+    "phonemes": "\"Ö:VÄ4R#N'ATNING",
+    "labels": "\"Ö:VE0Rv#N`ATNING"
+  },
+  {
     "word": "sedan",
     "phonemes": "S\"E:D'AN",
     "labels": "S'EN"
+  },
+  {
+    "word": "vaxholmsbåtarna",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TA2NA",
+    "labels": "V\"AKS#HÅLMS#B`Å:TA2NA"
   },
   {
     "word": "vettersö",
@@ -1860,6 +2790,11 @@
     "labels": "V\"AKS`ÅLM"
   },
   {
+    "word": "sommaren",
+    "phonemes": "S\"ÅM'AREN",
+    "labels": "S\"ÅMARE0N"
+  },
+  {
     "word": "stockholm",
     "phonemes": "ST\"ÅK#'ÅLM",
     "labels": "ST\"ÅK#H`ÅLM"
@@ -1868,6 +2803,16 @@
     "word": "övernatta",
     "phonemes": "\"Ö:VÄ4R#N'ATA",
     "labels": "\"Ö:VE0#N`ATA"
+  },
+  {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "Å:Kp:"
+  },
+  {
+    "word": "menade",
+    "phonemes": "M\"E:N'ADE",
+    "labels": "M\"E:NADE0"
   },
   {
     "word": "vandrarhem",
@@ -1883,6 +2828,11 @@
     "word": "fyrverkeripjäser",
     "phonemes": "F\"Y:R#VÄ4RKÄ4RI#PJ'Ä:SÄ4R",
     "labels": "FY:RV\"I:RKÄ4R\"I:#PJ`Ä:SE0R"
+  },
+  {
+    "word": "med",
+    "phonemes": "M'E:",
+    "labels": "M'E:Dv"
   },
   {
     "word": "inga",
@@ -1905,9 +2855,19 @@
     "labels": "M'E"
   },
   {
+    "word": "ifrån",
+    "phonemes": "IFR'Å:N",
+    "labels": "FR'Å:N"
+  },
+  {
     "word": "trevlig",
     "phonemes": "TR\"E:VL'IG",
     "labels": "TR\"E:VLI"
+  },
+  {
+    "word": "framme",
+    "phonemes": "FR\"AM'E",
+    "labels": "FR\"AME"
   },
   {
     "word": "ok",
@@ -1915,9 +2875,34 @@
     "labels": "ÅK'EJ"
   },
   {
+    "word": "vaxholmsbåten",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TEN",
+    "labels": "V\"AKSÅLMS#B`Å:TE0N"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ\"Ä3R#G'Å:2DEN",
+    "labels": "SJ'Ä3RGÅ:2DE0N"
+  },
+  {
+    "word": "XtvekX",
+    "phonemes": "J'A:",
+    "labels": "öh"
+  },
+  {
+    "word": "lista",
+    "phonemes": "L\"IST'A",
+    "labels": "L\"ISTA"
+  },
+  {
     "word": "efter",
     "phonemes": "'EFTER",
     "labels": "'EFT"
+  },
+  {
+    "word": "staveström",
+    "phonemes": "ST\"A:VE0#STR'Ö:M",
+    "labels": "ST\"A:VE0R#STR`Ö:M"
   },
   {
     "word": "kyligt",
@@ -1925,9 +2910,19 @@
     "labels": "TJ\"Y:LIT"
   },
   {
+    "word": "letar",
+    "phonemes": "R\"E:T'AR",
+    "labels": "R\"E:TAR"
+  },
+  {
     "word": "hellre",
     "phonemes": "H'ELRE",
     "labels": "H'ELDRE0"
+  },
+  {
+    "word": "åka",
+    "phonemes": "\"Ä:K'A",
+    "labels": "\"Å:KA"
   },
   {
     "word": "förhållande",
@@ -1965,6 +2960,11 @@
     "labels": "2S'Å:"
   },
   {
+    "word": "har",
+    "phonemes": "H'A:R",
+    "labels": "'A:"
+  },
+  {
     "word": "telefonnumret",
     "phonemes": "TELEFÅN'U:MRET",
     "labels": "TELEFÅN'U:MRE0T"
@@ -1980,6 +2980,11 @@
     "labels": "2L'UN2S"
   },
   {
+    "word": "Fortkörning",
+    "phonemes": "F\"O:2T#TJ'Ö32NING",
+    "labels": "F\"O:2Tp:#TJ`Ö32NING"
+  },
+  {
     "word": "turistinformation",
     "phonemes": "T\"U:RIST#INFÅRMASJ'O:N",
     "labels": "T\"U:RIST#INFÅRMASJ`O:N"
@@ -1988,6 +2993,16 @@
     "word": "den",
     "phonemes": "D'EN",
     "labels": "R'E"
+  },
+  {
+    "word": "skärgården",
+    "phonemes": "SJ'Ä3RGÅ:2N",
+    "labels": "SJ'Ä3RGÅ:N"
+  },
+  {
+    "word": "ah",
+    "phonemes": "'A:H",
+    "labels": "'AH"
   },
   {
     "word": "det",
@@ -2010,14 +3025,39 @@
     "labels": "N\"Å:GRA"
   },
   {
+    "word": "verkar",
+    "phonemes": "V\"Ä4RK'AR",
+    "labels": "V\"Ä4RKAR"
+  },
+  {
+    "word": "fjärdlång",
+    "phonemes": "FJ\"Ä32D#L'ÅNG",
+    "labels": "FJ\"Ä32D#L`ÅNG"
+  },
+  {
+    "word": "äh",
+    "phonemes": "'Ä3H",
+    "labels": "'Ä3"
+  },
+  {
     "word": "med",
     "phonemes": "M'E:",
     "labels": "M'E:D"
   },
   {
+    "word": "hamnar",
+    "phonemes": "H\"AMN'AR",
+    "labels": "\"AMNAR"
+  },
+  {
     "word": "vill",
     "phonemes": "V'IL",
     "labels": "L"
+  },
+  {
+    "word": "lägger",
+    "phonemes": "L'ÄGÄ4R",
+    "labels": "2L'ÄGE0R"
   },
   {
     "word": "kostar",
@@ -2050,6 +3090,16 @@
     "labels": "MIN'U:TE0R"
   },
   {
+    "word": "någon",
+    "phonemes": "N\"Å:G'ÅN",
+    "labels": "N\"Å:GÅNv"
+  },
+  {
+    "word": "dit",
+    "phonemes": "D'I:T",
+    "labels": "'I:"
+  },
+  {
     "word": "såklart",
     "phonemes": "S\"Å:KL'A2T",
     "labels": "SÅ:KL'A:2T"
@@ -2058,11 +3108,6 @@
     "word": "vaxholm",
     "phonemes": "V\"AKS#H'ÅLM",
     "labels": "V\"AKSp:#H`ÅLM"
-  },
-  {
-    "word": "då",
-    "phonemes": "D'Å:",
-    "labels": "p:"
   },
   {
     "word": "campingplatser",
@@ -2075,14 +3120,29 @@
     "labels": "B'Å:TE0NG"
   },
   {
+    "word": "platser",
+    "phonemes": "PL\"ATSE0R",
+    "labels": "PL\"ATSE0Rv"
+  },
+  {
     "word": "campingplats",
     "phonemes": "K\"AMPING#PL'ATS",
     "labels": "K\"AMPING#PL`ATS"
   },
   {
+    "word": "konferens",
+    "phonemes": "KÅNFÄ4R'ENS",
+    "labels": "KÅFÄ4R'ENS"
+  },
+  {
     "word": "stockholm",
     "phonemes": "ST\"ÅK#'ÅLM",
     "labels": "ST\"ÅK#`ÅL"
+  },
+  {
+    "word": "vilken",
+    "phonemes": "V\"ILK'E0N",
+    "labels": "V\"ILsmKE0N"
   },
   {
     "word": "ut",
@@ -2095,6 +3155,16 @@
     "labels": "L'UFTE0N"
   },
   {
+    "word": "eftermiddag",
+    "phonemes": "\"EFTÄ4R#M'IDA",
+    "labels": "\"EFT#M`IDA"
+  },
+  {
+    "word": "denna",
+    "phonemes": "D\"EN'A",
+    "labels": "D\"ENA"
+  },
+  {
     "word": "vill",
     "phonemes": "V'IL",
     "labels": "VL"
@@ -2105,14 +3175,24 @@
     "labels": "2S\"E:NARE0"
   },
   {
+    "word": "vegabryggan",
+    "phonemes": "V\"E:GA#BR'YGAN",
+    "labels": "V\"E:GA#BR`YGAN"
+  },
+  {
+    "word": "skärgård",
+    "phonemes": "SJ\"Ä3R#G'Å:2D",
+    "labels": "2S\"Ä3R#G`Å:2D"
+  },
+  {
     "word": "ni",
     "phonemes": "N'I:",
     "labels": "2N'I:"
   },
   {
-    "word": "vegabryggan",
-    "phonemes": "V\"E:GA#BR'YGAN",
-    "labels": "V\"E:GA#BR`YGAN"
+    "word": "torsdagarna",
+    "phonemes": "T\"O:2S#D'A:GA2NA",
+    "labels": "T\"O:2S#D`A:GA2NA"
   },
   {
     "word": "en",
@@ -2130,14 +3210,14 @@
     "labels": "LÅSJ'I:"
   },
   {
-    "word": "föreställningen",
-    "phonemes": "F\"Ö3RE#ST'ÄLNINGEN",
-    "labels": "'I:"
-  },
-  {
     "word": "strömkajen",
     "phonemes": "STR\"ÖMK'AJEN",
     "labels": "STR\"ÖM#K`AJE0N"
+  },
+  {
+    "word": "jag",
+    "phonemes": "J'A:G",
+    "labels": "J'A:v"
   },
   {
     "word": "kymmendö",
@@ -2170,6 +3250,21 @@
     "labels": "N'ÅM"
   },
   {
+    "word": "onsdag",
+    "phonemes": "'ONSDA",
+    "labels": "'OSDA:G"
+  },
+  {
+    "word": "innan",
+    "phonemes": "\"IN'AN",
+    "labels": "\"INANG"
+  },
+  {
+    "word": "staveström",
+    "phonemes": "STA:VESTR'ÖM",
+    "labels": "ST\"A:VE0#STR`ÖMv"
+  },
+  {
     "word": "inget",
     "phonemes": "\"ING'ET",
     "labels": "\"INGE0T"
@@ -2195,14 +3290,14 @@
     "labels": "TR\"E:VLIGv"
   },
   {
-    "word": "hem",
-    "phonemes": "H'EM",
-    "labels": "P'Å:"
-  },
-  {
     "word": "klippudden",
     "phonemes": "KL\"IP#'UDEN",
     "labels": "KL\"IP#`UDE0N"
+  },
+  {
+    "word": "sandhamn",
+    "phonemes": "S\"AND#H'AMN",
+    "labels": "S\"ANDv#H`AM"
   },
   {
     "word": "campingplatser",
@@ -2218,6 +3313,11 @@
     "word": "hotellet",
     "phonemes": "HOT'ELET",
     "labels": "HOT'ELE0T"
+  },
+  {
+    "word": "hur",
+    "phonemes": ",H'U:R",
+    "labels": "H'U:Rv"
   },
   {
     "word": "nej",
@@ -2245,6 +3345,16 @@
     "labels": "'EFTE0"
   },
   {
+    "word": "finnhamns",
+    "phonemes": "F\"IN#H'AMNS",
+    "labels": "F\"IN#H`AMNSv"
+  },
+  {
+    "word": "billigaste",
+    "phonemes": "B\"IL'IGASTE0",
+    "labels": "B\"ILIASTE0"
+  },
+  {
     "word": "tidigt",
     "phonemes": "T\"I:D'IT",
     "labels": "T\"I:DIT"
@@ -2253,6 +3363,11 @@
     "word": "senare",
     "phonemes": "S\"E:N'ARE",
     "labels": "S\"E:NARE0"
+  },
+  {
+    "word": "25",
+    "phonemes": "TJU:GOF'EM",
+    "labels": "TJU:F'EMv"
   },
   {
     "word": "riktningen",
@@ -2305,6 +3420,21 @@
     "labels": "N'O:"
   },
   {
+    "word": "en",
+    "phonemes": "'EN",
+    "labels": "M"
+  },
+  {
+    "word": "nybrokajen",
+    "phonemes": "N\"Y:BRO#K`AJEN",
+    "labels": "N\"Y:BRO#K`AJE0N"
+  },
+  {
+    "word": "norrskär",
+    "phonemes": "N'ÅRSJÄ3R",
+    "labels": "N'ÅR2SÄ3R"
+  },
+  {
     "word": "båtarna",
     "phonemes": "B\"Å:TA2N'A",
     "labels": "B\"Å:TA2NA"
@@ -2313,6 +3443,11 @@
     "word": "utö",
     "phonemes": "\"U:#T'Ö:",
     "labels": "\"U:#T`Ö:"
+  },
+  {
+    "word": "ingen",
+    "phonemes": "\"ING'EN",
+    "labels": "\"INGE0N"
   },
   {
     "word": "röda",
@@ -2330,9 +3465,19 @@
     "labels": "TR'AK"
   },
   {
+    "word": "känner",
+    "phonemes": "TJ'ÄNÄ4R",
+    "labels": "TJ'ÄNE0R"
+  },
+  {
     "word": "och",
     "phonemes": "'Å:",
     "labels": "'ÅKv"
+  },
+  {
+    "word": "kväll",
+    "phonemes": "KV'ÄL",
+    "labels": "KV'ÄLv"
   },
   {
     "word": "matställe",
@@ -2370,6 +3515,11 @@
     "labels": "K\"AMPA"
   },
   {
+    "word": "till",
+    "phonemes": "T'IL",
+    "labels": "2T'ILv"
+  },
+  {
     "word": "veckodagar",
     "phonemes": "V\"EKOD'AGAR",
     "labels": "V\"EKODAGAR"
@@ -2378,6 +3528,11 @@
     "word": "nybrokajen",
     "phonemes": "N\"Y:BRO#K'AJEN",
     "labels": "N\"Y:BRO#K`AJE0N"
+  },
+  {
+    "word": "varifrån",
+    "phonemes": "VARIFR'Å:N",
+    "labels": "VARFR'Å:N"
   },
   {
     "word": "sista",
@@ -2390,9 +3545,19 @@
     "labels": "M\"A:R#`Ö:"
   },
   {
+    "word": "hamn",
+    "phonemes": "H'AMN",
+    "labels": "H'AMvNv"
+  },
+  {
     "word": "räcker",
     "phonemes": "R'ÄKÄ4R",
     "labels": "R'ÄKE0R"
+  },
+  {
+    "word": "sjaltsösjöbaden",
+    "phonemes": "SJ\"ALT#SÖ:#SJ'Ö:BADEN",
+    "labels": "2S\"ALT#SÖ:#2S`Ö:BADE0N"
   },
   {
     "word": "mycket",
@@ -2400,19 +3565,14 @@
     "labels": "M\"YKE0"
   },
   {
-    "word": "de",
-    "phonemes": "Dd'ÅM",
-    "labels": "D'ÅM"
-  },
-  {
     "word": "någon",
     "phonemes": "N'ÅN",
     "labels": "N'ÅM"
   },
   {
-    "word": "någonstans",
-    "phonemes": "NÅNST'ANS",
-    "labels": "NÅST'AS"
+    "word": "hotellrum",
+    "phonemes": "HOT\"EL#R'UM",
+    "labels": "HOT\"ELv#R`UMv"
   },
   {
     "word": "vad",
@@ -2420,9 +3580,24 @@
     "labels": "VA:"
   },
   {
+    "word": "någonstans",
+    "phonemes": "NÅNST'ANS",
+    "labels": "NÅST'AS"
+  },
+  {
     "word": "varandra",
     "phonemes": "VAR'ANDRA",
     "labels": "VAR'AN"
+  },
+  {
+    "word": "tillåten",
+    "phonemes": "T\"IL#L'Å:TEN",
+    "labels": "T\"I#L`Å:TE0N"
+  },
+  {
+    "word": "de",
+    "phonemes": "Dd'ÅM",
+    "labels": "D'ÅM"
   },
   {
     "word": "som",
@@ -2430,9 +3605,9 @@
     "labels": "2S'ÅM"
   },
   {
-    "word": "jag",
-    "phonemes": "J'A:",
-    "labels": "\"Å:KA"
+    "word": "vidare",
+    "phonemes": "V\"I:D'ARE",
+    "labels": "V\"I:DARE0"
   },
   {
     "word": "vilka",
@@ -2450,9 +3625,19 @@
     "labels": "2N'ÅRSJÄ3R"
   },
   {
+    "word": "går",
+    "phonemes": "G'Å:R",
+    "labels": "G'Å:Rv"
+  },
+  {
     "word": "45",
     "phonemes": "FÖ42TIF'EM",
     "labels": "FÖ42TIF'EMv"
+  },
+  {
+    "word": "konferensrum",
+    "phonemes": "KÅNFÄ4R\"ENS#R'U:M",
+    "labels": "KÅFÄ4R\"ENS#R`U:M"
   },
   {
     "word": "jag",
@@ -2460,14 +3645,19 @@
     "labels": "'A:"
   },
   {
+    "word": "biljetten",
+    "phonemes": "BIL#J'ETEN",
+    "labels": "BILJ`ETE0N"
+  },
+  {
     "word": "norrtälje",
     "phonemes": "NÅ2T\"ÄLJ'E",
     "labels": "NÅ2T\"ÄLJE"
   },
   {
-    "word": "måndag",
-    "phonemes": "M'ÅNDA",
-    "labels": "M'ÅNDA:G"
+    "word": "när",
+    "phonemes": "N'Ä3",
+    "labels": "N\"Ä3"
   },
   {
     "word": "hotellrum",
@@ -2475,14 +3665,34 @@
     "labels": "HOT\"EL#R`UM"
   },
   {
+    "word": "måndag",
+    "phonemes": "M'ÅNDA",
+    "labels": "M'ÅNDA:G"
+  },
+  {
     "word": "finns",
     "phonemes": "F'INS",
     "labels": "F'IS"
   },
   {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "V'ILKA"
+  },
+  {
+    "word": "finnhamn",
+    "phonemes": "F\"IN#H'AMN",
+    "labels": "F\"IN#H`AMNv"
+  },
+  {
     "word": "övernatta",
     "phonemes": "\"Ö:VÄ4R#N'ATA",
     "labels": "\"Ö:VR#2N`ATA"
+  },
+  {
+    "word": "destination",
+    "phonemes": "DESTINATSJ'O:N",
+    "labels": "DESTINA2S'O:Nv"
   },
   {
     "word": "små",
@@ -2495,9 +3705,14 @@
     "labels": "ST'A:VSNÄ:"
   },
   {
-    "word": "de",
-    "phonemes": "D'OM",
-    "labels": "P'Å:"
+    "word": "möjligheter",
+    "phonemes": "M\"ÖJLIG#H'E:TÄ4R",
+    "labels": "M\"ÖJLI#H`E:TE0R"
+  },
+  {
+    "word": "9",
+    "phonemes": "N\"I:'O",
+    "labels": "N\"I:E"
   },
   {
     "word": "skärgård",
@@ -2505,14 +3720,29 @@
     "labels": "SJ\"Ä3R#G`Å:2D"
   },
   {
+    "word": "nöjer",
+    "phonemes": "N'ÖJÄ4R",
+    "labels": "N'ÖJE0"
+  },
+  {
     "word": "10",
     "phonemes": "T\"I:'O",
     "labels": "T\"I:O"
   },
   {
+    "word": "vill",
+    "phonemes": "V'IL",
+    "labels": "V'ILv"
+  },
+  {
     "word": "platser",
     "phonemes": "PL\"ATS'E0R",
     "labels": "PL\"ATSE0R"
+  },
+  {
+    "word": "fredagar",
+    "phonemes": "FR\"E:#D'A:GAR",
+    "labels": "FR\"E:#D`A:GAR"
   },
   {
     "word": "en",
@@ -2523,6 +3753,16 @@
     "word": "17",
     "phonemes": "SJ\"UT'ÅN",
     "labels": "SJ\"UTÅN"
+  },
+  {
+    "word": "prövar",
+    "phonemes": "PR\"Ö:V'AR",
+    "labels": "PR\"Ö:VAR"
+  },
+  {
+    "word": "efter",
+    "phonemes": "'EFTER",
+    "labels": "'EFTR"
   },
   {
     "word": "vid",
@@ -2540,9 +3780,24 @@
     "labels": "T\"ITA"
   },
   {
+    "word": "öppna",
+    "phonemes": "\"ÖPN'A",
+    "labels": "\"ÖPNA"
+  },
+  {
+    "word": "möjligt",
+    "phonemes": "M\"ÖJL'IGT",
+    "labels": "M\"ÖJLIGT"
+  },
+  {
     "word": "föreställningen",
     "phonemes": "F\"Ö3RE#ST'ÄLNINGEN",
     "labels": "F\"Ö3RE#ST`ÄNINGE0N"
+  },
+  {
+    "word": "hamnen",
+    "phonemes": "EN",
+    "labels": "H'AMNE0N"
   },
   {
     "word": "åka",
@@ -2550,9 +3805,14 @@
     "labels": "\"Å:K"
   },
   {
-    "word": "ok",
-    "phonemes": "ÅK'E:J",
-    "labels": "ÅK'EJ"
+    "word": "anländer",
+    "phonemes": "\"AN#L'ÄNDÄ4R",
+    "labels": "\"AN#L`ÄNDE0R"
+  },
+  {
+    "word": "fryser",
+    "phonemes": "FR'Y:SÄ4R",
+    "labels": "FR'Y:S"
   },
   {
     "word": "efter",
@@ -2563,6 +3823,16 @@
     "word": "Fortkörning",
     "phonemes": "F\"O:2T#TJ'Ö32NING",
     "labels": "F\"O:2T#TJ`Ö32NING"
+  },
+  {
+    "word": "ok",
+    "phonemes": "ÅK'E:J",
+    "labels": "ÅK'EJ"
+  },
+  {
+    "word": "exploderade",
+    "phonemes": "EKSPLÅD'E:RADE",
+    "labels": "ESPLÅD'E:RADE0"
   },
   {
     "word": "Där",
@@ -2615,6 +3885,11 @@
     "labels": "FR'E:DA:G"
   },
   {
+    "word": "svartlöga",
+    "phonemes": "SV'A2T#L'Ö:GA",
+    "labels": "SV\"A2Tv#L`Ö:GA"
+  },
+  {
     "word": "som",
     "phonemes": "S'ÅM",
     "labels": "SM"
@@ -2625,9 +3900,29 @@
     "labels": "SV\"A2T#L`Ö:GA"
   },
   {
+    "word": "kapellskär",
+    "phonemes": "K'APEL#SJ'Ä3R",
+    "labels": "KAP\"EL#SJ`Ä3R"
+  },
+  {
+    "word": "gruvbryggan",
+    "phonemes": "GR\"U:V#BR'YGAN",
+    "labels": "GR\"U:V#BR`YGA"
+  },
+  {
+    "word": "löka",
+    "phonemes": "L\"Ö:K'A",
+    "labels": "L\"Ö:KA"
+  },
+  {
     "word": "tar",
     "phonemes": "T'A:R",
     "labels": "T'A:"
+  },
+  {
+    "word": "ifrån",
+    "phonemes": "FR'Å:N",
+    "labels": "IFR'Å:NG"
   },
   {
     "word": "sa",
@@ -2638,6 +3933,11 @@
     "word": "Sprakande",
     "phonemes": "SPR\"A:K'ANDE",
     "labels": "SPR\"A:KAND"
+  },
+  {
+    "word": "resa",
+    "phonemes": "R\"E:S'A",
+    "labels": "R\"E:SA"
   },
   {
     "word": "möja",
@@ -2665,6 +3965,11 @@
     "labels": "B'Å:TE0N"
   },
   {
+    "word": "passande",
+    "phonemes": "P\"AS'ANDE",
+    "labels": "P\"ASANDE0"
+  },
+  {
     "word": "mycket",
     "phonemes": "M\"YK'E0T",
     "labels": "M\"YKE0T"
@@ -2680,6 +3985,21 @@
     "labels": "F\"Ö3RE"
   },
   {
+    "word": "båttid",
+    "phonemes": "B\"ÅT#'I:D",
+    "labels": "B\"ÅT#T`I:Dv"
+  },
+  {
+    "word": "vaxholmsbåten",
+    "phonemes": "V\"AKS#HÅLMS#B'Å:TEN",
+    "labels": "V\"AKS#HÅLMS#B`Å:TE0N"
+  },
+  {
+    "word": "vandrarhem",
+    "phonemes": "V\"ANDRAR#H'EM",
+    "labels": "V\"ANDRAR#H`EMv"
+  },
+  {
     "word": "informationen",
     "phonemes": "INFÅRMASJ'O:NEN",
     "labels": "INFÅMASJ'O:NE0N"
@@ -2688,6 +4008,11 @@
     "word": "stadsgårdskajen",
     "phonemes": "ST\"A:DS#GÅ:2D#SK'AJEN",
     "labels": "ST\"A:DS#GÅ:2D#SK`AJE0N"
+  },
+  {
+    "word": "lägger",
+    "phonemes": "L'ÄGÄ4R",
+    "labels": "L'ÄGE0"
   },
   {
     "word": "restauranger",
@@ -2705,9 +4030,19 @@
     "labels": "N\"Ä3R#H`E:TE0N"
   },
   {
+    "word": "goddag",
+    "phonemes": "GOD'A:",
+    "labels": "GOD'A:G"
+  },
+  {
     "word": "övernattningsmöjligheter",
     "phonemes": "\"Ö:VÄ4R#NATNINGS#MÖJLIGH'E:TE0R",
     "labels": "\"Ö:VE0#NATNINGS#MÖJLIH`E:TE0R"
+  },
+  {
+    "word": "annan",
+    "phonemes": "\"AN'AN",
+    "labels": "\"ANAM"
   },
   {
     "word": "föreställningen",
@@ -2740,6 +4075,16 @@
     "labels": "L'Ö32DA:G"
   },
   {
+    "word": "tacka",
+    "phonemes": "T\"AK'A",
+    "labels": "T\"AKA"
+  },
+  {
+    "word": "staveström",
+    "phonemes": "STA:VESTR'ÖM",
+    "labels": "ST\"A:V#STR`ÖM"
+  },
+  {
     "word": "stockholm",
     "phonemes": "ST\"ÅK#H'ÅLM",
     "labels": "ST\"ÅK`ÅLM"
@@ -2750,19 +4095,34 @@
     "labels": "TR'O:"
   },
   {
+    "word": "tycker",
+    "phonemes": "T'YKÄ4R",
+    "labels": "T'YKE0"
+  },
+  {
+    "word": "åta",
+    "phonemes": "\"Å:#T'A:",
+    "labels": "\"Å:#T`A"
+  },
+  {
+    "word": "mellan",
+    "phonemes": "M\"EL'AN",
+    "labels": "M\"ELANG"
+  },
+  {
     "word": "är",
     "phonemes": "'Ä3R",
     "labels": "'Ä3"
   },
   {
-    "word": "i",
-    "phonemes": "'I:",
-    "labels": "D'E:"
-  },
-  {
     "word": "tackar",
     "phonemes": "T\"AK'AR",
     "labels": "T\"AKAR"
+  },
+  {
+    "word": "bo",
+    "phonemes": "B'O:",
+    "labels": "B'O:v"
   },
   {
     "word": "fyrverkeripjäser",
@@ -2775,6 +4135,11 @@
     "labels": "OT'ELE0N"
   },
   {
+    "word": "ledigt",
+    "phonemes": "L\"E:D'IGT",
+    "labels": "L\"E:DIGTv"
+  },
+  {
     "word": "vilka",
     "phonemes": "V\"ILK'A",
     "labels": "V\"ILvKA"
@@ -2783,6 +4148,11 @@
     "word": "ska",
     "phonemes": "SK'A:",
     "labels": "2SK'A:"
+  },
+  {
+    "word": "ornöboda",
+    "phonemes": "\"O:2NÖ:#B'O:DA",
+    "labels": "\"O:2NÖ:#B`O:DA"
   },
   {
     "word": "nybrokajen",
@@ -2795,14 +4165,19 @@
     "labels": "M\"ÅRÅNE0N"
   },
   {
+    "word": "man",
+    "phonemes": "M'AN",
+    "labels": "M'ANG"
+  },
+  {
     "word": "16",
     "phonemes": "S\"EKST'ÅN",
     "labels": "S\"EKSTÅN"
   },
   {
-    "word": "man",
-    "phonemes": "M'AN",
-    "labels": "M'ANG"
+    "word": "kyligt",
+    "phonemes": "TJ\"Y:L'IGT",
+    "labels": "TJ\"Y:LIGT"
   },
   {
     "word": "dumma",
@@ -2810,9 +4185,24 @@
     "labels": "D\"UMA"
   },
   {
+    "word": "skärgårdsbåt",
+    "phonemes": "SJ\"Ä3R#GÅ:2D2S#B'Å:T",
+    "labels": "SJ\"Ä3R#GÅ:2D2S#B`Å:T"
+  },
+  {
     "word": "de",
     "phonemes": "D'E:",
     "labels": "2DE:"
+  },
+  {
+    "word": "från",
+    "phonemes": "FR'Å:N",
+    "labels": "F'Å:N"
+  },
+  {
+    "word": "XavbrordX",
+    "phonemes": "av",
+    "labels": "E0"
   },
   {
     "word": "mycket",
@@ -2835,9 +4225,24 @@
     "labels": "D'E:"
   },
   {
+    "word": "restaurang",
+    "phonemes": "RESTÅR'ANG",
+    "labels": "RESTUR'ANGv"
+  },
+  {
     "word": "vilka",
     "phonemes": "V\"ILK'A",
     "labels": "V\"IKA"
+  },
+  {
+    "word": "lämpligast",
+    "phonemes": "L\"ÄMPL'IGAST",
+    "labels": "L\"ÄMPLIAS"
+  },
+  {
+    "word": "7",
+    "phonemes": "SJ'U:",
+    "labels": "2S'U:"
   },
   {
     "word": "drottningholm",
@@ -2865,6 +4270,16 @@
     "labels": "BR\"ÅT#`Ö:"
   },
   {
+    "word": "avgår",
+    "phonemes": "\"A:V#G'Å:R",
+    "labels": "\"A:V#G`Å:R"
+  },
+  {
+    "word": "från",
+    "phonemes": "FR'Å:N",
+    "labels": "'Å:N"
+  },
+  {
     "word": "föreställningen",
     "phonemes": "F\"Ö3RE#ST'ÄLNINGEN",
     "labels": "F\"Ö3RE#ST`ÄLNING"
@@ -2885,14 +4300,19 @@
     "labels": "ST\"ÅK#`ÅM"
   },
   {
+    "word": "norra_lagnö",
+    "phonemes": "N\"ÅRA~L\"ANGN#'Ö:",
+    "labels": "N\"ÅRA~L\"ANGN#`Ö:"
+  },
+  {
     "word": "stannar",
     "phonemes": "ST\"AN'AR",
     "labels": "ST\"ANA"
   },
   {
-    "word": "i",
-    "phonemes": "'I:",
-    "labels": "'EN"
+    "word": "kapellskär",
+    "phonemes": "KAP\"EL#SJ'Ä3R",
+    "labels": "KAP\"EL#SJ`Ä3R"
   },
   {
     "word": "när",
@@ -2913,6 +4333,11 @@
     "word": "hemma",
     "phonemes": "H\"EM'A",
     "labels": "H\"EMA"
+  },
+  {
+    "word": "möjlighet",
+    "phonemes": "M\"ÖJLIG#H'E:T",
+    "labels": "M\"ÖJLI#H`E:T"
   },
   {
     "word": "exploderade",
