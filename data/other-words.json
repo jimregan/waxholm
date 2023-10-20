@@ -2,7 +2,8 @@
   {
     "word": "var",
     "phonemes": "V'A:R",
-    "labels": "'A:R"
+    "labels": "'A:R",
+    "note": "cutoff recording"
   },
   {
     "word": "Öppna",
@@ -42,6 +43,7 @@
   {
     "word": "en",
     "phonemes": "'EN",
+    "comment": "check",
     "labels": "'E"
   },
   {
@@ -82,6 +84,7 @@
   {
     "word": "när",
     "phonemes": "N'Ä3R",
+    "comment": "check",
     "labels": "N"
   },
   {
@@ -127,6 +130,7 @@
   {
     "word": "så",
     "phonemes": "S'Å:",
+    "comment": "check",
     "labels": "S"
   },
   {
@@ -172,12 +176,8 @@
   {
     "word": "fyrverkeripjäser",
     "phonemes": "F\"Y:R#VÄ4RKÄ4RI#PJ'Ä:SÄ4R",
+    "comment": "check",
     "labels": "FY:RP:VÄ4RKÄ4R\"I:#PJ`Ä:SE0R"
-  },
-  {
-    "word": "struntar",
-    "phonemes": "STR\"UNT'AR",
-    "labels": "D'Å:"
   },
   {
     "word": "ungefär",
@@ -228,11 +228,6 @@
     "word": "värre",
     "phonemes": "V'Ä4RE",
     "labels": "V'Ä4RE0"
-  },
-  {
-    "word": "utvilade",
-    "phonemes": "\"U:T#V'I:LADE",
-    "labels": "T\"ITAD"
   },
   {
     "word": "Stockholms",
@@ -302,6 +297,7 @@
   {
     "word": "du",
     "phonemes": "D'U:",
+    "comment": "check",
     "labels": "'U:"
   },
   {
@@ -322,6 +318,7 @@
   {
     "word": "båten",
     "phonemes": "B'Å:TEN",
+    "comment": "check",
     "labels": "B'Å:TKlTE0N"
   },
   {
@@ -362,6 +359,7 @@
   {
     "word": "dom",
     "phonemes": "D'OM",
+    "comment": "check",
     "labels": "'ÅM"
   },
   {
@@ -377,6 +375,7 @@
   {
     "word": "det",
     "phonemes": "D'E:T",
+    "comment": "check",
     "labels": "D"
   },
   {
@@ -567,6 +566,7 @@
   {
     "word": "några",
     "phonemes": "N\"Å:GR'A",
+    "comment": "check",
     "labels": "N\"Å:A"
   },
   {
@@ -622,6 +622,7 @@
   {
     "word": "tror",
     "phonemes": "TR'O:R",
+    "comment": "check",
     "labels": "TR"
   },
   {
@@ -642,6 +643,7 @@
   {
     "word": "de",
     "phonemes": "D'OM",
+    "comment": "check",
     "labels": "R'ÅM"
   },
   {
@@ -687,6 +689,7 @@
   {
     "word": "XavbrordX",
     "phonemes": "XavbrordX",
+    "comment": "check",
     "labels": "N\"Å"
   },
   {
@@ -837,7 +840,7 @@
   {
     "word": "XinandX",
     "phonemes": "pa",
-    "labels": "Pa"
+    "labels": "pa"
   },
   {
     "word": "båt",
@@ -887,11 +890,7 @@
   {
     "word": "XtvekX",
     "phonemes": "öh",
-    "labels": "P:"
-  },
-  {
-    "word": "det",
-    "phonemes": "D'E:T",
+    "comment": "check",
     "labels": "P:"
   },
   {
