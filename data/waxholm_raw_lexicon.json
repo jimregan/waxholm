@@ -4409,7 +4409,7 @@
     "smp": "fp2009/fp2009.1.10.smp",
     "text": "sluta XutandX",
     "phoneme": "SL\"U:T'A",
-    "labels": "SL\"U:TtA p: pa"
+    "labels": "SL\"U:TtA p:_pa"
   },
   {
     "stem": "fp2036.1.03.smp",
@@ -4422,15 +4422,15 @@
     "stem": "fp2036.pr.06.smp",
     "smp": "fp2036/fp2036.pr.06.smp",
     "text": "XsmackX XinandX Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
-    "labels": "sm pa p: F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32Nvp:#J`O2Tt"
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "labels": "sm pa_p: F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32Nvp:#J`O2Tt"
   },
   {
     "stem": "fp2036.3.00.smp",
     "smp": "fp2036/fp2036.3.00.smp",
     "text": "XsmackX XinandX ja hejsan jag undrar var i stockholms skärgård som gällnö ligger",
     "phoneme": "J'A: H\"EJS'AN J'A:G+ \"UNDR'AR V'A:R+ 'I:+ ST\"ÅKhy'ÅLMS SJ\"Ä3RhyG'Å:2D S'ÅM+ J\"ÄLhyN'Ö: L'IGÄ4R",
-    "labels": "sm pa p: J'A: H'EJSAN J'A: \"UNDdRAR p:pap: V'A:R p: 'I: STt\"ÅKk#`ÅMS SJ'Ä3GgÅ:R 2S'ÅM J\"ÄL#N`Ö: L'IGgE0R"
+    "labels": "sm pa_p: J'A: H'EJSAN J'A: \"UNDdRAR p:pap: V'A:R p: 'I: STt\"ÅKk#`ÅMS SJ'Ä3GgÅ:R 2S'ÅM J\"ÄL#N`Ö: L'IGgE0R"
   },
   {
     "stem": "fp2036.7.07.smp",
@@ -4465,12 +4465,12 @@
     "smp": "fp2036/fp2036.1.02.smp",
     "text": "XinandX XtvekX jag vill åka ifrån kajen utanför grand_hotell i stockholm",
     "phoneme": "pa öh J'A:G+ V'IL+ \"Å:K'A FR'Å:N+ K'AJEN \"U:TANhyF'Ö3R GR'AND~H'O:TEL 'I:+ ST\"ÅKhy'ÅLM",
-    "labels": "pa p: öh p: J'A: V'IL \"Å:KkA IFR'Å:NG Kk'AJE0N p: \"U:TtAN#F`Ö3 GgR'ANDd~H'O:TtELv p: 'I: STt\"ÅKk#`ÅLM"
+    "labels": "pa_p: öh p: J'A: V'IL \"Å:KkA IFR'Å:NG Kk'AJE0N p: \"U:TtAN#F`Ö3 GgR'ANDd~H'O:TtELv p: 'I: STt\"ÅKk#`ÅLM"
   },
   {
     "stem": "fp2036.pr.07.smp",
     "smp": "fp2036/fp2036.pr.07.smp",
-    "text": "Det var kyligt i luften och stj{rnorna skimrade .",
+    "text": "Det var kyligt i luften och stjärnorna skimrade",
     "labels": "Dd'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0",
     "phoneme": ""
   },
@@ -4556,7 +4556,7 @@
     "smp": "fp2036/fp2036.7.00.smp",
     "text": "XinandX hej XtvekX jag skulle vilja åka ut i skärgården och bo på vandrarhem XsmackX jag undrar var",
     "phoneme": "H'EJ öh J'A:G+ SK\"UL'E+ V\"ILJ'A+ \"Å:K'A 'U:T 'I:+ SJ'Ä3RGÅ:2N 'Å:+ B'O: P'Å:+ V\"ANDRARhyH'EM sm J'A:G+ \"UNDR'AR V'A:R+",
-    "labels": "pa p: H'EJ p: öh J'A:Gg p: SKk\"ULE0 V\"ILJA \"Å:KkA 'U:Tt 'I: SJ'Ä3GgÅ:2N p: 'ÅKk p: B'O: Pp'Å: V\"ANDdRAR#H`EMv p: sm p: J'A: \"UNDdRAR V'A:"
+    "labels": "pa_p: H'EJ p: öh J'A:Gg p: SKk\"ULE0 V\"ILJA \"Å:KkA 'U:Tt 'I: SJ'Ä3GgÅ:2N p: 'ÅKk p: B'O: Pp'Å: V\"ANDdRAR#H`EMv p: sm p: J'A: \"UNDdRAR V'A:"
   },
   {
     "stem": "fp2036.pr.11.smp",
@@ -4583,7 +4583,7 @@
     "stem": "fp2036.7.08.smp",
     "smp": "fp2036/fp2036.7.08.smp",
     "text": "jag undrar hur man åker till finnhamns vandrarhem",
-    "phoneme": "J'A:G+ \"UNDR'AR,H'U:R+ M'AN+ 'Å:KÄ4R T'IL+ F\"INhyH'AMNS V\"ANDRARhyH'EM",
+    "phoneme": "J'A:G+ \"UNDR'AR ,H'U:R+ M'AN+ 'Å:KÄ4R T'IL+ F\"INhyH'AMNS V\"ANDRARhyH'EM",
     "labels": "p: J'A:Gg \"UNDdRAR H'U: M'AN 'Å:KkE0R Tt'IL F\"IN#H`AMNSv p: V\"ANDdRAR#H`EM"
   },
   {
@@ -4619,7 +4619,7 @@
     "smp": "fp2036/fp2036.pr.09.smp",
     "text": "Sprakande fyrverkeripjäser exploderade över oss",
     "phoneme": "SPR\"A:K'ANDE F\"Y:RhyVÄ4RKÄ4RIhyPJ'Ä:SÄ4R EKSPLÅD'E:RADE 'Ö:VÄ4R 'ÅS+",
-    "labels": "pa p: SPpR\"A:KkANDdE0 F'YRKk p: FY:RVÄ4RKkÄ4R\"I:#PpJ`Ä:SE0R EKkSPpLÅDd'E:RADdE0 p: 'Ö:VE0R 'ÅS"
+    "labels": "pa_p: SPpR\"A:KkANDdE0 F'YRKk p: FY:RVÄ4RKkÄ4R\"I:#PpJ`Ä:SE0R EKkSPpLÅDd'E:RADdE0 p: 'Ö:VE0R 'ÅS"
   },
   {
     "stem": "fp2036.1.07.smp",
@@ -4682,7 +4682,7 @@
     "smp": "fp2031/fp2031.1.03.smp",
     "text": "från nybrokajen",
     "phoneme": "FR'Å:N+ N\"Y:hyBROK'AJEN",
-    "labels": "FR'Å:N pa p: N\"Y:BbRO#Kk`AJE0N"
+    "labels": "FR'Å:N pa_p: N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2031.1.24.smp",
@@ -4702,7 +4702,7 @@
     "stem": "fp2031.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING p: 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -4752,7 +4752,7 @@
     "smp": "fp2031/fp2031.1.01.smp",
     "text": "XsmackX XinandX när går båtarna till vaxholm ikväll",
     "phoneme": "N'Ä3R+ G'Å:R B\"Å:TA2N'A T'IL+ V\"AKShyH'ÅLM IKV'ÄL",
-    "labels": "sm pa p: N'Ä3R p: Gg'Å:R Bb\"Å:TtA2NA Tt'I V\"AKkS`ÅLM p: IKkV'ÄL"
+    "labels": "sm pa_p: N'Ä3R p: Gg'Å:R Bb\"Å:TtA2NA Tt'I V\"AKkS`ÅLM p: IKkV'ÄL"
   },
   {
     "stem": "fp2031.1.11.smp",
@@ -4906,7 +4906,7 @@
     "smp": "fp2031/fp2031.5.00.smp",
     "text": "när går XutandX en båt till vegabryggan",
     "phoneme": "N'Ä3R+ G'Å:R 'EN+ B'Å:T T'IL+ V\"E:GAhyBR'YGAN",
-    "labels": "N'Ä3R pap: Gg'Å:R pa p: 'EN Bb'Å:Tt p: Tt'ILv V\"E:GgA#BbR`YGgAN"
+    "labels": "N'Ä3R pap: Gg'Å:R pa_p: 'EN Bb'Å:Tt p: Tt'ILv V\"E:GgA#BbR`YGgAN"
   },
   {
     "stem": "fp2031.2.02.smp",
@@ -5003,7 +5003,7 @@
     "stem": "fp2052.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -5164,7 +5164,7 @@
     "stem": "fp2055.pr.06.smp",
     "smp": "fp2055/fp2055.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -5177,7 +5177,7 @@
   {
     "stem": "fp2055.pr.07.smp",
     "smp": "fp2055/fp2055.pr.07.smp",
-    "text": "Det var kyligt i luften och stj{rnorna skimrade .",
+    "text": "Det var kyligt i luften och stjärnorna skimrade",
     "labels": "d'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0",
     "phoneme": ""
   },
@@ -5395,7 +5395,7 @@
     "stem": "fp2063.pr.06.smp",
     "smp": "fp2063/fp2063.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 p: 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -5422,7 +5422,7 @@
   {
     "stem": "fp2063.pr.07.smp",
     "smp": "fp2063/fp2063.pr.07.smp",
-    "text": "Det var kyligt i luften och stj{rnorna skimrade .",
+    "text": "Det var kyligt i luften och stjärnorna skimrade",
     "labels": "Dd'E:Tt V'A:R TJ\"Y:LITt 'I: L'UFTtE0N p: 'ÅKk SJ\"Ä32NO2NA SJ\"IMRADdE0",
     "phoneme": ""
   },
@@ -5632,7 +5632,7 @@
   {
     "stem": "fp2064.pr.07.smp",
     "smp": "fp2064/fp2064.pr.07.smp",
-    "text": "Det var kyligt i luften och stj{rnorna skimrade .",
+    "text": "Det var kyligt i luften och stjärnorna skimrade",
     "labels": "Dd'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N p: 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0",
     "phoneme": ""
   },
@@ -5661,7 +5661,7 @@
     "stem": "fp2064.pr.06.smp",
     "smp": "fp2064/fp2064.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -5899,7 +5899,7 @@
     "stem": "fp2030.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -5962,7 +5962,7 @@
     "stem": "fp2008.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -6368,7 +6368,7 @@
     "stem": "fp2037.pr.06.smp",
     "smp": "fp2037/fp2037.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -6403,8 +6403,8 @@
     "stem": "fp2001.6.00.smp",
     "smp": "fp2001/fp2001.6.00.smp",
     "text": "XinandX XtvekX visa hotelltabellen igen tack",
-    "phoneme": "V\"I:S'A HOT\"ELhyTAB'ELEN IJ'EN,T'AK",
-    "labels": "pa p: öh V\"I:SA OTt\"EL#TtAB`ELE0N J'EN Tt'AKk"
+    "phoneme": "V\"I:S'A HOT\"ELhyTAB'ELEN IJ'EN ,T'AK",
+    "labels": "pa_p: öh V\"I:SA OTt\"EL#TtAB`ELE0N J'EN Tt'AKk"
   },
   {
     "stem": "fp2001.pr.04.smp",
@@ -6418,13 +6418,13 @@
     "smp": "fp2001/fp2001.2.17.smp",
     "text": "XsmackX XinandX när går de åt andra hållet på söndag",
     "phoneme": "N'Ä3R+ G'Å:R D'OM 'Å:T+ \"ANDR'A H'ÅLET P'Å:+ S'ÖNDA",
-    "labels": "sm pa p: N'Ä3R G'Å:R 'ÅM 'Å:Tt \"ANDdRA H'ÅLE0Tt Pp'Å: S'ÖNDA"
+    "labels": "sm pa_p: N'Ä3R G'Å:R 'ÅM 'Å:Tt \"ANDdRA H'ÅLE0Tt Pp'Å: S'ÖNDA"
   },
   {
     "stem": "fp2001.2.07.smp",
     "smp": "fp2001/fp2001.2.07.smp",
     "text": "det sa jag ju dalarö",
-    "phoneme": "D'E+ S'A: J'A:+ J'U+,D\"A:LAhyR'Ö:",
+    "phoneme": "D'E+ S'A: J'A:+ J'U+ ,D\"A:LAhyR'Ö:",
     "labels": "D'E: S'A: J'A: J'U p:pap: Dd\"A:LAR#`Ö:"
   },
   {
@@ -6486,7 +6486,7 @@
   {
     "stem": "fp2001.pr.07.smp",
     "smp": "fp2001/fp2001.pr.07.smp",
-    "text": "Det var kyligt i luften och stj{rnorna skimrade .",
+    "text": "Det var kyligt i luften och stjärnorna skimrade",
     "labels": "Dd'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0",
     "phoneme": ""
   },
@@ -6508,14 +6508,14 @@
     "stem": "fp2001.6.02.smp",
     "smp": "fp2001/fp2001.6.02.smp",
     "text": "XsmackX jag vill ha en lista på de hamnar som har hotell och som samtidigt XsmackX trafikeras av era båtar",
-    "phoneme": "J'A:+ V'IL+ S'E: 'EN+ L\"IST'A P'Å:+ D'E:+ H\"AMN'AR,S'ÅM+ H'A:R+ HOT'EL 'Å:+ S\"AMhyT'I:DIGT TRAFIK'E:RAS 'A:V+ \"E:R'A B\"Å:T'AR",
+    "phoneme": "J'A:+ V'IL+ S'E: 'EN+ L\"IST'A P'Å:+ D'E:+ H\"AMN'AR ,S'ÅM+ H'A:R+ HOT'EL 'Å:+ S\"AMhyT'I:DIGT TRAFIK'E:RAS 'A:V+ \"E:R'A B\"Å:T'AR",
     "labels": "sm p: J'A: V'IL 'A: N L\"ISTtA Pp'Å: Dd'ÅM H\"AMNAR S'ÅM p: H'A:R p: HOTt'EL 'ÅKk p: S'ÅM S\"AM#Tt`I:DdITt p: sm p: TtRAFIKk'E:RAS 'A:V \"E:RA Bb\"Å:TtAR"
   },
   {
     "stem": "fp2001.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2D S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -6550,7 +6550,7 @@
     "stem": "fp2001.2.19.smp",
     "smp": "fp2001/fp2001.2.19.smp",
     "text": "det var väl bra så tack",
-    "phoneme": "D'E+ V'A:R+ V'Ä:L BR'A: S'Å:+,T'AK",
+    "phoneme": "D'E+ V'A:R+ V'Ä:L BR'A: S'Å:+ ,T'AK",
     "labels": "Dd'E p: V'A:R V'Ä:L BR'A: S'Å: p: Tt'AKk"
   },
   {
@@ -6558,7 +6558,7 @@
     "smp": "fp2001/fp2001.1.05.smp",
     "text": "XsmackX XinandX vilka båtar går från slussen till vaxholm idag",
     "phoneme": "V\"ILK'A B\"Å:T'AR G'Å:R FR'Å:N+ SL'USEN T'IL+ V\"AKShyH'ÅLM ID'A:G",
-    "labels": "sm p: pa p: V\"ILKkA Bb\"Å:TtAR G'Å:R FR'Å: SL'USE0N Tt'I V\"AKkS#H`ÅLM IDd'A:G"
+    "labels": "sm p: pa_p: V\"ILKkA Bb\"Å:TtAR G'Å:R FR'Å: SL'USE0N Tt'I V\"AKkS#H`ÅLM IDd'A:G"
   },
   {
     "stem": "fp2001.2.18.smp",
@@ -6572,7 +6572,7 @@
     "smp": "fp2001/fp2001.2.08.smp",
     "text": "XinandX på fredag kväll",
     "phoneme": "P'Å:+ FR'E:DA KV'ÄL",
-    "labels": "pa p: Pp'Å: FR'E:DA KkV'ÄL"
+    "labels": "pa_p: Pp'Å: FR'E:DA KkV'ÄL"
   },
   {
     "stem": "fp2001.1.04.smp",
@@ -6599,7 +6599,7 @@
     "stem": "fp2001.6.06.smp",
     "smp": "fp2001/fp2001.6.06.smp",
     "text": "då var det bra tack",
-    "phoneme": "D'Å:+ V'A:R+ D'E+ BR'A:,T'AK",
+    "phoneme": "D'Å:+ V'A:R+ D'E+ BR'A: ,T'AK",
     "labels": "Dd'Å: V'A:R 'E: BR'A: Tt'AKk"
   },
   {
@@ -6613,7 +6613,7 @@
     "stem": "fp2001.2.13.smp",
     "smp": "fp2001/fp2001.2.13.smp",
     "text": "vilka hotell finns , där",
-    "phoneme": "V\"ILK'A HOT'EL F'INS,D'Ä3R+",
+    "phoneme": "V\"ILK'A HOT'EL F'INS ,D'Ä3R+",
     "labels": "V\"ILKkA OTt'EL F'INS p: Dd'Ä3R"
   },
   {
@@ -6677,7 +6677,7 @@
     "smp": "fp2039/fp2039.1.04.smp",
     "text": "XsmackX XinandX jag skulle vilja åka från fjäderholmarna",
     "phoneme": "J'A:G+ SK\"UL'E+ V\"ILJ'A+ \"Å:K'A FR'Å:N+ FJ\"Ä:DÄ4RhyH'ÅLMA2NA",
-    "labels": "sm pa p: J'A: SKk\"ULE0 V\"ILJA \"Å:KkA p: FR'Å:N FJ\"Ä:DdE0R#H`ÅLMA2NA"
+    "labels": "sm pa_p: J'A: SKk\"ULE0 V\"ILJA \"Å:KkA p: FR'Å:N FJ\"Ä:DdE0R#H`ÅLMA2NA"
   },
   {
     "stem": "fp2039.1.14.smp",
@@ -6845,7 +6845,7 @@
     "smp": "fp2039/fp2039.12.26.smp",
     "text": "XinandX går det att bo på dalarö",
     "phoneme": "G'Å:R D'E:T+ 'AT+ B'O: P'Å:+ D\"A:LARhy'Ö:",
-    "labels": "pa p: Gg'Å:R 2D'E:Tt 'ATt Bb'O: Pp'Å: Dd\"A:LAR#`Ö:"
+    "labels": "pa_p: Gg'Å:R 2D'E:Tt 'ATt Bb'O: Pp'Å: Dd\"A:LAR#`Ö:"
   },
   {
     "stem": "fp2039.12.19.smp",
@@ -6921,7 +6921,7 @@
     "stem": "fp2039.pr.06.smp",
     "smp": "fp2039/fp2039.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNS'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -6992,7 +6992,7 @@
     "smp": "fp2039/fp2039.13.02.smp",
     "text": "XinandX bullerö",
     "phoneme": "B\"ULERhy'Ö:",
-    "labels": "pa p: Bb\"ULER#`Ö:"
+    "labels": "pa_p: Bb\"ULER#`Ö:"
   },
   {
     "stem": "fp2039.1.00.smp",
@@ -7118,7 +7118,7 @@
     "smp": "fp2039/fp2039.12.21.smp",
     "text": "XsmackX XinandX jag skulle vilja övernatta i brevik",
     "phoneme": "J'A:G+ SK\"UL'E+ V\"ILJ'A+ \"Ö:VÄ4RhyN'ATA 'I:+ BREV'I:K",
-    "labels": "sm pa p: J'A: SKk\"ULE0 V\"ILJA \"Ö:VE0#2N`ATtA 'I: BbR'E:VI:Kk"
+    "labels": "sm pa_p: J'A: SKk\"ULE0 V\"ILJA \"Ö:VE0#2N`ATtA 'I: BbR'E:VI:Kk"
   },
   {
     "stem": "fp2039.12.31.smp",
@@ -7187,7 +7187,7 @@
     "stem": "fp2006.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -7285,7 +7285,7 @@
     "stem": "fp2006.6.04.smp",
     "smp": "fp2006/fp2006.6.04.smp",
     "text": "jag letar efter hamnar som har hotell",
-    "phoneme": "J'A:+ L\"E:T'AR 'EFTER+ H\"AMN'AR,S'ÅM+ H'A:R+ HOT'EL",
+    "phoneme": "J'A:+ L\"E:T'AR 'EFTER+ H\"AMN'AR ,S'ÅM+ H'A:R+ HOT'EL",
     "labels": "J'A: L\"E:TtAR 'EFTtE0R H\"AMNAR 2S'ÅM H'A:R HOTt'EL"
   },
   {
@@ -7299,7 +7299,7 @@
     "stem": "fp2006.6.05.smp",
     "smp": "fp2006/fp2006.6.05.smp",
     "text": "var finns hamnar som har hotell",
-    "phoneme": "V'A:R+ F'INS H\"AMN'AR,S'ÅM+ H'A:R+ HOT'EL",
+    "phoneme": "V'A:R+ F'INS H\"AMN'AR ,S'ÅM+ H'A:R+ HOT'EL",
     "labels": "V'A:R F'INS H\"AMNAR 2S'ÅM H'A:R HOTt'EL"
   },
   {
@@ -7348,7 +7348,7 @@
     "stem": "fp2042.pr.06.smp",
     "smp": "fp2042/fp2042.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -7390,7 +7390,7 @@
     "stem": "fp2042.16.00.smp",
     "smp": "fp2042/fp2042.16.00.smp",
     "text": "jag vill åka till staveström och sedan fortsätta till finnhamn hur kan jag åka dit så",
-    "phoneme": "J'A:G+ V'IL+ \"Å:K'A T'IL+ STA:VESTR'ÖM 'Å:+ S\"E:D'AN F\"O2Thy2S'ÄTA T'IL+ F\"INhyH'AMN,H'U:R+ K'AN+ J'A:G+ \"Å:K'A D'I:T S'Å:+",
+    "phoneme": "J'A:G+ V'IL+ \"Å:K'A T'IL+ STA:VESTR'ÖM 'Å:+ S\"E:D'AN F\"O2Thy2S'ÄTA T'IL+ F\"INhyH'AMN ,H'U:R+ K'AN+ J'A:G+ \"Å:K'A D'I:T S'Å:+",
     "labels": "J'A: V'IL \"Å:KkA Tt'ILv p: STt\"A:VE0#STtR`ÖM p: 'ÅKk S\"E:DdAN F\"O2Tt#2S`ÄTtA Tt'I F\"IN#H`AMN p: H'U:R p: Kk'AN J'A: \"Å:KkA Dd'I:Tt S'Å:"
   },
   {
@@ -7523,7 +7523,7 @@
     "stem": "fp2042.15.02.smp",
     "smp": "fp2042/fp2042.15.02.smp",
     "text": "jag vill åka dit ikväll hur ska jag ta mig dit",
-    "phoneme": "J'A:G+ V'IL+ \"Å:K'A D'I:T IKV'ÄL,H'U:R+ SK'A:+ J'A:G+ T'A: M'EJ+ D'I:T",
+    "phoneme": "J'A:G+ V'IL+ \"Å:K'A D'I:T IKV'ÄL ,H'U:R+ SK'A:+ J'A:G+ T'A: M'EJ+ D'I:T",
     "labels": "J'A:Gg V'IL p: \"Å:KkA Dd'I:Tt IKkV'ÄLv p: H'U:R 2SKk'A: J'A:Gg Tt'A: M'EJ Dd'I:Tt"
   },
   {
@@ -7566,13 +7566,13 @@
     "smp": "fp2045/fp2045.pr.07.smp",
     "text": "XinandX Det var kyligt i luften och stjärnorna skimrade",
     "phoneme": "D'E:T+ V'A:R+ TJ\"Y:L'IGT 'I:+ L'UFTEN 'Å:+ SJ\"Ä32N'O2NA SJ\"IMR'ADE",
-    "labels": "pa p: Dd'E:Tt V'A: TJ\"Y:LITt 'I: L'UFTtE0N pa p: 'Å: 2S\"Ä32NO2NA 2S\"IMRADdE0"
+    "labels": "pa_p: Dd'E:Tt V'A: TJ\"Y:LITt 'I: L'UFTtE0N pa_p: 'Å: 2S\"Ä32NO2NA 2S\"IMRADdE0"
   },
   {
     "stem": "fp2045.pr.06.smp",
     "smp": "fp2045/fp2045.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PE0L T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PE0L T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Ttp:#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0Lv Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -7587,7 +7587,7 @@
     "smp": "fp2045/fp2045.1.07.smp",
     "text": "XinandX jag vill åka ifrån nybrokajen",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A IFR'Å:N N\"Y:hyBROK'AJEN",
-    "labels": "pa p: J'A:Gg V'IL \"Å:KkA IFR'Å:N N\"Y:BbRO#Kk`AJE0N"
+    "labels": "pa_p: J'A:Gg V'IL \"Å:KkA IFR'Å:N N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2045.12.05.smp",
@@ -7608,7 +7608,7 @@
     "smp": "fp2045/fp2045.13.08.smp",
     "text": "XinandX jag vill åka på onsdag",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A P'Å:+ 'ONSDA",
-    "labels": "pa p: J'A:Gg V'IL \"Å:KkA Pp'Å: p: 'ONSDdA:Gg"
+    "labels": "pa_p: J'A:Gg V'IL \"Å:KkA Pp'Å: p: 'ONSDdA:Gg"
   },
   {
     "stem": "fp2045.pr.04.smp",
@@ -7636,7 +7636,7 @@
     "smp": "fp2045/fp2045.13.11.smp",
     "text": "onsdag vill jag åka",
     "phoneme": "'ONSDA V'IL+ J'A:G+ \"Å:K'A",
-    "labels": "sm p: 'ONSDdA:Gg pa p: V'IL J'A: \"Å:KkA"
+    "labels": "sm p: 'ONSDdA:Gg pa_p: V'IL J'A: \"Å:KkA"
   },
   {
     "stem": "fp2045.12.07.smp",
@@ -7657,7 +7657,7 @@
     "smp": "fp2045/fp2045.13.10.smp",
     "text": "XsmackX XutandX när går båten från söderöra till nybrokajen",
     "phoneme": "N'Ä3R+ G'Å:R B'Å:TEN FR'Å:N+ S\"Ö:DERhy'Ö3RA T'IL+ N\"Y:BROhyK'AJEN",
-    "labels": "sm p: pa N'Ä3R Gg'Å:R Bb'Å:TtE0N p:pap: FR'Å:N S\"Ö:DdER#`Ö3RA p: Tt'I N\"Y:BbRO#Kk`AJE0N"
+    "labels": "sm p:_pa N'Ä3R Gg'Å:R Bb'Å:TtE0N p:pap: FR'Å:N S\"Ö:DdER#`Ö3RA p: Tt'I N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2045.13.00.smp",
@@ -7755,7 +7755,7 @@
     "smp": "fp2045/fp2045.12.02.smp",
     "text": "XsmackX XinandX kan man bo på ornöboda XutandX",
     "phoneme": "K'AN+ M'AN+ B'O: P'Å:+ \"O:2NÖ:hyB'O:DA",
-    "labels": "sm pa p: Kk'A M'AM Bb'O: Pp'Å: p: \"O:2NÖ:#Bb`O:DdA pa"
+    "labels": "sm pa_p: Kk'A M'AM Bb'O: Pp'Å: p: \"O:2NÖ:#Bb`O:DdA pa"
   },
   {
     "stem": "fp2045.1.00.smp",
@@ -7776,7 +7776,7 @@
     "smp": "fp2045/fp2045.13.04.smp",
     "text": "XinandX jag vill åka ifrån stockholm",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A IFR'Å:N ST\"ÅKhy'ÅLM",
-    "labels": "pa p: J'A:Gg V'IL \"Å:KkA IFR'Å:N STt\"ÅKk#`ÅLM"
+    "labels": "pa_p: J'A:Gg V'IL \"Å:KkA IFR'Å:N STt\"ÅKk#`ÅLM"
   },
   {
     "stem": "fp2045.13.22.smp",
@@ -7804,14 +7804,14 @@
     "smp": "fp2045/fp2045.12.00.smp",
     "text": "XsmackX XinandX var ligger XutandX kymmendö",
     "phoneme": "V'A:R+ L'IGÄ4R K\"YMENDhy'Ö:",
-    "labels": "sm pa p: V'A:R 2L'IGgE0R pa TJ\"YMENDd#`Ö:"
+    "labels": "sm pa_p: V'A:R 2L'IGgE0R pa TJ\"YMENDd#`Ö:"
   },
   {
     "stem": "fp2045.13.06.smp",
     "smp": "fp2045/fp2045.13.06.smp",
     "text": "XinandX var ligger nybrokajen",
     "phoneme": "V'A:R+ L'IGÄ4R N\"Y:hyBROK'AJEN",
-    "labels": "pa p: V'A:Rv 2L'IGgE0 N\"Y:BbRO#Kk`AJE0N"
+    "labels": "pa_p: V'A:Rv 2L'IGgE0 N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2045.13.16.smp",
@@ -7825,7 +7825,7 @@
     "smp": "fp2045/fp2045.1.02.smp",
     "text": "XinandX jag vill åka ifrån tekniska högskolan",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A IFR'Å:N T'EKNISKA H\"Ö:GhySK'O:LAN",
-    "labels": "pa p: J'A:G V'IL \"Å:KkA p: IFR'Å:N Tt'EKkNISKkA H\"Ö:Gg#SKk`O:LAN"
+    "labels": "pa_p: J'A:G V'IL \"Å:KkA p: IFR'Å:N Tt'EKkNISKkA H\"Ö:Gg#SKk`O:LAN"
   },
   {
     "stem": "fp2045.13.20.smp",
@@ -7860,14 +7860,14 @@
     "smp": "fp2045/fp2045.13.07.smp",
     "text": "XinandX hur mycket kostar det att åka båt från nybrokajen till söderöra",
     "phoneme": ",H'U:R+ M\"YK'ET K\"ÅST'AR D'E:T+ 'AT+ \"Å:K'A B'Å:T",
-    "labels": "pa p: H'U: M\"YKkE0 Kk\"ÅSTtAR 'E: 'ATt p: \"Å:KkA p: Bb'Å:Tt p: FR'Å:N N\"Y:BbRO#Kk`AJE0N p: Tt'IL p: S\"Ö:DdER#`Ö3RA"
+    "labels": "pa_p: H'U: M\"YKkE0 Kk\"ÅSTtAR 'E: 'ATt p: \"Å:KkA p: Bb'Å:Tt p: FR'Å:N N\"Y:BbRO#Kk`AJE0N p: Tt'IL p: S\"Ö:DdER#`Ö3RA"
   },
   {
     "stem": "fp2045.1.03.smp",
     "smp": "fp2045/fp2045.1.03.smp",
     "text": "XinandX jag vill åka ifrån nybrokajen",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A IFR'Å:N N\"Y:hyBROK'AJEN",
-    "labels": "pa p: J'A:Gg p: V'IL \"Å:KkA p: IFR'Å:N N\"Y:BbRO#Kk`AJE0N"
+    "labels": "pa_p: J'A:Gg p: V'IL \"Å:KkA p: IFR'Å:N N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2020.3.04.smp",
@@ -8027,7 +8027,7 @@
     "stem": "fp2020.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#Jp:J'O:2Tt"
   },
   {
@@ -8091,14 +8091,14 @@
     "smp": "fp2027/fp2027.3.05.smp",
     "text": "XsmackX XinandX finns det en campingplats på gällnö XutandX",
     "phoneme": "F'INS D'E:T+ 'EN+ K\"AMPINGhyPL'ATS P'Å:+ J\"ÄLhyN'Ö:",
-    "labels": "sm pa p: F'INS Dd'E 'EN Kk\"AMPpING#PpL`ATtS Pp'Å: J\"ÄL#N`Ö: pa"
+    "labels": "sm pa_p: F'INS Dd'E 'EN Kk\"AMPpING#PpL`ATtS Pp'Å: J\"ÄL#N`Ö: pa"
   },
   {
     "stem": "fp2027.1.16.smp",
     "smp": "fp2027/fp2027.1.16.smp",
     "text": "XinandX går det några båtar till vaxholm idag XutandX",
     "phoneme": "G'Å:R D'E:T+ N\"Å:GR'A B\"Å:T'AR T'IL+ V\"AKShyH'ÅLM ID'A:G",
-    "labels": "pa p: Gg'Å:R Dd'E: N\"Å:RA Bb\"Å:TtAR Tt'IL V\"AKkS#H`ÅLM p: IDd'A:Gg pa"
+    "labels": "pa_p: Gg'Å:R Dd'E: N\"Å:RA Bb\"Å:TtAR Tt'IL V\"AKkS#H`ÅLM p: IDd'A:Gg pa"
   },
   {
     "stem": "fp2027.1.06.smp",
@@ -8217,7 +8217,7 @@
     "smp": "fp2027/fp2027.3.03.smp",
     "text": "XsmackX XinandX var ligger gällnö",
     "phoneme": "V'A:R+ L'IGÄ4R J\"ÄLhyN'Ö:",
-    "labels": "sm pa p: V'A:R 2L'IGgE0R J\"ÄL#N`Ö:"
+    "labels": "sm pa_p: V'A:R 2L'IGgE0R J\"ÄL#N`Ö:"
   },
   {
     "stem": "fp2027.7.04.smp",
@@ -8238,7 +8238,7 @@
     "smp": "fp2027/fp2027.1.09.smp",
     "text": "finns det någon bio i XavbrordX XtvekX XutandX förlåt finns det någon bio i vaxholm",
     "phoneme": "F'INS D'E:T+ N\"Å:G'ÅN+ B\"I:'O 'I:+ ST\"ÅK'ÅLM FÖ42L'Å:T F'INS D'E:T+ N\"Å:G'ÅN+ B\"I:'O 'I:+ V\"AKShyH'ÅLM",
-    "labels": "F'INS Dd'E: N'ÅN Bb'I:O 'I: STt\"ÅKkÅ p: öh pa p: FÖ42L'Å:Tt p: F'INS Dd'E N'ÅM Bb'I:O p: 'I: V\"AKkS`ÅLM"
+    "labels": "F'INS Dd'E: N'ÅN Bb'I:O 'I: STt\"ÅKkÅ p: öh pa_p: FÖ42L'Å:Tt p: F'INS Dd'E N'ÅM Bb'I:O p: 'I: V\"AKkS`ÅLM"
   },
   {
     "stem": "fp2027.pr.05.smp",
@@ -8308,7 +8308,7 @@
     "smp": "fp2027/fp2027.1.13.smp",
     "text": "XinandX går det båtar till vaxholm före klockan 17",
     "phoneme": "G'Å:R D'E:T+ B\"Å:T'AR T'IL+ V\"AKShyH'ÅLM F\"Ö3R'E KL\"ÅK'AN+ SJ\"UT'ÅN",
-    "labels": "pa p: Gg'Å:R 2Dd'E: Bb\"Å:TtAR Tt'IL V\"AKkS#H`ÅLM p: F\"Ö3RE KkL\"ÅKkAN SJ\"UTtÅN"
+    "labels": "pa_p: Gg'Å:R 2Dd'E: Bb\"Å:TtAR Tt'IL V\"AKkS#H`ÅLM p: F\"Ö3RE KkL\"ÅKkAN SJ\"UTtÅN"
   },
   {
     "stem": "fp2027.3.00.smp",
@@ -8321,7 +8321,7 @@
     "stem": "fp2027.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -8336,7 +8336,7 @@
     "smp": "fp2027/fp2027.3.01.smp",
     "text": "XsmackX XinandX jag vill åka från XutandX strömkajen XutandX",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A FR'Å:N+ STR\"ÖMhyK'AJEN",
-    "labels": "sm pa p: J'A: V'IL \"Å:KkA FR'Å:N pa STtR\"ÖM#Kk`AJE0N pa"
+    "labels": "sm pa_p: J'A: V'IL \"Å:KkA FR'Å:N pa STtR\"ÖM#Kk`AJE0N pa"
   },
   {
     "stem": "fp2027.pr.07.smp",
@@ -8350,7 +8350,7 @@
     "smp": "fp2027/fp2027.7.06.smp",
     "text": "XinandX då åker jag från stockholm XutandX",
     "phoneme": "D'Å:+ 'Å:KÄ4R J'A:G+ FR'Å:N+ ST\"ÅKhy'ÅLM",
-    "labels": "pa p: Dd'Å: 'Å:KkE0R J'A: FR'Å:N STt\"ÅKk#H`ÅLM pa"
+    "labels": "pa_p: Dd'Å: 'Å:KkE0R J'A: FR'Å:N STt\"ÅKk#H`ÅLM pa"
   },
   {
     "stem": "fp2027.1.02.smp",
@@ -8391,7 +8391,7 @@
     "stem": "fp2018.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -8559,8 +8559,8 @@
     "stem": "fp2018.6.14.smp",
     "smp": "fp2018/fp2018.6.14.smp",
     "text": "XinandX då är jag nöjd",
-    "phoneme": "D'Å:+ V'A:R+ J'A:G+ N'ÖJD",
-    "labels": "pa p: Dd'Å: 'E: J'A: N'ÖJDd"
+    "phoneme": "D'Å:+ 'A:R+ J'A:G+ N'ÖJD",
+    "labels": "pa_p: Dd'Å: 'E: J'A: N'ÖJDd"
   },
   {
     "stem": "fp2018.pr.08.smp",
@@ -8580,7 +8580,7 @@
     "stem": "fp2018.1.06.smp",
     "smp": "fp2018/fp2018.1.06.smp",
     "text": "jag vill åka hem igen till stockholm måndag kväll hur dags går båten då",
-    "phoneme": "J'A:G+ V'IL+ \"Å:K'A H'EM IJ'EN T'IL+ ST\"ÅKhy'ÅLM M'ÅNDA KV'ÄL,H'U:R+ D'AGS G'Å:R B'Å:TEN D'Å:+",
+    "phoneme": "J'A:G+ V'IL+ \"Å:K'A H'EM IJ'EN T'IL+ ST\"ÅKhy'ÅLM M'ÅNDA KV'ÄL ,H'U:R+ D'AGS G'Å:R B'Å:TEN D'Å:+",
     "labels": "J'A: V'IL \"Å:KkA H'EM IJ'EN Tt'I STt\"ÅKk#`ÅLM p: M'ÅNDdA KkV'ÄLv p: H'U:Rv 2Dd'AGgS Gg'Å:R Bb'Å:TtE0N Dd'Å:"
   },
   {
@@ -8685,7 +8685,7 @@
     "stem": "fp2011.1.06.smp",
     "smp": "fp2011/fp2011.1.06.smp",
     "text": "XsmackX finns det ingen båt som går till vaxholm",
-    "phoneme": "F'INS D'E+ \"ING'EN+ B'Å:T,S'ÅM+ G'Å:R T'IL+ V\"AKShyH'ÅLM",
+    "phoneme": "F'INS D'E+ \"ING'EN+ B'Å:T ,S'ÅM+ G'Å:R T'IL+ V\"AKShyH'ÅLM",
     "labels": "sm p: F'INS Dd'E: \"INGE0N Bb'Å:Tt S'ÅM Gg'Å:R TtL V\"AKkS#H`ÅLM"
   },
   {
@@ -8699,7 +8699,7 @@
     "stem": "fp2011.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpL Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -8721,14 +8721,14 @@
     "smp": "fp2007/fp2007.pr.07.smp",
     "text": "XinandX Det var kyligt i luften och stjärnorna skimrade",
     "phoneme": "D'E:T+ V'A:R+ TJ\"Y:L'IGT 'I:+ L'UFTEN 'Å:+ SJ\"Ä32N'O2NA SJ\"IMR'ADE",
-    "labels": "pa p: d'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADE0"
+    "labels": "pa_p: d'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADE0"
   },
   {
     "stem": "fp2011.1.05.smp",
     "smp": "fp2011/fp2011.1.05.smp",
     "text": "XsmackX XinandX varifrån kan jag åka till vaxholm",
     "phoneme": "VARIFR'Å:N K'AN+ J'A:+ \"Å:K'A T'IL+ V\"AKShyH'ÅLM",
-    "labels": "sm pa p: VARIFR'Å:NG Kk'A J'A: \"Å:KkA Tt'IL V\"AKkS#H`ÅLM"
+    "labels": "sm pa_p: VARIFR'Å:NG Kk'A J'A: \"Å:KkA Tt'IL V\"AKkS#H`ÅLM"
   },
   {
     "stem": "fp2011.1.00.smp",
@@ -8840,13 +8840,13 @@
     "smp": "fp2011/fp2011.3.01.smp",
     "text": "XinandX var ligger granholmen",
     "phoneme": "V'A:R+ L'IGÄ4R GR\"A:NhyH'ÅLMEN",
-    "labels": "pa p: V'A:R 2L'IGgE0R p: GgR\"A:N#H`ÅLME0N"
+    "labels": "pa_p: V'A:R 2L'IGgE0R p: GgR\"A:N#H`ÅLME0N"
   },
   {
     "stem": "fp2011.6.00.smp",
     "smp": "fp2011/fp2011.6.00.smp",
     "text": "jag letar efter hamnar som har hotell",
-    "phoneme": "J'A:+ L\"E:T'AR 'EFTER+ H\"AMN'AR,S'ÅM+ H'A:R+ HOT'EL",
+    "phoneme": "J'A:+ L\"E:T'AR 'EFTER+ H\"AMN'AR ,S'ÅM+ H'A:R+ HOT'EL",
     "labels": "J'A: L\"E:TtAR 'EFTtE0R H\"AMNAR S'ÅM H'A:R HOTt'EL"
   },
   {
@@ -8958,7 +8958,7 @@
     "stem": "fp2016.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'Ä M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -9140,7 +9140,7 @@
     "stem": "fp2029.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -9161,7 +9161,7 @@
     "stem": "fp2044.11.04.smp",
     "smp": "fp2044/fp2044.11.04.smp",
     "text": "jag vill campa på nåttarö hur tar man sig lämpligast dit",
-    "phoneme": "J'A:G+ V'IL+ K'AMPA P'Å:+ N\"ÅTAhyR'Ö:,H'U:R+ T'A:R M'AN+ S'EJ+ L\"ÄMPL'IGAST D'I:T",
+    "phoneme": "J'A:G+ V'IL+ K'AMPA P'Å:+ N\"ÅTAhyR'Ö: ,H'U:R+ T'A:R M'AN+ S'EJ+ L\"ÄMPL'IGAST D'I:T",
     "labels": "J'A: V'IL Kk\"AMPpA Pp'Å: N\"ÅTtAR#`Ö: p: H'U:R Tt'A: M'AN S'E L\"ÄMPpLIAS Dd'I:Tt"
   },
   {
@@ -9197,7 +9197,7 @@
     "smp": "fp2044/fp2044.11.05.smp",
     "text": "XinandX vilka båtar går till nåttarö",
     "phoneme": "V\"ILK'A B\"Å:T'AR G'Å:R T'IL+ N\"ÅTAhyR'Ö:",
-    "labels": "pa p: V\"ILKkA Bb\"Å:TtAR Gg'Å:R 2Tt'IL N\"ÅTtAR#`Ö:"
+    "labels": "pa_p: V\"ILKkA Bb\"Å:TtAR Gg'Å:R 2Tt'IL N\"ÅTtAR#`Ö:"
   },
   {
     "stem": "fp2044.12.02.smp",
@@ -9274,7 +9274,7 @@
     "smp": "fp2044/fp2044.11.13.smp",
     "text": "XsmackX XinandX går det någon båt från nåttarö till nynäshamn på söndag kväll",
     "phoneme": "G'Å:R D'E:T+ N\"Å:G'ÅN+ B'Å:T FR'Å:N+ N\"ÅTAhyR'Ö: T'IL+ NY:NÄ:SH'AMN P'Å:+ S'ÖNDA KV'ÄL",
-    "labels": "sm pa p: Gg'Å:R 'E: N\"Å:GgÅM Bb'Å:Tt FR'Å: N\"ÅTtAR#`Ö: Tt'IL NY:NÄ:SH'AMM Pp'Å: S'ÖNDdAG KkV'ÄL"
+    "labels": "sm pa_p: Gg'Å:R 'E: N\"Å:GgÅM Bb'Å:Tt FR'Å: N\"ÅTtAR#`Ö: Tt'IL NY:NÄ:SH'AMM Pp'Å: S'ÖNDdAG KkV'ÄL"
   },
   {
     "stem": "fp2044.11.12.smp",
@@ -9400,7 +9400,7 @@
     "smp": "fp2043/fp2043.1.06.smp",
     "text": "XinandX jag menar tack",
     "phoneme": "J'A:G+ M\"E:N'AR T'AK",
-    "labels": "pa p: J'A: M\"E:NA Tt'AKk"
+    "labels": "pa_p: J'A: M\"E:NA Tt'AKk"
   },
   {
     "stem": "fp2043.11.04.smp",
@@ -9434,7 +9434,7 @@
     "stem": "fp2043.16.04.smp",
     "smp": "fp2043/fp2043.16.04.smp",
     "text": "XtvekX hur går båtarna vilka öar går den förbi",
-    "phoneme": "öh,H'U:R+ G'Å:R B\"Å:TA2N'A V\"ILK'A \"Ö:'AR G'Å:R D'EN+ FÖ4RB'I:",
+    "phoneme": "öh ,H'U:R+ G'Å:R B\"Å:TA2N'A V\"ILK'A \"Ö:'AR G'Å:R D'EN+ FÖ4RB'I:",
     "labels": "öh p: H'U:R Gg'Å: Bb\"Å:TtA2NA V\"ILKkA p: \"Ö:AR Gg'Å:R 2Dd'EN FÖ4Bb'I:"
   },
   {
@@ -9449,7 +9449,7 @@
     "smp": "fp2043/fp2043.11.06.smp",
     "text": "XinandX vill du visa en karta runt eller med ön finnhamn",
     "phoneme": "V'IL+ D'U:+ V\"I:S'A 'EN+ K\"A:2T'A R'UNT 'ELER+ M'E:+ 'Ö:N F\"INhyH'AMN",
-    "labels": "pa p: V'IL Dd'U: V\"I:SA 'ENG Kk\"A:2TtA p: R'UNTt p: 'ELE0 M'E:Dd 'Ö: p: F\"IN#H`AMN"
+    "labels": "pa_p: V'IL Dd'U: V\"I:SA 'ENG Kk\"A:2TtA p: R'UNTt p: 'ELE0 M'E:Dd 'Ö: p: F\"IN#H`AMN"
   },
   {
     "stem": "fp2043.pr.10.smp",
@@ -9497,8 +9497,8 @@
     "stem": "fp2043.16.00.smp",
     "smp": "fp2043/fp2043.16.00.smp",
     "text": "XtvekX idag torsdag vill jag åka till XsmackX staveström XinandX XtvekX och jag undrar hur tar jag mig dit",
-    "phoneme": "öh ID'A:G T'O:2SDA V'IL+ J'A:G+ \"Å:K'A T'IL+ STA:VESTR'ÖM pa 'Å:+ J'A:G+ \"UNDR'AR,H'U:R+ T'A:R J'A:G+ M'EJ+ D'I:T",
-    "labels": "öh p: IDd'A:Gg Tt'O:2SDdA p: V'IL J'A: \"Å:KkA Tt'ILv p: sm p: STt\"A:VE0#STtR`ÖM p: pa p: öh p: 'Å: J'A: \"UNDdRAR H'U: 2Tt'A: J'A: M'EJ Dd'I:Tt"
+    "phoneme": "öh ID'A:G T'O:2SDA V'IL+ J'A:G+ \"Å:K'A T'IL+ STA:VESTR'ÖM pa 'Å:+ J'A:G+ \"UNDR'AR ,H'U:R+ T'A:R J'A:G+ M'EJ+ D'I:T",
+    "labels": "öh p: IDd'A:Gg Tt'O:2SDdA p: V'IL J'A: \"Å:KkA Tt'ILv p: sm p: STt\"A:VE0#STtR`ÖM p: pa_p: öh p: 'Å: J'A: \"UNDdRAR H'U: 2Tt'A: J'A: M'EJ Dd'I:Tt"
   },
   {
     "stem": "fp2043.pr.04.smp",
@@ -9554,7 +9554,7 @@
     "smp": "fp2043/fp2043.1.01.smp",
     "text": "XinandX jag vill åka från stockholm",
     "phoneme": "J'A:G+ V'IL+ \"Å:K'A FR'Å:N+ ST\"ÅKhy'ÅLM",
-    "labels": "pa p: J'A: V'IL \"Å:KkA p: FR'Å:N STt\"ÅKk#`ÅLM"
+    "labels": "pa_p: J'A: V'IL \"Å:KkA p: FR'Å:N STt\"ÅKk#`ÅLM"
   },
   {
     "stem": "fp2043.16.01.smp",
@@ -9567,7 +9567,7 @@
     "stem": "fp2043.11.01.smp",
     "smp": "fp2043/fp2043.11.01.smp",
     "text": "kan man se hur de här ligger i förhållande till varandra på någon karta",
-    "phoneme": "K'AN+ M'AN+ S'E:,H'U:R+ D'E:+ H'Ä3R+ L'IGÄ4R 'I:+ FÖ4RH'ÅLANDE T'IL+ VAR'ANDRA P'Å:+ N\"Å:G'ÅN+ K\"A:2T'A",
+    "phoneme": "K'AN+ M'AN+ S'E: ,H'U:R+ D'E:+ H'Ä3R+ L'IGÄ4R 'I:+ FÖ4RH'ÅLANDE T'IL+ VAR'ANDRA P'Å:+ N\"Å:G'ÅN+ K\"A:2T'A",
     "labels": "Kk'A M'AN S'E: H'U:R d'ÅM H'Ä3R 2L'IGgE0R 'I: FÖ4H'ÅLANE Tt'I VAR'AN Pp'Å: N\"Å:GgÅNG Kk\"A:2TtA"
   },
   {
@@ -9581,8 +9581,8 @@
     "stem": "fp2043.16.03.smp",
     "smp": "fp2043/fp2043.16.03.smp",
     "text": "jaha XutandX XtvekX jag vill XsmackX se hur den båten går till staveström och om jag kan fortsätta till finnhamn",
-    "phoneme": "JA:H'A: J'A:G+ V'IL+ S'E:,H'U:R+ D'EN+ B'Å:TEN G'Å:R T'IL+ STA:VESTR'ÖM 'Å:+ 'ÅM+ J'A:G+ K'AN+ F\"O2Thy2S'ÄTA T'IL+ F\"INhyH'AMN",
-    "labels": "A:H'A: pa p: öh J'A:Ggv V'ILv pap: sm p:v S'E: pa H'U:R 2Dd'EM Bb'Å:TtE0NG Gg'Å:R 2Tt'I STt\"A:VE0#STtR`ÖM p: 'Å: p: 'ÅM J'A: Kk'AN F\"O#2S`ÄTtA Tt'I F\"IN#H`AM"
+    "phoneme": "JA:H'A: J'A:G+ V'IL+ S'E: ,H'U:R+ D'EN+ B'Å:TEN G'Å:R T'IL+ STA:VESTR'ÖM 'Å:+ 'ÅM+ J'A:G+ K'AN+ F\"O2Thy2S'ÄTA T'IL+ F\"INhyH'AMN",
+    "labels": "A:H'A: pa_p: öh J'A:Ggv V'ILv pap: sm p:v S'E: pa H'U:R 2Dd'EM Bb'Å:TtE0NG Gg'Å:R 2Tt'I STt\"A:VE0#STtR`ÖM p: 'Å: p: 'ÅM J'A: Kk'AN F\"O#2S`ÄTtA Tt'I F\"IN#H`AM"
   },
   {
     "stem": "fp2043.1.03.smp",
@@ -9630,7 +9630,7 @@
     "stem": "fp2043.pr.06.smp",
     "smp": "fp2043/fp2043.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -9756,7 +9756,7 @@
     "stem": "fp2017.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -9771,7 +9771,7 @@
     "smp": "fp2007/fp2007.pr.07.smp",
     "text": "Det var kyligt i luften och stjärnorna skimrade",
     "phoneme": "D'E:T+ V'A:R+ TJ\"Y:L'IGT 'I:+ L'UFTEN 'Å:+ SJ\"Ä32N'O2NA SJ\"IMR'ADE",
-    "labels": "pa p: Dd'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0"
+    "labels": "pa_p: Dd'E: V'A: TJ\"Y:LITt 'I: L'UFTtE0N 'Å: SJ\"Ä32NO2NA SJ\"IMRADdE0"
   },
   {
     "stem": "fp2017.1.00.smp",
@@ -9876,7 +9876,7 @@
     "smp": "fp2028/fp2028.2.41.smp",
     "text": "vilka XavbrordX båtar XinandX går från vaxholm till nybrokajen på en söndag efter klockan",
     "phoneme": "V\"ILK'A av B\"Å:T'AR G'Å:R FR'Å:N+ V\"AKShyH'ÅLM T'IL+ N\"Y:hyBROK'AJEN P'Å:+ 'EN+ S'ÖNDA 'EFTÄ4R+ KL\"ÅK'AN+",
-    "labels": "V\"ILKkA BbÅ: p: Bb\"Å:TtAR p: pa p: Gg'Å:R p: FR'Å:N V\"AKkS#H`ÅLM Tt'IL N\"Y:BbRO#Kk`AJE0N p: Pp'Å: 'EN p: S'ÖNDdA:Gg 'EFTtE0R KkL\"ÅKkAN"
+    "labels": "V\"ILKkA BbÅ: p: Bb\"Å:TtAR p: pa_p: Gg'Å:R p: FR'Å:N V\"AKkS#H`ÅLM Tt'IL N\"Y:BbRO#Kk`AJE0N p: Pp'Å: 'EN p: S'ÖNDdA:Gg 'EFTtE0R KkL\"ÅKkAN"
   },
   {
     "stem": "fp2028.2.51.smp",
@@ -10029,7 +10029,7 @@
     "stem": "fp2028.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING p: 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L pa Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -10099,7 +10099,7 @@
     "stem": "fp2028.2.31.smp",
     "smp": "fp2028/fp2028.2.31.smp",
     "text": "när går första båten från vaxholm på morgonen och hur många båtar går innan klockan 9",
-    "phoneme": "N'Ä3R+ G'Å:R F\"Ö42S2T'A B'Å:TEN FR'Å:N+ V\"AKShyH'ÅLM P'Å:+ M\"ÅR'ÅNEN 'Å:+,H'U:R+ M\"ÅNG'A B\"Å:T'AR G'Å:R \"IN'AN KL\"ÅK'AN+ N\"I:'O",
+    "phoneme": "N'Ä3R+ G'Å:R F\"Ö42S2T'A B'Å:TEN FR'Å:N+ V\"AKShyH'ÅLM P'Å:+ M\"ÅR'ÅNEN 'Å:+ ,H'U:R+ M\"ÅNG'A B\"Å:T'AR G'Å:R \"IN'AN KL\"ÅK'AN+ N\"I:'O",
     "labels": "N'Ä3R Gg'Å:R F\"Ö42S2TtA Bb'Å:TtE0N FR'Å:N V\"AKkS#H`ÅLM p: Pp'Å: M\"ÅRGgÅNE0N p: 'ÅKk H'U:R M\"ÅNGA B\"Å:TtAR Gg'Å:R \"INANG KkL\"ÅKkAN p: N\"I:O"
   },
   {
@@ -10540,7 +10540,7 @@
     "stem": "fp2010.1.08.smp",
     "smp": "fp2010/fp2010.1.08.smp",
     "text": "finns det några som går från nationalmuseum",
-    "phoneme": "F'INS D'E+ N\"Å:GR'A,S'ÅM+ G'Å:R FR'ÅM NATSJÅN\"A:LhyMUS'E:UM",
+    "phoneme": "F'INS D'E+ N\"Å:GR'A ,S'ÅM+ G'Å:R FR'ÅM NATSJÅN\"A:LhyMUS'E:UM",
     "labels": "F'INS d'E N\"Å:GRA S'ÅM Gg'Å:R FR'Å NATtSJÅN\"A:L#MUS`E:UM"
   },
   {
@@ -10582,7 +10582,7 @@
     "stem": "fp2010.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord, sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3 V'Ä4RE0 'ÄN M'O:2Dd p: S'A: KkÅNSTt'A:PpE0L Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -10590,7 +10590,7 @@
     "smp": "fp2010/fp2010.8.07.smp",
     "text": "XsmackX XinandX när är de öppna",
     "phoneme": "N'Ä3R+ 'Ö3R D'OM \"ÖPN'A",
-    "labels": "sm pa p: N'Ä3R 'Ä3 Dd'ÅM \"ÖPpNA"
+    "labels": "sm pa_p: N'Ä3R 'Ä3 Dd'ÅM \"ÖPpNA"
   },
   {
     "stem": "fp2010.6.02.smp",
@@ -10645,7 +10645,7 @@
     "stem": "fp2010.6.01.smp",
     "smp": "fp2010/fp2010.6.01.smp",
     "text": "vilka hamnar ute i skärgården som vaxholmsbåtarna lägger till vid har hotell",
-    "phoneme": "V\"ILK'A H\"AMN'AR \"U:T'E 'I:+ SJ\"Ä3RhyG'Å:2DEN,S'ÅM+ V\"AKShyHÅLMShyB'Å:TA2NA L'ÄGÄ4R T'IL+ V'I:D+ H'A:R+ HOT'EL",
+    "phoneme": "V\"ILK'A H\"AMN'AR \"U:T'E 'I:+ SJ\"Ä3RhyG'Å:2DEN ,S'ÅM+ V\"AKShyHÅLMShyB'Å:TA2NA L'ÄGÄ4R T'IL+ V'I:D+ H'A:R+ HOT'EL",
     "labels": "V\"ILKkA H\"AMNAR \"U:Tt 'I: SJ'Ä3RGgÅ:2DE0N p: S'ÅM p: V\"AKkS#HÅS#Bb`Å:TtA2NA L'ÄGE0 Tt'IL V'I:Dd p: H'A:R HOTt'EL"
   },
   {
@@ -10674,7 +10674,7 @@
     "smp": "fp2010/fp2010.1.03.smp",
     "text": "XsmackX jag vill åka XsuckX XinandX jag vill åka från nybrokajen",
     "phoneme": "J'A:+ V'IL+ \"Å:K'A FR'Å:N+ N\"Y:BROhyK'AJEN",
-    "labels": "sm p: 'A: VL \"Å:KA p: pa pa J'A: V'IL \"Å:KkA FR'Å: N\"Y:BbRO#Kk`AJE0N"
+    "labels": "sm p: 'A: VL \"Å:KA p:_pa pa J'A: V'IL \"Å:KkA FR'Å: N\"Y:BbRO#Kk`AJE0N"
   },
   {
     "stem": "fp2010.1.13.smp",
@@ -10736,7 +10736,7 @@
     "stem": "fp2026.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Ddv p: S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -10757,7 +10757,7 @@
     "stem": "fp2026.pr.05.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapel Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE0 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE0 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Ddv p: S'A: KkÅNSTt'A:PpE0L p: Tt\"Ö32N#J`O2Tt"
   },
   {
