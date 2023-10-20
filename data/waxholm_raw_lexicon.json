@@ -25,7 +25,7 @@
     "smp": "fp2007/fp2007.pr.09.smp",
     "text": "XinandX Sprakande fyrverkeripjäser exploderade över oss",
     "phoneme": "SPR\"A:K'ANDE F\"Y:RhyVÄ4RKÄ4RIhyPJ'Ä:SÄ4R EKSPLÅD'E:RADE 'Ö:VÄ4R 'ÅS+",
-    "labels": "pa p: SPpR\"A:KkANDdE0 FY:VÄ4RKkÄ4R\"I:#PpJ`Ä:SE0R EKkSPpLÅDd'E:RADdE0 'Ö:VR 'ÅS"
+    "labels": "pa_p: SPpR\"A:KkANDdE0 FY:VÄ4RKkÄ4R\"I:#PpJ`Ä:SE0R EKkSPpLÅDd'E:RADdE0 'Ö:VR 'ÅS"
   },
   {
     "stem": "fp2024.1.00.smp",
@@ -346,7 +346,7 @@
     "stem": "fp2023.pr.06.smp",
     "smp": "fp2007/fp2007.pr.06.smp",
     "text": "Fortkörning är värre än mord sa konstapeln Thörnhjort",
-    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
+    "phoneme": "F\"O:2ThyTJ'Ö32NING 'Ä3R+ V'Ä4RE 'ÄN+ M'O:2D ,S'A: KÅNST'A:PEL T\"Ö32NhyJ'O:2T",
     "labels": "F\"O:2Tt#TJ`Ö32NING 'Ä3R V'Ä4RE0 'ÄN M'O:2Dd S'A: KkÅNSTt'A:PpE0N Tt\"Ö32N#J`O2Tt"
   },
   {
@@ -452,7 +452,7 @@
     "smp": "fp2015/fp2015.6.03.smp",
     "text": "XsmackX XinandX finns det hotell på möja",
     "phoneme": "F'INS D'E:T+ HOT'EL P'Å:+ M\"ÖJ'A",
-    "labels": "sm pa p: F'INS Dd'E: HOTt'EL Pp'Å: M\"ÖJA"
+    "labels": "sm pa_p: F'INS Dd'E: HOTt'EL Pp'Å: M\"ÖJA"
   },
   {
     "stem": "fp2015.pr.07.smp",
@@ -522,7 +522,7 @@
     "smp": "fp2015/fp2015.1.06.smp",
     "text": "och båtarna går inte någon annan XinandX dag i veckan eller helst på kvällen då",
     "phoneme": "'Å:+ B\"Å:TA2N'A G'Å:R \"INT'E N'ÅN+ \"AN'AN+ D'A:G 'I:+ V\"EK'AN 'ELER+ H'ELST P'Å:+ KV'ÄLEN D'Å:+",
-    "labels": "'Å: Bb\"Å:TtA2NA Gg'Å: \"INTtE0 N\"Å:GgÅN \"ANAN pa p: Dd'A:Gg 'I: V\"EKkAN 'ELE0R H'ELS Pp'Å: KkV'ÄLE0N Dd'Å:"
+    "labels": "'Å: Bb\"Å:TtA2NA Gg'Å: \"INTtE0 N\"Å:GgÅN \"ANAN pa_p: Dd'A:Gg 'I: V\"EKkAN 'ELE0R H'ELS Pp'Å: KkV'ÄLE0N Dd'Å:"
   },
   {
     "stem": "fp2015.pr.10.smp",
