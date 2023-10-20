@@ -527,7 +527,7 @@
   {
     "word": "XutandX",
     "phonemes": "pa",
-    "labels": "P:_Pa"
+    "labels": "p: pa"
   },
   {
     "word": "skärgården",
@@ -2872,7 +2872,7 @@
   {
     "word": "XinandX",
     "phonemes": "pa",
-    "labels": "Pa_P:"
+    "labels": "pa p:"
   },
   {
     "word": "föreställningen",
@@ -2893,11 +2893,6 @@
     "word": "stannar",
     "phonemes": "ST\"AN'AR",
     "labels": "ST\"ANA"
-  },
-  {
-    "word": "i",
-    "phonemes": "'I:",
-    "labels": "'EN"
   },
   {
     "word": "när",
@@ -2948,11 +2943,6 @@
     "word": "det",
     "phonemes": "D'E",
     "labels": "2D'E:T"
-  },
-  {
-    "word": "åka",
-    "phonemes": "\"Å:K'A",
-    "labels": "P:"
   },
   {
     "word": "Thörnhjort",
