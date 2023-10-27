@@ -2,11 +2,19 @@ from collections import namedtuple
 from copy import deepcopy
 from .exceptions import FRExpected
 from difflib import SequenceMatcher
+import re
 
 
-def fix_text(text: str) -> str:
+def fix_text(text: str, extended: bool = False) -> str:
     replacements = text.maketrans("{}|\\[]", "äåöÖÄÅ")
-    return text.translate(replacements)
+    if not extended:
+        return text.translate(replacements)
+    else:
+        tr = text.translate(replacements)
+        spaced = re.sub("\s+", " ", tr)
+        if spaced[-1] == ".":
+            spaced = spaced[:-1]
+        return spaced.strip()
 
 
 Label = namedtuple('Label', ['start', 'end', 'label'])
