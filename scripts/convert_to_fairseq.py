@@ -2,6 +2,7 @@
 
 from waxholm import FR, Mix
 from waxholm.audio import smp_to_wav
+from waxholm.utils import clean_x_words
 import argparse
 from pathlib import Path
 import soundfile as sf
@@ -15,19 +16,6 @@ def _clean_phone(phone):
     # other markers
     phone = phone.replace("#", "").replace("+", "")
     return phone
-
-
-def _clean_word(word):
-    if "XX" in word:
-        return ""
-    elif word.startswith("X") and word.endswith("X"):
-        return ""
-    else:
-        return word
-
-
-def clean_words(words):
-    return [x for x in words if _clean_word(x) != ""]
 
 
 DISCARD_PHONES = [
@@ -79,7 +67,7 @@ def main():
                 label_text = " ".join(labels)
             else:
                 labels = mix.get_word_label_tuples()
-                labels = clean_words(labels)
+                labels = clean_x_words(labels)
                 label_text = " ".join(labels)
                 label_text = label_text.lower()
 
