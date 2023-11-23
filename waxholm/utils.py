@@ -13,9 +13,12 @@
 # limitations under the License.
 
 
-
-
 def clean_x_words(words):
+    """Removes 'X' words (non-spoken noise markers) from the next
+
+    Args:
+        words (List[str]): list of words to clean
+    """
     def clean_x_word(word):
         if "XX" in word:
             return ""
