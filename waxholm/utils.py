@@ -14,7 +14,7 @@
 
 
 def clean_x_words(words):
-    """Removes 'X' words (non-spoken noise markers) from the next
+    """Removes 'X' words (non-spoken noise markers) from the text
 
     Args:
         words (List[str]): list of words to clean
