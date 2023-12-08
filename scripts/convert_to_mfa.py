@@ -39,6 +39,7 @@ def clean_pron_set(prons):
     output = set()
     for pron in prons:
         output.add(clean_pronunciation(pron))
+    return output
 
 
 def main():
@@ -91,7 +92,8 @@ def main():
 
         with open(str(outpath / "lexicon.dict"), "w") as lexf:
             for word in lexicon:
-                for pron in lexicon[word]:
+                prons = clean_pron_set(lexicon[word])
+                for pron in prons:
                     lexf.write(f"{word}\t{pron}\n")
 
 
