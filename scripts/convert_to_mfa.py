@@ -46,6 +46,8 @@ def main():
         print(f"Path to data ({data_location}) exists, but is not a directory")
         exit()
 
+    lexicon = {}
+
     for mixfile in data_location.glob("**/*.mix"):
         stem = mixfile.stem
         mix = Mix(filepath=mixfile)
@@ -58,3 +60,16 @@ def main():
             smpfile = str(mixfile).replace(".mix", "")
             wavfile = f"{outpath}/{stem}.wav"
             smp_to_wav(smpfile, wavfile)
+
+        for word_pair in mix.get_dictionary_list():
+            word = word_pair[0]
+            pron = word_pair[1]
+
+            if not word in lexicon:
+                lexicon[word] = set()
+            lexicon[word].add(pron)
+
+        with open(str(outpath / "lexicon.dict"), "w") as lexf:
+            for word in lexicon:
+                for pron in lexicon[word]:
+                    lexf.write(f"{word}\t{pron}\n")
