@@ -20,6 +20,7 @@ from pathlib import Path
 
 from waxholm.audio import smp_to_wav
 
+
 def main():
     parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
@@ -36,5 +37,13 @@ def main():
 
         if not outpath.exists() and not outpath.is_dir():
             outpath.mkdir()
+
+    data_location = Path(args.data_location)
+    if not data_location.exists():
+        print(f"Path to data ({data_location}) does not exist")
+        exit()
+    elif not data_location.is_dir():
+        print(f"Path to data ({data_location}) exists, but is not a directory")
+        exit()
 
 
