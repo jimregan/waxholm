@@ -33,6 +33,8 @@ def fix_text(text: str, extended: bool = False) -> str:
 def _kludge_broken(text):
     if text.strip() == "FR      21506\t #ha\t>pm #ha\t>w skratt\t 1.344 sec":
         return "FR      21506\t #ha\t>pm #ha\t>w XskrattX\t 1.344 sec"
+    elif text.strip() == "FR      16602\t #.\t>pm #.\t>w. 1.038\t 1.038 sec":
+        return "FR      16602\t #.\t>pm #.\t>w .\t 1.038 sec"
     else:
         return text
 
@@ -101,10 +103,6 @@ class FR:
             elif subpart.startswith(">w "):
                 self.type = 'B'
                 self.word = fix_text(subpart[3:])
-                self.pseudoword = False
-            elif subpart.startswith(">w. 1.038"):
-                self.type = 'B'
-                self.word = fix_text(".")
                 self.pseudoword = False
             elif subpart.startswith(">w. "):
                 self.type = 'B'
