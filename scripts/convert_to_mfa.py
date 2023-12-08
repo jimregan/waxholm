@@ -73,3 +73,7 @@ def main():
             for word in lexicon:
                 for pron in lexicon[word]:
                     lexf.write(f"{word}\t{pron}\n")
+
+
+if __name__ == '__main__':
+    main()
