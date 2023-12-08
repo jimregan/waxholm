@@ -229,10 +229,13 @@ def _is_glottal_closure(cur, next):
 
 
 def _replace_glottal_closures(input):
-    input += ' '
+    input = f" {input} "
     for sil in SILS:
-        input = input.replace(f"{sil} {SILS[sil]} ", f"{SILS[sil]} ")
-    return input[:-1]
+        input = input.replace(f" {sil} {SILS[sil]} ", f" {sil} ")
+        if "2" in sil:
+            sil_no_two = sil.replace("2", "")
+            input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")            
+    return input.strip()
 
 def _fix_duration_markers(input):
     input += ' '
