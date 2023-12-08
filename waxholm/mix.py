@@ -533,7 +533,7 @@ class Mix():
                 output[prev_word].append(current_phones.copy())
                 return output
 
-    def get_dictionary_list(self, fix_accents=True, split_multiwords=True):
+    def get_dictionary_list(self, fix_accents=True, split_mws=True):
         """
         Get pronunciation dictionary entries from the .mix file.
         These entries are based on the corrected pronunciations; for
@@ -546,9 +546,9 @@ class Mix():
         prev_word = ''
 
         for fr in self.fr:
-            def add_pron(prev_word, current_phones, split_multiwords=True):
+            def add_pron(prev_word, current_phones, split_mws=True):
                 pron_joined = " ".join(current_phones)
-                if split_multiwords and "~" in pron_joined and "_" in prev_word:
+                if split_mws and "~" in pron_joined and "_" in prev_word:
                     return split_multiwords(prev_word, pron_joined)
                 else:
                     if "~" in pron_joined:
@@ -558,7 +558,7 @@ class Mix():
             if 'word' in fr.__dict__:
                 phone = fr.get_phone(fix_accents)
                 if prev_word != "":
-                    output += add_pron(prev_word, current_phones, split_multiwords)
+                    output += add_pron(prev_word, current_phones, split_mws)
                     current_phones.clear()
                 prev_word = fr.word
                 current_phones.append(phone)
@@ -566,7 +566,7 @@ class Mix():
                 phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
-                output += add_pron(prev_word, current_phones, split_multiwords)
+                output += add_pron(prev_word, current_phones, split_mws)
                 return output
 
     def get_phoneme_string(self, insert_pauses=True, fix_accents=True):
