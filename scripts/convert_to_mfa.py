@@ -21,6 +21,13 @@ from pathlib import Path
 from waxholm.audio import smp_to_wav
 
 
+def split_multiwords(pair):
+    words = pair[0].split('_')
+    prons = [x.strip() for x in pair[1].split('~')]
+    retval = [x for x in zip(words, prons)]
+    return retval
+
+
 def main():
     parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
