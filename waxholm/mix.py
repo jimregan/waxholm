@@ -14,6 +14,7 @@
 from collections import namedtuple
 from copy import deepcopy
 from .exceptions import FRExpected
+from .utils import fix_duration_markers, is_glottal_closure, replace_glottal_closures
 from difflib import SequenceMatcher
 import re
 
@@ -227,36 +228,6 @@ def merge_frs(fr1, fr2, check_time=False):
             return FR(pm=fr2.pm, pm_type=fr2.pm_type, type=fr2.type,
                       frame=fr2.frame, seconds=fr2.seconds, phone=fr2.phone,
                       phone_type=fr2.phone_type, word=word, pseudoword=pword)
-
-
-SILS = {
-    "K": "k",
-    "G": "g",
-    "T": "t",
-    "D": "d",
-    "2T": "2t",
-    "2D": "2d",
-    "P": "p",
-    "B": "b"
-}
-def is_glottal_closure(cur, next):
-    return cur in SILS and next == SILS[cur]
-
-
-def replace_glottal_closures(input):
-    input = f" {input} "
-    for sil in SILS:
-        input = input.replace(f" {sil} {SILS[sil]} ", f" {sil} ")
-        if "2" in sil:
-            sil_no_two = sil.replace("2", "")
-            input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")            
-    return input.strip()
-
-
-def fix_duration_markers(input):
-    input += ' '
-    input = input.replace(":+ ", ": ")
-    return input[:-1]
 
 
 class Mix():
