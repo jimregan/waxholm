@@ -30,6 +30,15 @@ def fix_text(text: str, extended: bool = False) -> str:
         return spaced.strip()
 
 
+def _kludge_broken(text):
+    if text.strip() == "FR      21506\t #ha\t>pm #ha\t>w skratt\t 1.344 sec":
+        return "FR      21506\t #ha\t>pm #ha\t>w XskrattX\t 1.344 sec"
+    elif text.strip() == "FR      16602\t #.\t>pm #.\t>w. 1.038\t 1.038 sec":
+        return "FR      16602\t #.\t>pm #.\t>w .\t 1.038 sec"
+    else:
+        return text
+
+
 Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
@@ -48,9 +57,12 @@ class FR:
                     print(f"Unrecognised argument: {arg}")
 
     def from_text(self, text: str):
+        text = _kludge_broken(text)
         if not text.startswith("FR"):
             raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
+        if not parts[0].startswith("FR"):
+            print("Error with FR", text)
         self.frame = parts[0][2:].strip()
         if parts[-1].strip().endswith(" sec"):
             self.seconds = parts[-1].strip()[0:-4]
@@ -134,6 +146,9 @@ class FR:
         return "FR(" + ", ".join(parts) + ")"
 
     def fix_type(self):
+        if not "type" in self.__dict__:
+            if "pm_type" in self.__dict__ and self.pm_type == "$":
+                self.type = "B"
         if self.is_type("B") and self.get_word() == "":
             self.pm_type = "$"
             self.phone_type = "$"
@@ -236,6 +251,7 @@ def _replace_glottal_closures(input):
             sil_no_two = sil.replace("2", "")
             input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")            
     return input.strip()
+
 
 def _fix_duration_markers(input):
     input += ' '
