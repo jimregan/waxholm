@@ -14,7 +14,7 @@
 # limitations under the License.
 # flake8: noqa
 
-from waxholm import FR, Mix
+from waxholm import Mix
 import argparse
 from pathlib import Path
 
