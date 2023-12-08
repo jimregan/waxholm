@@ -46,4 +46,15 @@ def main():
         print(f"Path to data ({data_location}) exists, but is not a directory")
         exit()
 
+    for mixfile in data_location.glob("**/*.mix"):
+        stem = mixfile.stem
+        mix = Mix(filepath=mixfile)
 
+        txtfile = f"{outpath}/{stem}.txt"
+        with open(txtfile, "w") as textoutput:
+            textoutput.write(mix.text + "\n")
+
+        if args.audio:
+            smpfile = str(mixfile).replace(".mix", "")
+            wavfile = f"{outpath}/{stem}.wav"
+            smp_to_wav(smpfile, wavfile)
