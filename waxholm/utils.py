@@ -13,6 +13,26 @@
 # limitations under the License.
 
 
+X_TAGS = {
+    "XtvekX": "öh",
+    "XinandX": "pa",
+    "XsmackX": "sm",
+    "XutandX": "pa",
+    "XharklingX": "ha",
+    "XklickX": "kl",
+    "XavbrordX": "",
+    "XskrattX": "ha",
+    "XsuckX": "pa"
+}
+
+
+def check_x_tag(word, phoneme):
+    if word == "XavbrordX":
+        return True
+    if word in X_TAGS:
+        return phoneme == X_TAGS[word]
+
+
 def clean_x_words(words):
     """Removes 'X' words (non-spoken noise markers) from the text
 
