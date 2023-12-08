@@ -22,10 +22,13 @@ from pathlib import Path
 def check_candidates(word, pron):
     monowords = [
         "att",
-        "och"
+        "och",
+        "är"
     ]
     len_pron = len(pron.split(" "))
     if len_pron != 1:
+        return False
+    if len(word) >= 2 and word[0] == 'X' and word[-1] == 'X':
         return False
     if len(word) == 1 or word in monowords:
         return False
@@ -52,8 +55,7 @@ def main():
             word = word_pair[0]
             pron = word_pair[1]
 
-            lword = word.lower()
-            if check_candidates(lword, pron):
+            if check_candidates(word, pron):
                 print(f'File: {mixfile} ({word} : {pron})')            
 
 
