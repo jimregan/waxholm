@@ -22,13 +22,6 @@ from waxholm.audio import smp_to_wav
 from waxholm.utils import replace_glottal_closures, fix_duration_markers
 
 
-def split_multiwords(pair):
-    words = pair[0].split('_')
-    prons = [x.strip() for x in pair[1].split('~')]
-    retval = [x for x in zip(words, prons)]
-    return retval
-
-
 def strip_accents(text):
     for accent in "ˈ`ˌ":
         text = text.replace(accent, "")
@@ -40,6 +33,12 @@ def clean_pronunciation(text):
     text = fix_duration_markers(text)
     text = strip_accents(text)
     return text
+
+
+def clean_pron_set(prons):
+    output = set()
+    for pron in prons:
+        output.add(clean_pronunciation(pron))
 
 
 def main():

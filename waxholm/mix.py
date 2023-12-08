@@ -19,6 +19,13 @@ from difflib import SequenceMatcher
 import re
 
 
+def split_multiwords(pair):
+    words = pair[0].split('_')
+    prons = [x.strip() for x in pair[1].split('~')]
+    retval = [x for x in zip(words, prons)]
+    return retval
+
+
 def fix_text(text: str, extended: bool = False) -> str:
     replacements = text.maketrans("{}|\\[]", "äåöÖÄÅ")
     if not extended:
