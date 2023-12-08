@@ -549,7 +549,7 @@ class Mix():
             def add_pron(prev_word, current_phones, split_mws=True):
                 pron_joined = " ".join(current_phones)
                 if split_mws and "~" in pron_joined and "_" in prev_word:
-                    return split_multiwords(prev_word, pron_joined)
+                    return split_multiwords((prev_word, pron_joined))
                 else:
                     if "~" in pron_joined:
                         pron_joined = pron_joined.replace("~", "")
