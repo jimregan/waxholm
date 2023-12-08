@@ -61,7 +61,7 @@ if os.environ.get('READTHEDOCS', None):
     extras_require['reST'].append('recommonmark')
 
 setup(name='waxholm',
-      version='0.1.2',
+      version='0.1.3',
       description='Module for reading Waxholm corpus transcripts',
       long_description=long_description,
       long_description_content_type='text/x-rst',
