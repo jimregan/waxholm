@@ -140,6 +140,9 @@ class FR:
         return "FR(" + ", ".join(parts) + ")"
 
     def fix_type(self):
+        if not "type" in self.__dict__:
+            if "pm_type" in self.__dict__ and self.pm_type == "$":
+                self.type = "B"
         if self.is_type("B") and self.get_word() == "":
             self.pm_type = "$"
             self.phone_type = "$"
