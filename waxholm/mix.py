@@ -51,6 +51,8 @@ class FR:
         if not text.startswith("FR"):
             raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
+        if not parts[0].startswith("FR"):
+            print("Error with FR", text)
         self.frame = parts[0][2:].strip()
         if parts[-1].strip().endswith(" sec"):
             self.seconds = parts[-1].strip()[0:-4]
@@ -81,11 +83,13 @@ class FR:
             elif subpart.startswith(">pm "):
                 phparts = split_phone(subpart[4:])
                 if phparts is not None:
+                    self.type = phparts['phone_type']
                     self.pm_type = phparts['phone_type']
                     self.pm = phparts['phone']
             elif subpart.startswith(">pm. "):
                 phparts = split_phone(subpart[5:])
                 if phparts is not None:
+                    self.type = phparts['phone_type']
                     self.pm_type = phparts['phone_type']
                     self.pm = phparts['phone']
             elif subpart.startswith(">w "):
