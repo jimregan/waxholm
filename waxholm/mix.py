@@ -30,6 +30,13 @@ def fix_text(text: str, extended: bool = False) -> str:
         return spaced.strip()
 
 
+def _kludge_broken(text):
+    if text.strip() == "FR      21506\t #ha\t>pm #ha\t>w skratt\t 1.344 sec":
+        return "FR      21506\t #ha\t>pm #ha\t>w XskrattX\t 1.344 sec"
+    else:
+        return text
+
+
 Label = namedtuple('Label', ['start', 'end', 'label'])
 
 
@@ -48,6 +55,7 @@ class FR:
                     print(f"Unrecognised argument: {arg}")
 
     def from_text(self, text: str):
+        text = _kludge_broken(text)
         if not text.startswith("FR"):
             raise FRExpected(text)
         parts = [a.strip() for a in text.split("\t")]
