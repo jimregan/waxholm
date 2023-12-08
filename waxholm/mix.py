@@ -92,10 +92,6 @@ class FR:
                 self.type = 'B'
                 self.word = fix_text(subpart[3:])
                 self.pseudoword = False
-            elif subpart.startswith(">w. 1.038"):
-                self.type = 'B'
-                self.word = fix_text(".")
-                self.pseudoword = False
             elif subpart.startswith(">w. "):
                 self.type = 'B'
                 self.word = fix_text(subpart[4:])
@@ -240,7 +236,6 @@ def _replace_glottal_closures(input):
             sil_no_two = sil.replace("2", "")
             input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")            
     return input.strip()
-
 
 def _fix_duration_markers(input):
     input += ' '
