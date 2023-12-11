@@ -29,9 +29,9 @@ def strip_accents(text):
 
 
 def clean_pronunciation(text):
-    text = replace_glottal_closures(text)
     text = fix_duration_markers(text)
     text = strip_accents(text)
+    text = replace_glottal_closures(text)
     return text
 
 
