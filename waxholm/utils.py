@@ -74,9 +74,12 @@ def is_glottal_closure(cur, next):
 
 def replace_glottal_closures(input):
     input = f" {input} "
-    for sil in SILS:
-        input = input.replace(f" {sil} {SILS[sil]} ", f" {sil} ")
-        if "2" in sil:
-            sil_no_two = sil.replace("2", "")
-            input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")
+    LOCAL_SILS = {f" {x} {SILS[x]} ": f" {x} " for x in SILS}
+    for retro in ["D", "T"]:
+        LOCAL_SILS[f" 2{retro} {retro.lower()} "] = f" 2{retro} "
+        LOCAL_SILS[f" {retro} 2{retro.lower()} "] = f" 2{retro} "
+    for sil in LOCAL_SILS:
+        if sil in input:
+            input = input.replace(sil, LOCAL_SILS[sil])
+            input = f" {input.strip()} "
     return input.strip()
