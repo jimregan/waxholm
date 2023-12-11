@@ -75,7 +75,11 @@ def main():
 
         txtfile = f"{outpath}/{stem}.txt"
         with open(txtfile, "w") as textoutput:
-            textoutput.write(mix.text + "\n")
+            text = mix.text.strip()
+            text = text.lower()
+            if text.endswith("."):
+                text = text[:-1].strip()
+            textoutput.write(text + "\n")
 
         if args.audio:
             smpfile = str(mixfile).replace(".mix", "")
@@ -83,7 +87,7 @@ def main():
             smp_to_wav(smpfile, wavfile)
 
         for word_pair in mix.get_dictionary_list():
-            word = word_pair[0]
+            word = word_pair[0].lower()
             pron = word_pair[1]
 
             if not word in lexicon:
