@@ -28,10 +28,24 @@ def strip_accents(text):
     return text
 
 
+def clean_silences(pron):
+    if pron == "p:":
+        return "SIL"
+    split = pron.split(" ")
+    start = 0
+    end = len(split) - 1
+    if split[start] == "p:":
+        start += 1
+    if split[end] == "p:":
+        end -= 1
+    return " ".join(split[start:end+1])
+
+
 def clean_pronunciation(text):
     text = fix_duration_markers(text)
     text = strip_accents(text)
     text = replace_glottal_closures(text)
+    text = clean_silences(text)
     return text
 
 
@@ -40,6 +54,13 @@ def clean_pron_set(prons):
     for pron in prons:
         output.add(clean_pronunciation(pron))
     return output
+
+
+def cond_lc(text):
+    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
+        return text
+    else:
+        return text.lower()
 
 
 def main():
@@ -87,7 +108,7 @@ def main():
             smp_to_wav(smpfile, wavfile)
 
         for word_pair in mix.get_dictionary_list():
-            word = word_pair[0].lower()
+            word = cond_lc(word_pair[0])
             pron = word_pair[1]
 
             if not word in lexicon:
