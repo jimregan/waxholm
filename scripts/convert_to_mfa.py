@@ -98,7 +98,7 @@ def main():
         txtfile = f"{outpath}/{stem}.txt"
         with open(txtfile, "w") as textoutput:
             text = mix.text.strip()
-            text = text.lower()
+            text = " ".join([cond_lc(x) for x in text.split(" ")])
             if text.endswith("."):
                 text = text[:-1].strip()
             textoutput.write(text + "\n")
