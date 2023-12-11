@@ -64,6 +64,12 @@ def cond_lc(text):
         return text.lower()
 
 
+JUNK = [
+    "XX\t\n",
+    ".\t.\n"
+]
+
+
 def main():
     parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
@@ -120,7 +126,9 @@ def main():
             for word in lexicon:
                 prons = clean_pron_set(lexicon[word])
                 for pron in prons:
-                    lexf.write(f"{word}\t{pron}\n")
+                    cand = f"{word}\t{pron}\n"
+                    if not cand in JUNK:
+                        lexf.write(cand)
 
 
 if __name__ == '__main__':
