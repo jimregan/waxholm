@@ -49,3 +49,37 @@ def clean_x_words(words):
     return [x for x in words if clean_x_word(x) != ""]
 
 
+def fix_duration_markers(input):
+    input += ' '
+    input = input.replace(":+ ", ": ")
+    input = input.replace("+ ", " ")
+    return input.strip()
+
+
+SILS = {
+    "K": "k",
+    "G": "g",
+    "T": "t",
+    "D": "d",
+    "2T": "2t",
+    "2D": "2d",
+    "P": "p",
+    "B": "b"
+}
+
+
+def is_glottal_closure(cur, next):
+    return cur in SILS and next == SILS[cur]
+
+
+def replace_glottal_closures(input):
+    input = f" {input} "
+    LOCAL_SILS = {f" {x} {SILS[x]} ": f" {x} " for x in SILS}
+    for retro in ["D", "T"]:
+        LOCAL_SILS[f" 2{retro} {retro.lower()} "] = f" 2{retro} "
+        LOCAL_SILS[f" {retro} 2{retro.lower()} "] = f" 2{retro} "
+    for sil in LOCAL_SILS:
+        if sil in input:
+            input = input.replace(sil, LOCAL_SILS[sil])
+            input = f" {input.strip()} "
+    return input.strip()

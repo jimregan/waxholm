@@ -19,13 +19,55 @@ import argparse
 from pathlib import Path
 
 from waxholm.audio import smp_to_wav
+from waxholm.utils import replace_glottal_closures, fix_duration_markers
 
 
-def split_multiwords(pair):
-    words = pair[0].split('_')
-    prons = [x.strip() for x in pair[1].split('~')]
-    retval = [x for x in zip(words, prons)]
-    return retval
+def strip_accents(text):
+    for accent in "ˈ`ˌ":
+        text = text.replace(accent, "")
+    return text
+
+
+def clean_silences(pron):
+    if pron == "p:":
+        return "SIL"
+    split = pron.split(" ")
+    start = 0
+    end = len(split) - 1
+    if split[start] == "p:":
+        start += 1
+    if split[end] == "p:":
+        end -= 1
+    split = ["SIL" if x == "p:" else x for x in split]
+    return " ".join(split[start:end+1])
+
+
+def clean_pronunciation(text):
+    text = fix_duration_markers(text)
+    text = strip_accents(text)
+    text = replace_glottal_closures(text)
+    text = clean_silences(text)
+    return text
+
+
+def clean_pron_set(prons):
+    output = set()
+    for pron in prons:
+        output.add(clean_pronunciation(pron))
+    return output
+
+
+def cond_lc(text):
+    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
+        return text
+    else:
+        return text.lower()
+
+
+JUNK = [
+    "XX\t\n",
+    ".\t.\n"
+]
 
 
 def main():
@@ -57,19 +99,29 @@ def main():
 
     for mixfile in data_location.glob("**/*.mix"):
         stem = mixfile.stem
+        stem_parts = stem.split(".")
+        speaker = stem_parts[0]
         mix = Mix(filepath=mixfile)
 
-        txtfile = f"{outpath}/{stem}.txt"
+        spk_path = outpath / f"{speaker}"
+
+        if not spk_path.is_dir():
+            spk_path.mkdir()
+        txtfile = f"{spk_path}/{stem}.txt"
         with open(txtfile, "w") as textoutput:
-            textoutput.write(mix.text + "\n")
+            text = mix.text.strip()
+            text = " ".join([cond_lc(x) for x in text.split(" ")])
+            if text.endswith("."):
+                text = text[:-1].strip()
+            textoutput.write(text + "\n")
 
         if args.audio:
             smpfile = str(mixfile).replace(".mix", "")
-            wavfile = f"{outpath}/{stem}.wav"
+            wavfile = f"{spk_path}/{stem}.wav"
             smp_to_wav(smpfile, wavfile)
 
         for word_pair in mix.get_dictionary_list():
-            word = word_pair[0]
+            word = cond_lc(word_pair[0])
             pron = word_pair[1]
 
             if not word in lexicon:
@@ -78,8 +130,11 @@ def main():
 
         with open(str(outpath / "lexicon.dict"), "w") as lexf:
             for word in lexicon:
-                for pron in lexicon[word]:
-                    lexf.write(f"{word}\t{pron}\n")
+                prons = clean_pron_set(lexicon[word])
+                for pron in prons:
+                    cand = f"{word}\t{pron}\n"
+                    if not cand in JUNK:
+                        lexf.write(cand)
 
 
 if __name__ == '__main__':

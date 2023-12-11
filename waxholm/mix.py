@@ -14,8 +14,16 @@
 from collections import namedtuple
 from copy import deepcopy
 from .exceptions import FRExpected
+from .utils import fix_duration_markers, is_glottal_closure, replace_glottal_closures
 from difflib import SequenceMatcher
 import re
+
+
+def split_multiwords(pair):
+    words = pair[0].split('_')
+    prons = [x.strip() for x in pair[1].split('~')]
+    retval = [x for x in zip(words, prons)]
+    return retval
 
 
 def fix_text(text: str, extended: bool = False) -> str:
@@ -214,7 +222,7 @@ def merge_frs(fr1, fr2, check_time=False):
     if check_time:
         if fr1.get_seconds() != fr2.get_seconds():
             return None
-    if _is_glottal_closure(fr1.get_phone(), fr2.get_phone()):
+    if is_glottal_closure(fr1.get_phone(), fr2.get_phone()):
         if not fr1.has_word():
             return fr2
         else:
@@ -227,36 +235,6 @@ def merge_frs(fr1, fr2, check_time=False):
             return FR(pm=fr2.pm, pm_type=fr2.pm_type, type=fr2.type,
                       frame=fr2.frame, seconds=fr2.seconds, phone=fr2.phone,
                       phone_type=fr2.phone_type, word=word, pseudoword=pword)
-
-
-SILS = {
-    "K": "k",
-    "G": "g",
-    "T": "t",
-    "D": "d",
-    "2T": "2t",
-    "2D": "2d",
-    "P": "p",
-    "B": "b"
-}
-def _is_glottal_closure(cur, next):
-    return cur in SILS and next == SILS[cur]
-
-
-def _replace_glottal_closures(input):
-    input = f" {input} "
-    for sil in SILS:
-        input = input.replace(f" {sil} {SILS[sil]} ", f" {sil} ")
-        if "2" in sil:
-            sil_no_two = sil.replace("2", "")
-            input = input.replace(f" {sil_no_two} {SILS[sil]} ", f" {sil} ")            
-    return input.strip()
-
-
-def _fix_duration_markers(input):
-    input += ' '
-    input = input.replace(":+ ", ": ")
-    return input[:-1]
 
 
 class Mix():
@@ -485,7 +463,7 @@ class Mix():
         while i < len(labels)-1:
             cur = labels[i]
             next = labels[i+1]
-            if _is_glottal_closure(cur[2], next[2]):
+            if is_glottal_closure(cur[2], next[2]):
                 tmp = Label(start = cur[0], end = next[1], label = next[2])
                 out.append(tmp)
                 i += 2
@@ -555,7 +533,7 @@ class Mix():
                 output[prev_word].append(current_phones.copy())
                 return output
 
-    def get_dictionary_list(self, fix_accents=True):
+    def get_dictionary_list(self, fix_accents=True, split_mws=True):
         """
         Get pronunciation dictionary entries from the .mix file.
         These entries are based on the corrected pronunciations; for
@@ -568,10 +546,19 @@ class Mix():
         prev_word = ''
 
         for fr in self.fr:
+            def add_pron(prev_word, current_phones, split_mws=True):
+                pron_joined = " ".join(current_phones)
+                if split_mws and "~" in pron_joined and "_" in prev_word:
+                    return split_multiwords((prev_word, pron_joined))
+                else:
+                    if "~" in pron_joined:
+                        pron_joined = pron_joined.replace("~", "")
+                    return [(prev_word, pron_joined)]
+
             if 'word' in fr.__dict__:
                 phone = fr.get_phone(fix_accents)
                 if prev_word != "":
-                    output.append((prev_word, " ".join(current_phones)))
+                    output += add_pron(prev_word, current_phones, split_mws)
                     current_phones.clear()
                 prev_word = fr.word
                 current_phones.append(phone)
@@ -579,7 +566,7 @@ class Mix():
                 phone = fr.get_phone(fix_accents)
                 current_phones.append(phone)
             else:
-                output.append((prev_word, " ".join(current_phones)))
+                output += add_pron(prev_word, current_phones, split_mws)
                 return output
 
     def get_phoneme_string(self, insert_pauses=True, fix_accents=True):
@@ -598,8 +585,8 @@ class Mix():
         else:
             phone_strings = [x[1] for x in dict_list if x[1] != "."]
             joined = ' '.join(phone_strings)
-        joined = _replace_glottal_closures(joined)
-        joined = _fix_duration_markers(joined)
+        joined = replace_glottal_closures(joined)
+        joined = fix_duration_markers(joined)
         return joined
 
     def get_phoneme_list(self, insert_pauses=True, fix_accents=True):
