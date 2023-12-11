@@ -38,6 +38,7 @@ def clean_silences(pron):
         start += 1
     if split[end] == "p:":
         end -= 1
+    split = ["SIL" if x == "p:" else x for x in split]
     return " ".join(split[start:end+1])
 
 
