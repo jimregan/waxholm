@@ -99,9 +99,15 @@ def main():
 
     for mixfile in data_location.glob("**/*.mix"):
         stem = mixfile.stem
+        stem_parts = stem.split(".")
+        speaker = stem_parts[0]
         mix = Mix(filepath=mixfile)
 
-        txtfile = f"{outpath}/{stem}.txt"
+        spk_path = outpath / f"{speaker}"
+
+        if not spk_path.is_dir():
+            spk_path.mkdir()
+        txtfile = f"{spk_path}/{stem}.txt"
         with open(txtfile, "w") as textoutput:
             text = mix.text.strip()
             text = " ".join([cond_lc(x) for x in text.split(" ")])
@@ -111,7 +117,7 @@ def main():
 
         if args.audio:
             smpfile = str(mixfile).replace(".mix", "")
-            wavfile = f"{outpath}/{stem}.wav"
+            wavfile = f"{spk_path}/{stem}.wav"
             smp_to_wav(smpfile, wavfile)
 
         for word_pair in mix.get_dictionary_list():
