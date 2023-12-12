@@ -32,7 +32,6 @@ def main():
     parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
     parser.add_argument('--outpath', type=str, help='path to place converted files')
-    parser.add_argument('--audio', help='also convert audio', action='store_true')
     args = parser.parse_args()
 
     if args.outpath:
@@ -72,11 +71,6 @@ def main():
             if text.endswith("."):
                 text = text[:-1].strip()
             textoutput.write(text + "\n")
-
-        if args.audio:
-            smpfile = str(mixfile).replace(".mix", "")
-            wavfile = f"{spk_path}/{stem}.wav"
-            smp_to_wav(smpfile, wavfile)
 
         for word_pair in mix.get_dictionary_list():
             word = cond_lc(word_pair[0])
