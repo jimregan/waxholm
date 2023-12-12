@@ -28,7 +28,7 @@ def strip_accents(text):
     return text
 
 
-def clean_silences(pron):
+def clean_silences_mfa(pron, vowellike=False):
     if pron == "p:":
         return "SIL"
     split = pron.split(" ")
@@ -39,6 +39,8 @@ def clean_silences(pron):
     if split[end] == "p:":
         end -= 1
     split = ["SIL" if x == "p:" else x for x in split]
+    if vowellike:
+        split = [x for x in split if x != "v"]
     return " ".join(split[start:end+1])
 
 
@@ -46,7 +48,7 @@ def clean_pronunciation(text):
     text = fix_duration_markers(text)
     text = strip_accents(text)
     text = replace_glottal_closures(text)
-    text = clean_silences(text)
+    text = clean_silences_mfa(text)
     return text
 
 
