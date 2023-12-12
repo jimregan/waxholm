@@ -91,7 +91,7 @@ def strip_accents(text):
     return text
 
 
-def clean_silences_mfa(pron, vowellike=False):
+def clean_silences_mfa(pron, non_phones=False):
     if pron == "p:":
         return "SIL"
     split = pron.split(" ")
@@ -102,28 +102,33 @@ def clean_silences_mfa(pron, vowellike=False):
     if split[end] == "p:":
         end -= 1
     split = ["SIL" if x == "p:" else x for x in split]
-    if vowellike:
-        split = [x for x in split if x != "v"]
+    NON_PHONES = ["v", "kl", "SIL", "pa", "sm"]
+    if non_phones:
+        split = [x for x in split if x not in NON_PHONES]
     return " ".join(split[start:end+1])
 
 
-def clean_pronunciation(text, vowellike=False):
+def clean_pronunciation(text, non_phones=False):
     text = fix_duration_markers(text)
     text = strip_accents(text)
     text = replace_glottal_closures(text)
-    text = clean_silences_mfa(text, vowellike)
+    text = clean_silences_mfa(text, non_phones)
     return text
 
 
-def clean_pron_set(prons, vowellike=False):
+def clean_pron_set(prons, non_phones=False):
     output = set()
     for pron in prons:
-        output.add(clean_pronunciation(pron, vowellike))
+        output.add(clean_pronunciation(pron, non_phones))
     return output
 
 
+def is_x_word(text):
+    return len(text) >= 2 and text[0] == "X" and text[-1] == "X"
+
+
 def cond_lc(text):
-    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
+    if is_x_word(text):
         return text
     else:
         return text.lower()
