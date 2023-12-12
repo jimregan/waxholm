@@ -83,3 +83,47 @@ def replace_glottal_closures(input):
             input = input.replace(sil, LOCAL_SILS[sil])
             input = f" {input.strip()} "
     return input.strip()
+
+
+def strip_accents(text):
+    for accent in "ˈ`ˌ":
+        text = text.replace(accent, "")
+    return text
+
+
+def clean_silences_mfa(pron, vowellike=False):
+    if pron == "p:":
+        return "SIL"
+    split = pron.split(" ")
+    start = 0
+    end = len(split) - 1
+    if split[start] == "p:":
+        start += 1
+    if split[end] == "p:":
+        end -= 1
+    split = ["SIL" if x == "p:" else x for x in split]
+    if vowellike:
+        split = [x for x in split if x != "v"]
+    return " ".join(split[start:end+1])
+
+
+def clean_pronunciation(text, vowellike=False):
+    text = fix_duration_markers(text)
+    text = strip_accents(text)
+    text = replace_glottal_closures(text)
+    text = clean_silences_mfa(text, vowellike)
+    return text
+
+
+def clean_pron_set(prons, vowellike=False):
+    output = set()
+    for pron in prons:
+        output.add(clean_pronunciation(pron, vowellike))
+    return output
+
+
+def cond_lc(text):
+    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
+        return text
+    else:
+        return text.lower()
