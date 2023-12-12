@@ -13,6 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # flake8: noqa
+#
+# This script converts the Waxholm data enough to create an acoustic model
+# (using `mfa train`). The lexicon includes non-specific epenthetic vowels;
+# for a script to create a lexicon suitable for use with mfa's g2p trainer
+# use `convert_to_mfa_g2p.py`
 
 from waxholm import Mix
 import argparse
@@ -29,9 +34,9 @@ JUNK = [
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
-    parser.add_argument('data_location', type=str, help='path to the Waxholm data')
-    parser.add_argument('--outpath', type=str, help='path to place converted files')
+    parser = argparse.ArgumentParser(description='Convert a directory containing the Waxholm data for use with the Montreal Forced Aligner.')
+    parser.add_argument('data_location', type=str, help='path to the directory containing the Waxholm data')
+    parser.add_argument('--outpath', type=str, help='path to place converted files (directory will be created if it does not exist)')
     parser.add_argument('--audio', help='also convert audio', action='store_true')
     args = parser.parse_args()
 
