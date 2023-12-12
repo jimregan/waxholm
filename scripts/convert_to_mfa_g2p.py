@@ -13,13 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # flake8: noqa
+#
+# Collects a dictionary from the Waxholm data, 
 
 from waxholm import Mix
 import argparse
 from pathlib import Path
 
-from waxholm.audio import smp_to_wav
-from waxholm.utils import cond_lc, clean_pron_set
+from waxholm.utils import cond_lc, clean_pron_set, is_x_word
 
 
 JUNK = [
@@ -29,20 +30,17 @@ JUNK = [
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
+    parser = argparse.ArgumentParser(description='Gathers a lexicon from the Waxholm data for input to Montreal Forced Aligner\'s G2P trainer.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
-    parser.add_argument('--outpath', type=str, help='path to place converted files')
+    parser.add_argument('lexicon', type=str, help='path to place the gathered lexicon')
     args = parser.parse_args()
 
-    if args.outpath:
-        outpath = Path(args.outpath)
+    if args.lexicon:
+        outpath = Path(args.lexicon)
 
-        if outpath.exists() and not outpath.is_dir():
+        if outpath.exists():
             print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
             exit()
-
-        if not outpath.exists() and not outpath.is_dir():
-            outpath.mkdir()
 
     data_location = Path(args.data_location)
     if not data_location.exists():
@@ -55,24 +53,11 @@ def main():
     lexicon = {}
 
     for mixfile in data_location.glob("**/*.mix"):
-        stem = mixfile.stem
-        stem_parts = stem.split(".")
-        speaker = stem_parts[0]
         mix = Mix(filepath=mixfile)
 
-        spk_path = outpath / f"{speaker}"
-
-        if not spk_path.is_dir():
-            spk_path.mkdir()
-        txtfile = f"{spk_path}/{stem}.txt"
-        with open(txtfile, "w") as textoutput:
-            text = mix.text.strip()
-            text = " ".join([cond_lc(x) for x in text.split(" ")])
-            if text.endswith("."):
-                text = text[:-1].strip()
-            textoutput.write(text + "\n")
-
         for word_pair in mix.get_dictionary_list():
+            if is_x_word(word_pair[0]):
+                continue
             word = cond_lc(word_pair[0])
             pron = word_pair[1]
 
@@ -80,12 +65,13 @@ def main():
                 lexicon[word] = set()
             lexicon[word].add(pron)
 
-        with open(str(outpath / "lexicon.dict"), "w") as lexf:
+        lexicon = dict(sorted(lexicon.items()))
+        with open(str(outpath), "w") as lexf:
             for word in lexicon:
-                prons = clean_pron_set(lexicon[word])
+                prons = clean_pron_set(lexicon[word], True)
                 for pron in prons:
                     cand = f"{word}\t{pron}\n"
-                    if not cand in JUNK:
+                    if not cand in JUNK and not cand.endswith("\t\n"):
                         lexf.write(cand)
 
 
