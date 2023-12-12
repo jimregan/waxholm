@@ -102,7 +102,7 @@ def clean_silences_mfa(pron, non_phones=False):
     if split[end] == "p:":
         end -= 1
     split = ["SIL" if x == "p:" else x for x in split]
-    NON_PHONES = ["v", "kl", "SIL"]
+    NON_PHONES = ["v", "kl", "SIL", "pa", "sm"]
     if non_phones:
         split = [x for x in split if x not in NON_PHONES]
     return " ".join(split[start:end+1])
