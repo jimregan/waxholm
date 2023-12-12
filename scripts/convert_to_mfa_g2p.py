@@ -14,7 +14,9 @@
 # limitations under the License.
 # flake8: noqa
 #
-# Collects a dictionary from the Waxholm data, 
+# Collects a dictionary from the Waxholm data, suitable for use with MFA's
+# G2P trainer (i.e., skipping non-speech "phones").
+# Note that the result should still be sorted using the standard Unix sort tool.
 
 from waxholm import Mix
 import argparse
@@ -33,8 +35,11 @@ JUNK = [
 def final_pass(pron):
     pron = pron.replace("T t", "T")
     pron = pron.replace("t", "T")
+    pron = pron.replace("D d", "D")
     pron = pron.replace("d", "D")
+    pron = pron.replace("G g", "G")
     pron = pron.replace("g", "G")
+    pron = pron.replace("K k", "K")
     pron = pron.replace("k", "K")
     return pron
 
