@@ -122,8 +122,12 @@ def clean_pron_set(prons, vowellike=False):
     return output
 
 
+def is_x_word(text):
+    return len(text) >= 2 and text[0] == "X" and text[-1] == "X"
+
+
 def cond_lc(text):
-    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
+    if is_x_word(text):
         return text
     else:
         return text.lower()
