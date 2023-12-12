@@ -13,55 +13,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # flake8: noqa
+#
+# This script converts the Waxholm data enough to create an acoustic model
+# (using `mfa train`). The lexicon includes non-specific epenthetic vowels;
+# for a script to create a lexicon suitable for use with mfa's g2p trainer
+# use `convert_to_mfa_g2p.py`
 
 from waxholm import Mix
 import argparse
 from pathlib import Path
 
 from waxholm.audio import smp_to_wav
-from waxholm.utils import replace_glottal_closures, fix_duration_markers
-
-
-def strip_accents(text):
-    for accent in "ˈ`ˌ":
-        text = text.replace(accent, "")
-    return text
-
-
-def clean_silences(pron):
-    if pron == "p:":
-        return "SIL"
-    split = pron.split(" ")
-    start = 0
-    end = len(split) - 1
-    if split[start] == "p:":
-        start += 1
-    if split[end] == "p:":
-        end -= 1
-    split = ["SIL" if x == "p:" else x for x in split]
-    return " ".join(split[start:end+1])
-
-
-def clean_pronunciation(text):
-    text = fix_duration_markers(text)
-    text = strip_accents(text)
-    text = replace_glottal_closures(text)
-    text = clean_silences(text)
-    return text
-
-
-def clean_pron_set(prons):
-    output = set()
-    for pron in prons:
-        output.add(clean_pronunciation(pron))
-    return output
-
-
-def cond_lc(text):
-    if len(text) >= 2 and text[0] == "X" and text[-1] == "X":
-        return text
-    else:
-        return text.lower()
+from waxholm.utils import cond_lc, clean_pron_set
 
 
 JUNK = [
@@ -71,9 +34,9 @@ JUNK = [
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert .mix to input to the Montreal Forced Aligner.')
-    parser.add_argument('data_location', type=str, help='path to the Waxholm data')
-    parser.add_argument('--outpath', type=str, help='path to place converted files')
+    parser = argparse.ArgumentParser(description='Convert a directory containing the Waxholm data for use with the Montreal Forced Aligner.')
+    parser.add_argument('data_location', type=str, help='path to the directory containing the Waxholm data')
+    parser.add_argument('--outpath', type=str, help='path to place converted files (directory will be created if it does not exist)')
     parser.add_argument('--audio', help='also convert audio', action='store_true')
     args = parser.parse_args()
 
