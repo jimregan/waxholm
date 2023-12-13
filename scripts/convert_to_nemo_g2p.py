@@ -43,6 +43,7 @@ def main():
     parser = argparse.ArgumentParser(description='Gathers a corpus of sentences and their transcriptions from the Waxholm data for input to NeMo\'s G2P trainer.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
     parser.add_argument('lexicon', type=str, help='path to place the gathered lexicon')
+    parser.add_argument('--accented', help='include accent markers in the output', action='store_true')
     args = parser.parse_args()
 
     if args.lexicon:
@@ -51,6 +52,10 @@ def main():
         if outpath.exists():
             print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
             exit()
+
+    if args.accented:
+        print("Not yet implemented")
+        exit()
 
     data_location = Path(args.data_location)
     if not data_location.exists():
