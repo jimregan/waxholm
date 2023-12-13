@@ -137,12 +137,13 @@ def clean_silences_mfa(pron:str, non_phones=False) -> str:
     return " ".join(split[start:end+1])
 
 
-def clean_pronunciation(text, non_phones=False, clean_accents=True):
+def clean_pronunciation(text, non_phones=False, clean_accents=True, clean_silences=True):
     text = fix_duration_markers(text)
     if clean_accents:
         text = strip_accents(text)
     text = replace_glottal_closures(text)
-    text = clean_silences_mfa(text, non_phones)
+    if clean_silences:
+        text = clean_silences_mfa(text, non_phones)
     return text
 
 
@@ -218,7 +219,7 @@ def map_to_ipa(phone_list: List[str], non_speech=False) -> List[str]:
     output = []
     for phone in phone_list:
         accent = ''
-        if len(phone) > 1:
+        if len(phone) < 1:
             continue
         if phone[0] in "ˈ`ˌ":
             accent = phone[0]
