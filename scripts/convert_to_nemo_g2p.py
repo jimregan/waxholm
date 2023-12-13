@@ -45,7 +45,7 @@ def final_pass(pron):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Gathers a lexicon from the Waxholm data for input to Montreal Forced Aligner\'s G2P trainer.')
+    parser = argparse.ArgumentParser(description='Gathers a corpus of sentences and their transcriptions from the Waxholm data for input to NeMo\'s G2P trainer.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
     parser.add_argument('lexicon', type=str, help='path to place the gathered lexicon')
     parser.add_argument('--include_numbers', help='include numbers in the output', action='store_true')
