@@ -27,8 +27,7 @@ from waxholm.utils import cond_lc, clean_pron_set, is_x_word
 
 
 JUNK = [
-    "XX\t\n",
-    ".\t.\n"
+    "XX\t\n"
 ]
 
 
