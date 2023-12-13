@@ -27,7 +27,19 @@ X_TAGS = {
 }
 
 
-def check_x_tag(word, phoneme):
+def check_x_tag(word: str, phoneme: str) -> bool:
+    """
+    Check if a word is an 'X tag' (i.e., a non-speech event),
+    and that it matches the expected 'pronunciation'.
+
+    Args:
+        word (str): the word to check
+        phoneme (str): the listed phoneme to check
+
+    Returns:
+        bool: True if the word is an X tag, and the pronunciation is
+        as expected
+    """
     if word == "XavbrordX":
         return True
     if word in X_TAGS:
@@ -109,9 +121,10 @@ def clean_silences_mfa(pron:str, non_phones=False) -> str:
     return " ".join(split[start:end+1])
 
 
-def clean_pronunciation(text, non_phones=False):
+def clean_pronunciation(text, non_phones=False, clean_accents=True):
     text = fix_duration_markers(text)
-    text = strip_accents(text)
+    if clean_accents:
+        text = strip_accents(text)
     text = replace_glottal_closures(text)
     text = clean_silences_mfa(text, non_phones)
     return text
