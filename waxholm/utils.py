@@ -131,7 +131,7 @@ def clean_silences_mfa(pron:str, non_phones=False) -> str:
     if split[end] == "p:":
         end -= 1
     split = ["SIL" if x == "p:" else x for x in split]
-    NON_PHONES = ["v", "kl", "SIL", "pa", "sm"]
+    NON_PHONES = ["v", "kl", "SIL", "pa", "sm", "Kl", "Pa"]
     if non_phones:
         split = [x for x in split if x not in NON_PHONES]
     return " ".join(split[start:end+1])
@@ -141,9 +141,9 @@ def clean_pronunciation(text, non_phones=False, clean_accents=True, clean_silenc
     text = fix_duration_markers(text)
     if clean_accents:
         text = strip_accents(text)
-    text = replace_glottal_closures(text)
     if clean_silences:
         text = clean_silences_mfa(text, non_phones)
+    text = replace_glottal_closures(text)
     return text
 
 
