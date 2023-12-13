@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from typing import List
 
 
 X_TAGS = {
@@ -33,7 +34,7 @@ def check_x_tag(word, phoneme):
         return phoneme == X_TAGS[word]
 
 
-def clean_x_words(words):
+def clean_x_words(words: List[str]) -> List[str]:
     """Removes 'X' words (non-spoken noise markers) from the text
 
     Args:
@@ -49,7 +50,7 @@ def clean_x_words(words):
     return [x for x in words if clean_x_word(x) != ""]
 
 
-def fix_duration_markers(input):
+def fix_duration_markers(input: str) -> str:
     input += ' '
     input = input.replace(":+ ", ": ")
     input = input.replace("+ ", " ")
@@ -91,7 +92,7 @@ def strip_accents(text):
     return text
 
 
-def clean_silences_mfa(pron, non_phones=False):
+def clean_silences_mfa(pron:str, non_phones=False) -> str:
     if pron == "p:":
         return "SIL"
     split = pron.split(" ")
@@ -123,11 +124,11 @@ def clean_pron_set(prons, non_phones=False):
     return output
 
 
-def is_x_word(text):
+def is_x_word(text: str) -> bool:
     return len(text) >= 2 and text[0] == "X" and text[-1] == "X"
 
 
-def cond_lc(text):
+def cond_lc(text: str) -> str:
     if is_x_word(text):
         return text
     else:
@@ -184,7 +185,7 @@ IPA_MAPPING = {
 }
 
 
-def map_to_ipa(phone_list, non_speech=False):
+def map_to_ipa(phone_list: List[str], non_speech=False) -> List[str]:
     output = []
     for phone in phone_list:
         if phone in IPA_MAPPING:
