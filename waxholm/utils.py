@@ -205,8 +205,12 @@ IPA_MAPPING = {
 def map_to_ipa(phone_list: List[str], non_speech=False) -> List[str]:
     output = []
     for phone in phone_list:
+        accent = ''
+        if phone[0] in "ˈ`ˌ":
+            accent = phone[0]
+            phone = phone[1:]
         if phone in IPA_MAPPING:
-            output.append(IPA_MAPPING[phone])
+            output.append(accent + IPA_MAPPING[phone])
         elif non_speech:
             output.append(f"<{phone}>")
     return output
