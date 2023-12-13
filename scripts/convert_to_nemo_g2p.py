@@ -53,9 +53,9 @@ def main():
             print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
             exit()
 
+    clean_accents = True
     if args.accented:
-        print("Not yet implemented")
-        exit()
+        clean_accents = not args.accented
 
     data_location = Path(args.data_location)
     if not data_location.exists():
@@ -75,13 +75,15 @@ def main():
         for word_pair in mix.get_dictionary_list():
             if is_x_word(word_pair[0]):
                 continue
-            pron = clean_pronunciation(word_pair[1])
+            pron = clean_pronunciation(word_pair[1], clean_accents=clean_accents)
             pron = final_pass(pron)
             pron = "".join(map_to_ipa(pron.split(" ")))
             words.append(word_pair[0])
             prons.append(pron)
         graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
         text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
+        # FIXME: check what to do here
+        text = text.replace("`", "ˈ")
         pairs.append({"text_graphemes": graphemes, "text": text})
 
     with open(str(outpath), "w", encoding='utf8') as lexf:
