@@ -21,7 +21,7 @@
 from waxholm import Mix
 import argparse
 from pathlib import Path
-import re
+import json
 
 from waxholm.utils import cond_lc, clean_pron_set, is_x_word
 
@@ -47,7 +47,6 @@ def main():
     parser = argparse.ArgumentParser(description='Gathers a corpus of sentences and their transcriptions from the Waxholm data for input to NeMo\'s G2P trainer.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
     parser.add_argument('lexicon', type=str, help='path to place the gathered lexicon')
-    parser.add_argument('--include_numbers', help='include numbers in the output', action='store_true')
     args = parser.parse_args()
 
     if args.lexicon:
@@ -72,8 +71,6 @@ def main():
 
         for word_pair in mix.get_dictionary_list():
             if is_x_word(word_pair[0]):
-                continue
-            elif not args.include_numbers and re.match(".*[0-9].*", word_pair[0]):
                 continue
             word = cond_lc(word_pair[0])
             pron = final_pass(word_pair[1])
