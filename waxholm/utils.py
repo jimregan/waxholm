@@ -218,6 +218,8 @@ def map_to_ipa(phone_list: List[str], non_speech=False) -> List[str]:
     output = []
     for phone in phone_list:
         accent = ''
+        if len(phone) > 1:
+            continue
         if phone[0] in "ˈ`ˌ":
             accent = phone[0]
             phone = phone[1:]
