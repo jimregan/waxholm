@@ -83,14 +83,14 @@ def main():
                 lexicon[word] = set()
             lexicon[word].add(pron)
 
-        lexicon = dict(sorted(lexicon.items()))
-        with open(str(outpath), "w") as lexf:
-            for word in lexicon:
-                prons = clean_pron_set(lexicon[word], True)
-                for pron in prons:
-                    cand = f"{word}\t{pron}\n"
-                    if not cand in JUNK and not cand.endswith("\t\n"):
-                        lexf.write(cand)
+    lexicon = dict(sorted(lexicon.items()))
+    with open(str(outpath), "w") as lexf:
+        for word in lexicon:
+            prons = clean_pron_set(lexicon[word], True)
+            for pron in prons:
+                cand = f"{word}\t{pron}\n"
+                if not cand in JUNK and not cand.endswith("\t\n"):
+                    lexf.write(cand)
 
 
 if __name__ == '__main__':
