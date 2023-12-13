@@ -16,6 +16,9 @@
 #
 # Collects a dictionary from the Waxholm data, suitable for use with NeMo's
 # G2P trainer (i.e., skipping non-speech "phones").
+# FIXME: IPA
+# FIXME: pronunciations coming out in wrong order
+# FIXME: join IPA characters
 
 from waxholm import Mix
 import argparse
