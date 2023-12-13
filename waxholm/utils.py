@@ -182,3 +182,13 @@ IPA_MAPPING = {
     "Å": "ɔ",
     "Å:": "oː"
 }
+
+
+def map_to_ipa(phone_list, non_speech=False):
+    output = []
+    for phone in phone_list:
+        if phone in IPA_MAPPING:
+            output.append(IPA_MAPPING[phone])
+        elif non_speech:
+            output.append(f"<{phone}>")
+    return output
