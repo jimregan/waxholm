@@ -24,7 +24,7 @@ import argparse
 from pathlib import Path
 import json
 
-from waxholm.utils import clean_pron_set, is_x_word
+from waxholm.utils import is_x_word, clean_pronunciation, map_to_ipa
 
 
 def final_pass(pron):
@@ -70,13 +70,16 @@ def main():
         for word_pair in mix.get_dictionary_list():
             if is_x_word(word_pair[0]):
                 continue
+            pron = clean_pronunciation(word_pair[1])
+            pron = final_pass(pron)
+            pron = "".join(map_to_ipa(pron.split(" ")))
             words.append(word_pair[0])
-            prons.append(final_pass(word_pair[1]))
+            prons.append(pron)
         graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
-        text = " ".join(clean_pron_set(prons)).replace(" .", ".").replace(" ,", ",")
+        text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
         pairs.append({"text_graphemes": graphemes, "text": text})
 
-    with open(str(outpath), "w") as lexf:
+    with open(str(outpath), "w", encoding='utf8') as lexf:
         for pair in pairs:
             jsonout = json.dumps(pair)
             lexf.write(jsonout + "\n")
