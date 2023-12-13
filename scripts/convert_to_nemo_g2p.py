@@ -23,7 +23,7 @@ import argparse
 from pathlib import Path
 import json
 
-from waxholm.utils import cond_lc, clean_pron_set, is_x_word
+from waxholm.utils import clean_pron_set, is_x_word
 
 
 JUNK = [
@@ -64,29 +64,29 @@ def main():
         print(f"Path to data ({data_location}) exists, but is not a directory")
         exit()
 
-    lexicon = {}
+    pairs = {}
 
     for mixfile in data_location.glob("**/*.mix"):
         mix = Mix(filepath=mixfile)
 
+        words = []
+        prons = []
         for word_pair in mix.get_dictionary_list():
             if is_x_word(word_pair[0]):
                 continue
-            word = cond_lc(word_pair[0])
-            pron = final_pass(word_pair[1])
+            words.append(word_pair[0])
+            prons.append(final_pass(word_pair[1]))
+        graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
+        text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
+        pairs.append({"text_graphemes": graphemes, "text": text})
 
-            if not word in lexicon:
-                lexicon[word] = set()
-            lexicon[word].add(pron)
-
-        lexicon = dict(sorted(lexicon.items()))
-        with open(str(outpath), "w") as lexf:
-            for word in lexicon:
-                prons = clean_pron_set(lexicon[word], True)
-                for pron in prons:
-                    cand = f"{word}\t{pron}\n"
-                    if not cand in JUNK and not cand.endswith("\t\n"):
-                        lexf.write(cand)
+    with open(str(outpath), "w") as lexf:
+        for word in pairs:
+            prons = clean_pron_set(lexicon[word], True)
+            for pron in prons:
+                cand = f"{word}\t{pron}\n"
+                if not cand in JUNK and not cand.endswith("\t\n"):
+                    lexf.write(cand)
 
 
 if __name__ == '__main__':
