@@ -67,6 +67,18 @@ def clean_x_words(words: List[str]) -> List[str]:
 
 
 def fix_duration_markers(input: str) -> str:
+    """
+    Remove + marks from phonemes.
+    This function is misnamed, because I assumed this was a duration marker;
+    actually, it's a trigger for a post-processing phase that handled
+    assimilation.
+
+    Args:
+        input (str): the phonetic string
+
+    Returns:
+        str: the string with plus marks removed
+    """
     input += ' '
     input = input.replace(":+ ", ": ")
     input = input.replace("+ ", " ")
