@@ -63,7 +63,7 @@ def main():
         print(f"Path to data ({data_location}) exists, but is not a directory")
         exit()
 
-    pairs = {}
+    pairs = []
 
     for mixfile in data_location.glob("**/*.mix"):
         mix = Mix(filepath=mixfile)
@@ -76,16 +76,13 @@ def main():
             words.append(word_pair[0])
             prons.append(final_pass(word_pair[1]))
         graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
-        text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
+        text = " ".join(clean_pron_set(prons)).replace(" .", ".").replace(" ,", ",")
         pairs.append({"text_graphemes": graphemes, "text": text})
 
     with open(str(outpath), "w") as lexf:
-        for word in pairs:
-            prons = clean_pron_set(lexicon[word], True)
-            for pron in prons:
-                cand = f"{word}\t{pron}\n"
-                if not cand in JUNK and not cand.endswith("\t\n"):
-                    lexf.write(cand)
+        for pair in pairs:
+            jsonout = json.dumps(pair)
+            lexf.write(jsonout + "\n")
 
 
 if __name__ == '__main__':
