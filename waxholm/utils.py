@@ -47,10 +47,14 @@ def check_x_tag(word: str, phoneme: str) -> bool:
 
 
 def clean_x_words(words: List[str]) -> List[str]:
-    """Removes 'X' words (non-spoken noise markers) from the text
+    """
+    Removes 'X' words (non-spoken noise markers) from the text
 
     Args:
         words (List[str]): list of words to clean
+
+    Returns:
+        List[str]: the cleaned list of words
     """
     def clean_x_word(word):
         if "XX" in word:
