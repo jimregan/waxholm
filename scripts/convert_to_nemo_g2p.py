@@ -14,9 +14,8 @@
 # limitations under the License.
 # flake8: noqa
 #
-# Collects a dictionary from the Waxholm data, suitable for use with MFA's
+# Collects a dictionary from the Waxholm data, suitable for use with NeMo's
 # G2P trainer (i.e., skipping non-speech "phones").
-# Note that the result should still be sorted using the standard Unix sort tool.
 
 from waxholm import Mix
 import argparse
