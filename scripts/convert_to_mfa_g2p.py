@@ -33,14 +33,22 @@ JUNK = [
 
 
 def final_pass(pron):
+    pron = pron.replace("2T 2t", "2T")
+    pron = pron.replace("2T 2T", "2T")
+    pron = pron.replace("T 2T", "2T")
     pron = pron.replace("T t", "T")
     pron = pron.replace("t", "T")
+    pron = pron.replace("2D 2d", "2D")
+    pron = pron.replace("2D 2D", "2D")
+    pron = pron.replace("D 2d", "2D")
+    pron = pron.replace("D 2D", "2D")
     pron = pron.replace("D d", "D")
     pron = pron.replace("d", "D")
     pron = pron.replace("G g", "G")
     pron = pron.replace("g", "G")
     pron = pron.replace("K k", "K")
     pron = pron.replace("k", "K")
+    pron = pron.replace("Kl", "kl")
     return pron
 
 
