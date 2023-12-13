@@ -14,49 +14,36 @@
 # limitations under the License.
 # flake8: noqa
 #
-# Collects a dictionary from the Waxholm data, suitable for use with MFA's
+# Collects a dictionary from the Waxholm data, suitable for use with NeMo's
 # G2P trainer (i.e., skipping non-speech "phones").
-# Note that the result should still be sorted using the standard Unix sort tool.
+# FIXME: pronunciations coming out in wrong order
+# FIXME: join IPA characters
 
 from waxholm import Mix
 import argparse
 from pathlib import Path
-import re
+import json
 
-from waxholm.utils import cond_lc, clean_pron_set, is_x_word
-
-
-JUNK = [
-    "XX\t\n",
-    ".\t.\n"
-]
+from waxholm.utils import is_x_word, clean_pronunciation, map_to_ipa
 
 
 def final_pass(pron):
-    pron = pron.replace("2T 2t", "2T")
-    pron = pron.replace("2T 2T", "2T")
-    pron = pron.replace("T 2T", "2T")
     pron = pron.replace("T t", "T")
     pron = pron.replace("t", "T")
-    pron = pron.replace("2D 2d", "2D")
-    pron = pron.replace("2D 2D", "2D")
-    pron = pron.replace("D 2d", "2D")
-    pron = pron.replace("D 2D", "2D")
     pron = pron.replace("D d", "D")
     pron = pron.replace("d", "D")
     pron = pron.replace("G g", "G")
     pron = pron.replace("g", "G")
     pron = pron.replace("K k", "K")
     pron = pron.replace("k", "K")
-    pron = pron.replace("Kl", "kl")
     return pron
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Gathers a lexicon from the Waxholm data for input to Montreal Forced Aligner\'s G2P trainer.')
+    parser = argparse.ArgumentParser(description='Gathers a corpus of sentences and their transcriptions from the Waxholm data for input to NeMo\'s G2P trainer.')
     parser.add_argument('data_location', type=str, help='path to the Waxholm data')
     parser.add_argument('lexicon', type=str, help='path to place the gathered lexicon')
-    parser.add_argument('--include_numbers', help='include numbers in the output', action='store_true')
+    parser.add_argument('--accented', help='include accent markers in the output', action='store_true')
     args = parser.parse_args()
 
     if args.lexicon:
@@ -66,6 +53,10 @@ def main():
             print(f"File exists with output path name ({outpath}); cowardly refusing to continue")
             exit()
 
+    clean_accents = True
+    if args.accented:
+        clean_accents = not args.accented
+
     data_location = Path(args.data_location)
     if not data_location.exists():
         print(f"Path to data ({data_location}) does not exist")
@@ -74,31 +65,31 @@ def main():
         print(f"Path to data ({data_location}) exists, but is not a directory")
         exit()
 
-    lexicon = {}
+    pairs = []
 
     for mixfile in data_location.glob("**/*.mix"):
         mix = Mix(filepath=mixfile)
 
+        words = []
+        prons = []
         for word_pair in mix.get_dictionary_list():
             if is_x_word(word_pair[0]):
                 continue
-            elif not args.include_numbers and re.match(".*[0-9].*", word_pair[0]):
-                continue
-            word = cond_lc(word_pair[0])
-            pron = final_pass(word_pair[1])
+            pron = clean_pronunciation(word_pair[1], clean_accents=clean_accents)
+            pron = final_pass(pron)
+            pron = "".join(map_to_ipa(pron.split(" ")))
+            words.append(word_pair[0])
+            prons.append(pron)
+        graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
+        text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
+        # FIXME: check what to do here
+        text = text.replace("`", "ˈ")
+        pairs.append({"text_graphemes": graphemes, "text": text})
 
-            if not word in lexicon:
-                lexicon[word] = set()
-            lexicon[word].add(pron)
-
-    lexicon = dict(sorted(lexicon.items()))
-    with open(str(outpath), "w") as lexf:
-        for word in lexicon:
-            prons = clean_pron_set(lexicon[word], True)
-            for pron in prons:
-                cand = f"{word}\t{pron}\n"
-                if not cand in JUNK and not cand.endswith("\t\n"):
-                    lexf.write(cand)
+    with open(str(outpath), "w", encoding='utf8') as lexf:
+        for pair in pairs:
+            jsonout = json.dumps(pair)
+            lexf.write(jsonout + "\n")
 
 
 if __name__ == '__main__':
