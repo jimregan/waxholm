@@ -16,7 +16,6 @@
 #
 # Collects a dictionary from the Waxholm data, suitable for use with NeMo's
 # G2P trainer (i.e., skipping non-speech "phones").
-# FIXME: IPA
 # FIXME: pronunciations coming out in wrong order
 # FIXME: join IPA characters
 
@@ -26,11 +25,6 @@ from pathlib import Path
 import json
 
 from waxholm.utils import clean_pron_set, is_x_word
-
-
-JUNK = [
-    "XX\t\n"
-]
 
 
 def final_pass(pron):
