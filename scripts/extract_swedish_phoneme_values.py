@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2023, Jim O'Regan for Språkbanken Tal
+# Copyright (c) 2026, Jim O'Regan for Språkbanken Tal
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
