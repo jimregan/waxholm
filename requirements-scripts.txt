@@ -1,0 +1,16 @@
+# Additional dependencies for scripts/
+# Install with: pip install -r requirements-scripts.txt
+
+# Base module dependency
+soundfile
+
+# For TextGrid conversion (convert_to_textgrid.py)
+praatio
+
+# For phoneme extraction and alignment scripts
+# (extract_swedish_phoneme_values.py, align_with_swedish_values.py)
+librosa
+numpy
+
+# Alternative: Praat-based extraction (extract_swedish_phoneme_values_praat.py)
+praat-parselmouth
