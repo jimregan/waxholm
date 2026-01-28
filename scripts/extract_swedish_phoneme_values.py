@@ -187,8 +187,11 @@ def process_corpus(data_location: Path, verbose=False):
             continue
 
         # Find corresponding audio file
-        smp_file = mixfile.with_suffix('.smp')
+        # Handle .smp.mix naming convention: stem removes .mix, leaving the .smp name
+        smp_file = mixfile.parent / mixfile.stem
         if not smp_file.exists():
+            if verbose:
+                print(f"  Audio file not found: {smp_file}")
             continue
 
         try:
