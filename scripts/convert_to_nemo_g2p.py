@@ -16,8 +16,6 @@
 #
 # Collects a dictionary from the Waxholm data, suitable for use with NeMo's
 # G2P trainer (i.e., skipping non-speech "phones").
-# FIXME: pronunciations coming out in wrong order
-# FIXME: join IPA characters
 
 from waxholm import Mix
 import argparse
@@ -77,12 +75,12 @@ def main():
                 continue
             pron = clean_pronunciation(word_pair[1], clean_accents=clean_accents)
             pron = final_pass(pron)
-            pron = "".join(map_to_ipa(pron.split(" ")))
+            pron = " ".join(map_to_ipa(pron.split(" ")))
             words.append(word_pair[0])
             prons.append(pron)
         graphemes = " ".join(words).replace(" .", ".").replace(" ,", ",")
         text = " ".join(prons).replace(" .", ".").replace(" ,", ",")
-        # FIXME: check what to do here
+        # Convert Waxholm backtick accent marker to proper IPA primary stress symbol
         text = text.replace("`", "ˈ")
         pairs.append({"text_graphemes": graphemes, "text": text})
 
