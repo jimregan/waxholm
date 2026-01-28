@@ -11,3 +11,6 @@ praatio
 # (extract_swedish_phoneme_values.py, align_with_swedish_values.py)
 librosa
 numpy
+
+# Alternative: Praat-based extraction (extract_swedish_phoneme_values_praat.py)
+praat-parselmouth
