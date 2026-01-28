@@ -31,7 +31,15 @@ except ImportError as e:
 
 import argparse
 import json
+import sys
 from pathlib import Path
+
+# Optional praatio support for TextGrid output
+try:
+    from praatio import textgrid
+    HAS_PRAATIO = True
+except ImportError:
+    HAS_PRAATIO = False
 
 
 def load_reference_values(reference_file: Path):
@@ -426,10 +434,10 @@ def main():
         print("Generate it first using extract_swedish_phoneme_values.py")
         exit(1)
 
-    print(f"Loading reference values from {reference_path}...", file=__import__('sys').stderr)
+    print(f"Loading reference values from {reference_path}...", file=sys.stderr)
     reference_values = load_reference_values(reference_path)
 
-    print(f"Aligning {audio_path}...", file=__import__('sys').stderr)
+    print(f"Aligning {audio_path}...", file=sys.stderr)
     results = align_audio(
         str(audio_path),
         reference_values,
@@ -464,36 +472,60 @@ def main():
         output_lines.append(json.dumps(output_data, indent=2, ensure_ascii=False))
 
     elif args.format == 'textgrid':
-        # Simple Praat TextGrid format
-        total_duration = segments[-1][1] if segments else 0
-        output_lines.append('File type = "ooTextFile"')
-        output_lines.append('Object class = "TextGrid"')
-        output_lines.append('')
-        output_lines.append(f'xmin = 0')
-        output_lines.append(f'xmax = {total_duration}')
-        output_lines.append('tiers? <exists>')
-        output_lines.append('size = 1')
-        output_lines.append('item []:')
-        output_lines.append('    item [1]:')
-        output_lines.append('        class = "IntervalTier"')
-        output_lines.append('        name = "phonemes"')
-        output_lines.append('        xmin = 0')
-        output_lines.append(f'        xmax = {total_duration}')
-        output_lines.append(f'        intervals: size = {len(segments)}')
-        for i, (start, end, phoneme, _) in enumerate(segments, 1):
-            output_lines.append(f'        intervals [{i}]:')
-            output_lines.append(f'            xmin = {start}')
-            output_lines.append(f'            xmax = {end}')
-            output_lines.append(f'            text = "{phoneme}"')
+        if HAS_PRAATIO:
+            # Use praatio for proper TextGrid output
+            tg = textgrid.Textgrid()
+            interval_tuples = [(start, end, phoneme) for start, end, phoneme, _ in segments]
+            phone_tier = textgrid.IntervalTier("phonemes", interval_tuples)
+            tg.addTier(phone_tier)
+
+            if args.output:
+                tg.save(args.output, format="long_textgrid", includeBlankSpaces=True)
+                print(f"Saved to {args.output}", file=sys.stderr)
+            else:
+                # praatio doesn't support writing to stdout, so use fallback
+                print("Warning: praatio doesn't support stdout output, using manual format", file=sys.stderr)
+                output_lines = _manual_textgrid(segments)
+                print('\n'.join(output_lines))
+            return
+        else:
+            # Fallback to manual TextGrid format
+            output_lines = _manual_textgrid(segments)
 
     output_text = '\n'.join(output_lines)
 
     if args.output:
         with open(args.output, 'w', encoding='utf-8') as f:
             f.write(output_text)
-        print(f"Saved to {args.output}", file=__import__('sys').stderr)
+        print(f"Saved to {args.output}", file=sys.stderr)
     else:
         print(output_text)
+
+
+def _manual_textgrid(segments):
+    """Generate TextGrid format manually (fallback when praatio unavailable)."""
+    output_lines = []
+    total_duration = segments[-1][1] if segments else 0
+    output_lines.append('File type = "ooTextFile"')
+    output_lines.append('Object class = "TextGrid"')
+    output_lines.append('')
+    output_lines.append('xmin = 0')
+    output_lines.append(f'xmax = {total_duration}')
+    output_lines.append('tiers? <exists>')
+    output_lines.append('size = 1')
+    output_lines.append('item []:')
+    output_lines.append('    item [1]:')
+    output_lines.append('        class = "IntervalTier"')
+    output_lines.append('        name = "phonemes"')
+    output_lines.append('        xmin = 0')
+    output_lines.append(f'        xmax = {total_duration}')
+    output_lines.append(f'        intervals: size = {len(segments)}')
+    for i, (start, end, phoneme, _) in enumerate(segments, 1):
+        output_lines.append(f'        intervals [{i}]:')
+        output_lines.append(f'            xmin = {start}')
+        output_lines.append(f'            xmax = {end}')
+        output_lines.append(f'            text = "{phoneme}"')
+    return output_lines
 
 
 if __name__ == '__main__':
