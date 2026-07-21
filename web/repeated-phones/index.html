@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Repeated Phone Review</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="toolbar">
+        <div class="title">
+          <h1>Repeated Phone Review</h1>
+          <p id="summary">Loading candidates...</p>
+        </div>
+        <div class="actions">
+          <button id="prev" type="button" title="Previous candidate">←</button>
+          <output id="position">0 / 0</output>
+          <button id="next" type="button" title="Next candidate">→</button>
+        </div>
+      </header>
+
+      <section class="viewer" aria-label="Spectrogram review">
+        <div class="metadata">
+          <div>
+            <span class="label">File</span>
+            <strong id="fileName">-</strong>
+          </div>
+          <div>
+            <span class="label">Phone</span>
+            <strong id="phoneLabel">-</strong>
+          </div>
+          <div>
+            <span class="label">Time</span>
+            <strong id="timeRange">-</strong>
+          </div>
+          <div>
+            <span class="label">Words</span>
+            <strong id="words">-</strong>
+          </div>
+        </div>
+
+        <div class="spectrogram-wrap">
+          <canvas id="spectrogram" width="1200" height="420"></canvas>
+          <div id="overlay" class="overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="transport">
+          <button id="playWindow" type="button">Play Window</button>
+          <button id="playRepeat" type="button">Play Split</button>
+          <label class="loop">
+            <input id="loop" type="checkbox">
+            Loop
+          </label>
+          <audio id="audio" controls preload="metadata"></audio>
+        </div>
+      </section>
+
+      <aside class="candidate-list" aria-label="Candidates">
+        <input id="filter" type="search" placeholder="Filter by file or phone">
+        <div id="list"></div>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
