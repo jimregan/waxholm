@@ -32,8 +32,6 @@ from pyshiro.labels import write_lab
 SIL = "sil"
 
 
-# --- token normalization (faithful to waxholm/waxholm/utils.py) --------------
-
 def strip_accents(text: str) -> str:            # waxholm.utils.strip_accents
     for accent in "ˈ`ˌ":
         text = text.replace(accent, "")
@@ -63,8 +61,6 @@ def normalize(tok: str) -> str:
     return SILS.get(t, t)                         # fold plosive closures into release phone
 
 
-# --- TextGrid phones-tier parser (multi-tier safe) ---------------------------
-
 _ITEM_RE = re.compile(r"item\s*\[\d+\]:")
 _NAME_RE = re.compile(r'name\s*=\s*"([^"]*)"')
 _IV_RE = re.compile(
@@ -82,8 +78,6 @@ def parse_phones_tier(path: Path):
         return [(float(s), float(e), t) for s, e, t in _IV_RE.findall(block)]
     return []
 
-
-# --- conversion --------------------------------------------------------------
 
 def convert_file(tg_path: Path, wav_path: Path, out_lab: Path) -> Counter:
     raw = parse_phones_tier(tg_path)
