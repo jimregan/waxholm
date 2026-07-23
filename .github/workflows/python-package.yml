@@ -28,7 +28,7 @@ jobs:
       run: |
         sudo apt-get install libsndfile1
         python -m pip install --upgrade pip
-        python -m pip install flake8 pytest pytest-cov tox pytest-flake8 pytest-random
+        python -m pip install flake8 pytest pytest-cov tox pytest-random
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
